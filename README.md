@@ -48,6 +48,7 @@ My MIPS study
 ## rt-thread 20201229, for qemu -machine mipssim  
 * rt-thread_back_to_202012291854_min.zip  
 * Neweast version may crash  
+* https://gitee.com/rtthread/rt-thread  
 
 ## topsy  
 * https://github.com/pahihu/Topsy  

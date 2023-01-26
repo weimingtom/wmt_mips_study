@@ -11,6 +11,7 @@ My MIPS study
 * gcc -S for qtspim  
 * see https://github.com/weimingtom/wmt_ai_study/blob/master/fpga_cpld_001.md  
 * openwrt & buildroot   
+* golang or rust baremetal / bare, simulator (emulator), compiler, etc  
 
 ## mips linux (vmlinux), for qemu -machine mipssim (and for -machine mips)      
 * https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.5.7.tar.gz  

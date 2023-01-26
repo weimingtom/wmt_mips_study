@@ -110,3 +110,6 @@ My MIPS study
 
 ## v6pic32  
 * https://codeberg.org/zerocool32/v6pic32  
+
+## nachos  
+* https://homes.cs.washington.edu/~tom/nachos/  

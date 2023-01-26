@@ -11,7 +11,7 @@ My MIPS study
 * gcc -S for qtspim  
 * see https://github.com/weimingtom/wmt_ai_study/blob/master/fpga_cpld_001.md  
 
-## mips linux, for qemu -machine mipssim (and for -machine mips)      
+## mips linux (vmlinux), for qemu -machine mipssim (and for -machine mips)      
 * https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.5.7.tar.gz  
 * https://www.linux-mips.org/wiki/Porting  
 * https://www.linux-mips.org/wiki/Kernel_Build  
@@ -19,7 +19,7 @@ My MIPS study
 * https://www.linux-mips.org/wiki/Emulators  
 * linux-2.x maybe ok  
 
-## loogson linux, ls1b defconfig, linux-2.6.3, 4.19, 5.3  
+## loogson linux (vmlinux), ls1b defconfig, linux-2.6.3, 4.19, 5.3  
 * https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.2.tar.gz  
 * https://gitee.com/loongsonlab/qemu  
 * https://gitee.com/loongsonlab/loongson  
@@ -27,7 +27,7 @@ My MIPS study
 * https://gitee.com/loongsonlab/linux-2.6.32  
 * loongson_mod_v2_self_build_linux.tar.gz, not through pmon    
 
-## pmon for loogson (here not boot linux)    
+## pmon for loogson (here not boot vmlinux)    
 * https://mirrors.ustc.edu.cn/loongson/  
 * https://gitee.com/brep/loongson1-pmon  
 * https://gitee.com/loongsonlab/qemu  

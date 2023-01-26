@@ -100,3 +100,13 @@ My MIPS study
 * https://github.com/sergev/qemu/wiki/RetroBSD-Example  
 * https://github.com/RetroBSD/retrobsd  
 * https://github.com/zyy0721/Minisys-OS/blob/master/boot/boot.S  
+* https://github.com/sergev/LiteBSD/releases/tag/tools  
+* gcc-4.8.1-mips-linux.tgz  
+
+## (TODO) virtualmips  
+* https://code.google.com/archive/p/virtualmips  
+* https://github.com/RetroBSD/retrobsd/tree/master/tools/virtualmips  
+* virtualmips-0.01_run_success_need_libelf-dev.tar.gz  
+
+## v6pic32  
+* https://codeberg.org/zerocool32/v6pic32  

@@ -45,6 +45,10 @@ My MIPS study
 * https://github.com/chyh1990/qemu-thumips  
 * ucore_v3_success_from_Lan1keA_BIT-ucore_mips-master.tar.gz  
 
+## rt-thread 20201229, for qemu -machine mipssim  
+* rt-thread_back_to_202012291854_min.zip  
+* Neweast version may crash  
+
 ## topsy  
 * https://github.com/pahihu/Topsy  
 * https://github.com/pahihu/MipsSimulator  

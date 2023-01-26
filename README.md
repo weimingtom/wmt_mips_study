@@ -119,3 +119,6 @@ My MIPS study
 * https://sites.google.com/site/jacksonm88/  
 * https://sites.google.com/site/linuxonpspproject/  
 * https://sites.google.com/site/wwwjalinux/linuxonpsp.htm  
+
+## qemu-mt7628  
+* https://github.com/newluhux/qemu-mt7628  

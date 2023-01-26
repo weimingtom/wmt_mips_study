@@ -113,3 +113,9 @@ My MIPS study
 
 ## nachos  
 * https://homes.cs.washington.edu/~tom/nachos/  
+
+## uclinux on psp 0.22  
+* uclinux_on_psp-0.22.zip  
+* https://sites.google.com/site/jacksonm88/  
+* https://sites.google.com/site/linuxonpspproject/  
+* https://sites.google.com/site/wwwjalinux/linuxonpsp.htm  

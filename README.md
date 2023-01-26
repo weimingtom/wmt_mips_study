@@ -10,7 +10,7 @@ My MIPS study
 * naken_asm  
 * gcc -S for qtspim  
 * see https://github.com/weimingtom/wmt_ai_study/blob/master/fpga_cpld_001.md  
-* openwrt  
+* openwrt & buildroot   
 
 ## mips linux (vmlinux), for qemu -machine mipssim (and for -machine mips)      
 * https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.5.7.tar.gz  
@@ -129,3 +129,5 @@ My MIPS study
 * https://cclinuxer.gitee.io/2021/01/OpenWrt进行qemu模拟/  
 * https://github.com/openwrt/openwrt/blob/master/target/linux/malta/README  
 
+## (TODO) buildroot mips, for qemu -machine malta  
+* https://github.com/buildroot/buildroot/blob/master/configs/qemu_mips32r2el_malta_defconfig  

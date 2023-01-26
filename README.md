@@ -49,6 +49,8 @@ My MIPS study
 * rt-thread_back_to_202012291854_min.zip  
 * Neweast version may crash  
 * https://gitee.com/rtthread/rt-thread  
+* https://blog.csdn.net/u014689277/article/details/121490983  
+* LOONGSON派二代 RTthread  
 
 ## topsy  
 * https://github.com/pahihu/Topsy  

@@ -7,6 +7,8 @@ My MIPS study
 * (IMP) https://github.com/OpenNoah/virtualnoah  
 * (IMP) gxemul for godson 1 and 2 and mips  
 * (IMP) skyeye and skyeye testcases for godson and mips    
+* naken_asm  
+* gcc -S for qtspim  
 * see https://github.com/weimingtom/wmt_ai_study/blob/master/fpga_cpld_001.md  
 
 ## mips linux, for qemu -machine mipssim (and for -machine mips)      
@@ -68,3 +70,16 @@ My MIPS study
 * https://student.cs.uwaterloo.ca/~cs350/common/WorkingWith161.html  
 * work_os162_v1_success_some.tar.gz  
 
+## (TODO) loogson / godson fpga  
+* https://github.com/huitailangyz/B0911009Y-Computer-Architecture-Lab  
+* https://github.com/poorjobless/cpu_gs232  
+
+## (TODO) naken_asm  
+* https://www.mikekohn.net/micro/naken_asm.php  
+* https://github.com/mikeakohn/naken_asm  
+
+## (TODO) qtspim  
+* https://pages.cs.wisc.edu/~larus/HP_AppA.pdf  
+* https://sourceforge.net/p/spimsimulator/code/HEAD/tree/  
+* https://pages.cs.wisc.edu/~larus/spim.html  
+* https://ecs-network.serv.pacific.edu/past-courses/2012-fall-ecpe-170/tutorials/qtspim-tutorial  

@@ -9,7 +9,7 @@ My MIPS study
 * (IMP) skyeye and skyeye testcases for godson and mips    
 * see https://github.com/weimingtom/wmt_ai_study/blob/master/fpga_cpld_001.md  
 
-## mips linux, for -machine mipssim (and for -machine mips)      
+## mips linux, for qemu -machine mipssim (and for -machine mips)      
 * https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.5.7.tar.gz  
 * https://www.linux-mips.org/wiki/Porting  
 * https://www.linux-mips.org/wiki/Kernel_Build  
@@ -26,6 +26,7 @@ My MIPS study
 
 ## xv6-mips  
 * https://github.com/varmil/xv6-mips  
+* (not good) https://github.com/nullpo-head/xv6-mips  
 
 ## ucore, ucore-thumips    
 * https://github.com/Lan1keA/BIT-ucore_mips  

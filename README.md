@@ -42,6 +42,7 @@ My MIPS study
 * https://github.com/Lan1keA/BIT-ucore_mips  
 * https://github.com/chyyuu/ucore_os_plus/tree/clang-dev  
 * https://github.com/chyh1990/ucore-thumips  
+* https://github.com/chyh1990/qemu-thumips  
 * ucore_v3_success_from_Lan1keA_BIT-ucore_mips-master.tar.gz  
 
 ## topsy  

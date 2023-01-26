@@ -132,3 +132,6 @@ My MIPS study
 ## (TODO) buildroot mips, for qemu -machine malta  
 * https://github.com/buildroot/buildroot/blob/master/board/qemu/mips32r2el-malta/readme.txt  
 * https://github.com/buildroot/buildroot/blob/master/configs/qemu_mips32r2el_malta_defconfig  
+
+## rcore, Rust version of THU uCore OS Plus  
+* https://github.com/rcore-os/rCore  

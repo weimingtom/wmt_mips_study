@@ -130,4 +130,5 @@ My MIPS study
 * https://github.com/openwrt/openwrt/blob/master/target/linux/malta/README  
 
 ## (TODO) buildroot mips, for qemu -machine malta  
+* https://github.com/buildroot/buildroot/blob/master/board/qemu/mips32r2el-malta/readme.txt  
 * https://github.com/buildroot/buildroot/blob/master/configs/qemu_mips32r2el_malta_defconfig  

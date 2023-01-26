@@ -87,3 +87,9 @@ My MIPS study
 * https://sourceforge.net/p/spimsimulator/code/HEAD/tree/  
 * https://pages.cs.wisc.edu/~larus/spim.html  
 * https://ecs-network.serv.pacific.edu/past-courses/2012-fall-ecpe-170/tutorials/qtspim-tutorial  
+
+## litebsd, retrobsd    
+* https://github.com/sergev/LiteBSD  
+* https://github.com/sergev/qemu/wiki/RetroBSD-Example  
+* https://github.com/RetroBSD/retrobsd  
+* https://github.com/zyy0721/Minisys-OS/blob/master/boot/boot.S  

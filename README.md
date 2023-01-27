@@ -14,7 +14,10 @@ My MIPS study
 * golang or rust baremetal / bare, simulator (emulator), compiler, etc  
 
 ## TODO, gcc -S, asm volatile, for QtSpim    
-* (TODO) (IMP) use gcc-2.95.3 cross mips to gcc hello.c -S -mno-explicit-relocs  
+* (TODO) (IMP) use gcc-2.95.3 cross mips to gcc hello.c -S -mno-explicit-relocs, need comment jal __ main, why ???
+```
+jal	__main
+```
 * https://blog.csdn.net/yt_42370304/article/details/84982864  
 * use "r" instead of "m" ???  
 ```

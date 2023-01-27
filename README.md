@@ -56,11 +56,11 @@ jal	__main
 * https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.2.tar.gz  
 * https://gitee.com/loongsonlab/qemu  
 * https://gitee.com/loongsonlab/loongson  
-* see loongsonlab/loongson, 
+* see loongsonlab/loongson, for some prebuilt firmware, for example, initrd and vmlinux / vmlinuxz (without pmon)  
 * https://gitee.com/loongsonlab/linux-2.6.32  
 * loongson_mod_v2_self_build_linux.tar.gz, not through pmon    
 
-## pmon for loogson (here not boot vmlinux), for qemu (need src mod）-machine ls1b      
+## pmon (a bootloader for loogson) for loogson (here not boot vmlinux), for qemu (need src mod）-machine ls1b      
 * https://mirrors.ustc.edu.cn/loongson/  
 * https://gitee.com/brep/loongson1-pmon  
 * https://gitee.com/loongsonlab/qemu  

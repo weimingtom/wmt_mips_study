@@ -265,3 +265,5 @@ $ ct-ng menuconfig
 $ ct-ng build
 ```
 
+## (TODO) mips32r1_xum, verilog and bare program  
+* https://github.com/grantae/mips32r1_xum  

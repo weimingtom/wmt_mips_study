@@ -91,6 +91,42 @@ LD =       $(CROSS_COMPILE)ld -EL
 ```
 root=/dev/ram console=ttyS0,115200 rdinit=/linuxrc 
 ```
+```
+xubuntu200464, 
+sudo apt install gcc-mipsel-linux-gnu
+```
+```
+（for busybox）
+
+$ cd _install
+$ mkdir -p proc sys dev etc etc/init.d
+$ gedit ./etc/init.d/rcS
+#!/bin/sh
+mount -t proc none /proc
+mount -t sysfs none /sys
+/sbin/mdev -s
+ifconfig lo up
+ifconfig eth0 10.0.2.15 netmask 255.255.255.0
+route add default gw 10.0.2.1
+$ chmod +x ./etc/init.d/rcS
+$ cp etc/init.d/rcS rcS
+$ cd /dev
+$ sudo mknod -m 660 console c 5 1
+$ sudo mknod -m 660 null c 1 3
+```
+```
+（for linux）
+
+$ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu- loongson1b_defconfig
+$ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu- menuconfig
+General setup--> Initial RAM filesystem and RAM disk (check)
+	Initramfs source file(s): /home/wmt/work_loongson/_install/
+kernel hacking--->Built-in kernel command line
+	(x) default string: root=/dev/ram console=ttyS0 rdinit=/linuxrc init=/linuxrc
+	default string: root=/dev/ram console=ttyS0,115200 rdinit=/linuxrc
+$ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
+$ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu- install
+```
 
 ## pmon (a bootloader for loogson) for loogson (here not boot vmlinux), for qemu (need src mod）-machine ls1b      
 * https://mirrors.ustc.edu.cn/loongson/  

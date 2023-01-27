@@ -95,7 +95,8 @@ jal	__main
 * https://www.rose-hulman.edu/Class/se/csse490/cs490-csa/project/os/topsy.srec  
 
 ## BUAA-OS, run on gxemul    
-* https://github.com/login256/BUAA-OS-2019/tree/lab6
+* https://github.com/login256/BUAA-OS-2019/tree/lab6  
+* Need to add -d fs.img to run.bash or gxemul command line  
 * https://github.com/login256/BUAA-OS-2019/tree/master  
 * https://github.com/fmars/MIPS_OS_Kernel  
 * login256_BUAA-OS-2019-lab6_run_success.tar.gz  

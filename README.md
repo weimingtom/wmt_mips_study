@@ -48,20 +48,20 @@ jal	__main
 * Jun Sun's Linux MIPS Porting Guide  
 * http://web.archive.org/web/20160322170852/http://linux.junsun.net/porting-howto/  
 * barebone_v1_success_mipssim_ubuntu140432_sde.tar.gz  
-···
-// LOADADDR = 0xa0040000
+```
+#LOADADDR = 0xa0040000
 LOADADDR  = 0x81000000
 RAMSIZE = 0x00100000		# 1MB
 
 CC =       $(CROSS_COMPILE)gcc -EL -fno-builtin
 LD =       $(CROSS_COMPILE)ld -EL
-···
-···
+```
+```
 #define         BASE                    0xbfd003f8
 //mips:    0xb4000000;
 //mipssim: 0xbfd00000;
 //#define UART0_ISA_OFF   0x3f8
-···
+```
 * https://gitee.com/caogos/qemu_gdb_mips_hello  
 * qemu_gdb_mips_hello-master_v1_ubuntu140432_sde.tar.gz  
 

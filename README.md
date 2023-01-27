@@ -303,6 +303,13 @@ $ ct-ng build
 * https://github.com/MIPSfpga/schoolMIPS/tree/05_pipeline_ahb/program/00_counter  
 * https://github.com/MIPSfpga/mipsfpga-plus/blob/master/programs/12_linux/patches/MIPSfpga_linux.patch  
 * https://github.com/zhelnio/ubuntu-hdl-tools-install  
+* MIPSfpga_GSG_v2.0.0.zip  
+* mipsfpga sword  
+* mips模型机在Sword板子部署在FPGA  
+* https://www.jianshu.com/p/86e0889755ca  
+* https://github.com/FlyGinger/MIPSfpga-on-SWORD  
+* http://www.sword.org.cn/courses/digital_logic  
+* https://gitee.com/SWORDfpga/ComputerArchitecture/tree/master  
 
 ## mips, nscscc  
 * https://github.com/nscscc2019ucas/nscscc2019ucas/blob/master/display/soc_up/simu/soft/func/test.lds  

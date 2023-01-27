@@ -268,5 +268,10 @@ $ ct-ng build
 ## (TODO) mips32r1_xum, verilog and bare program  
 * https://github.com/grantae/mips32r1_xum  
 
-## armadillo  
+## (TODO) armadillo  
 * https://github.com/ulfsigvardsson/armadillo  
+
+## CS3650_MIPS32ALU  
+* https://github.com/greyqwilson/MIPS32Processor_PreOwned  
+* https://electrobinary.blogspot.com/2021/02/alu-design-in-verilog-using-mips.html  
+* https://github.com/greyqwilson/CS3650_MIPS32ALU  

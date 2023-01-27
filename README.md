@@ -386,6 +386,11 @@ $ ct-ng build
 * https://github.com/MIPS/FreeRTOS/tree/mips  
 
 ## Creator Ci20, linux, android, openwrt  
+* https://elinux.org/CI20_Dev_Zone#Source_Code  
 * https://github.com/MIPS/CI20_linux  
 * https://github.com/MIPS/CI20_u-boot  
+* (android) https://github.com/MIPS/manifests  
 * https://elinux.org/CI20_Distros  
+* https://github.com/Pteridium/OpenWRT-experimental/tree/ci20-alpha  
+* https://github.com/Pteridium/OpenWRT-CI20  
+

@@ -384,3 +384,8 @@ $ ct-ng build
 
 ## (TODO) freertos  
 * https://github.com/MIPS/FreeRTOS/tree/mips  
+
+## Creator Ci20, linux, android, openwrt  
+* https://github.com/MIPS/CI20_linux  
+* https://github.com/MIPS/CI20_u-boot  
+* https://elinux.org/CI20_Distros  

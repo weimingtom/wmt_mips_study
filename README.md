@@ -245,7 +245,10 @@ root=/dev/ram console=ttyS0,115200 rdinit=/linuxrc
 * (TODO) https://github.com/nfd/ci20-hello-world  
 * https://code.lardcave.net/2015/02/10/1/  
 * http://code.lardcave.net/2015/02/10/2/  
-* crosstool-ng  
+
+
+## crosstool-ng  
+* https://code.lardcave.net/2015/02/10/1/  
 ```
 $ ct-ng mips-unknown-elf
 $ ct-ng menuconfig 

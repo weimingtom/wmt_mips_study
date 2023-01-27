@@ -252,6 +252,10 @@ root=/dev/ram console=ttyS0,115200 rdinit=/linuxrc
 * 似乎-machine mips就是可以模拟ci20的  
 * (TODO) qemu-system-mipsel -machine mips is ci20 ???, see avahidi/ci20-baremetal  
 * (TODO) u-boot command loads, to load srec, see avahidi/ci20-baremetal    
+* 我搞明白为什么很多OS项目都喜欢输出srec格式文件（S-Record），其实是个梗，  
+* 大概只有用过u-boot的人会明白。因为u-boot专门有个命令叫loads，  
+* 这里的s就是srec的意思，可以通过串口粘贴srec文件内容（其实是一堆数字字母文本），  
+* 就可以把固件烧录进去（srec内带有地址信息）  
 
 ## crosstool-ng  
 * https://code.lardcave.net/2015/02/10/1/  

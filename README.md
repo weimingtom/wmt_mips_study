@@ -91,9 +91,34 @@ LD =       $(CROSS_COMPILE)ld -EL
 ```
 root=/dev/ram console=ttyS0,115200 rdinit=/linuxrc 
 ```
+* how to build busybox and linux 5.2    
 ```
-xubuntu200464, 
+xubuntu200464  
 sudo apt install gcc-mipsel-linux-gnu
+```
+```
+xubuntu200464  
+
+$ cd busybox-1.20.2
+$ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu- defconfig
+$ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu- menuconfig
+Build Options--->Build BusyBox as a static binary(no shared libs)
+Login/Password Management Utilities--->passwd(uncheck)
+Miscellaneous Utilities--->time(uncheck)
+Networking Utilities--->inetd(uncheck)ntpd(uncheck)
+Runit Utilities--->all(uncheck)
+#if 0 to shell/shell_common.c printlim inside
+#if 0 to shell/shell_common.c shell_builtin_unlimit(char **argv) inside
+
+https://github.com/fdu/STM32F429I-disco_Buildroot/issues/1
+Init Utilities--->init->Support reading an inittab file(uncheck)
+comment_ strings (tty2...4) in file nit/init.c
+/*new_init_action(ASKFIRST, bb_default_login_shell, VC_2);
+new_init_action(ASKFIRST, bb_default_login_shell, VC_3);
+new_init_action(ASKFIRST, bb_default_login_shell, VC_4);*/
+
+$ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
+$ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu- install
 ```
 ```
 （for busybox）
@@ -125,7 +150,6 @@ kernel hacking--->Built-in kernel command line
 	(x) default string: root=/dev/ram console=ttyS0 rdinit=/linuxrc init=/linuxrc
 	default string: root=/dev/ram console=ttyS0,115200 rdinit=/linuxrc
 $ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
-$ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu- install
 ```
 
 ## pmon (a bootloader for loogson) for loogson (here not boot vmlinux), for qemu (need src mod）-machine ls1b      

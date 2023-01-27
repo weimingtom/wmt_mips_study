@@ -246,6 +246,12 @@ root=/dev/ram console=ttyS0,115200 rdinit=/linuxrc
 * (TODO) https://github.com/avahidi/ci20-baremetal  
 * https://code.lardcave.net/2015/02/10/1/  
 * http://code.lardcave.net/2015/02/10/2/  
+* 在linux和buildroot里面出现的CI20开发板（都需要较新版，linux 5），  
+* 其实就是君正的JZ4780（我以前说的那个用于电子辞典的是JZ4740）。  
+* 另外qemu-system-mipsel里面不支持ci20，但我看了别人的模拟做法，  
+* 似乎-machine mips就是可以模拟ci20的  
+* (TODO) qemu-system-mipsel -machine mips is ci20 ???, see avahidi/ci20-baremetal  
+* (TODO) u-boot command loads, to load srec, see avahidi/ci20-baremetal    
 
 ## crosstool-ng  
 * https://code.lardcave.net/2015/02/10/1/  

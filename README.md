@@ -396,3 +396,7 @@ $ ct-ng build
 * https://github.com/Pteridium/OpenWRT-experimental/tree/ci20-alpha  
 * https://github.com/Pteridium/OpenWRT-CI20  
 
+## Creator Ci40, openwrt  
+* https://github.com/CreatorDev/Ci40-platform-feed  
+* https://github.com/CreatorDev/Ci40_helloworld  
+* https://github.com/CreatorDev/ci-old  

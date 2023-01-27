@@ -66,6 +66,7 @@ LD =       $(CROSS_COMPILE)ld -EL
 ```
 * https://gitee.com/caogos/qemu_gdb_mips_hello  
 * qemu_gdb_mips_hello-master_v1_ubuntu140432_sde.tar.gz  
+* https://github.com/petersho/qemu-mips-hello  
 
 ## doc  
 * https://github.com/grantae/mips32r1_xum/tree/master/Documentation/MIPS  
@@ -282,3 +283,37 @@ $ ct-ng build
 
 ## NaiveMIPS  
 * https://github.com/z4yx/NaiveMIPS-HDL  
+* https://github.com/z4yx/ucore-thumips  
+
+## step_into_mips  
+* https://github.com/lvyufeng/step_into_mips  
+
+## minimips32  
+* https://github.com/study34668/MiniMIPS32  
+
+## picomips  
+* https://github.com/karthik-0398/picoMIPS  
+
+## edu.cornell.cs3410, mips logisim, cs3410.jar  
+* https://gitee.com/ForthewinQ/MIPS-CPU  
+
+## mipsfpga-plus, schoolMips  
+* (TODO) https://github.com/flsgavin/MIPSfpga-Boot    
+* https://github.com/zyy0721/Minisys-OS  
+* https://github.com/MIPSfpga/schoolMIPS/tree/05_pipeline_ahb/program/00_counter  
+* https://github.com/MIPSfpga/mipsfpga-plus/blob/master/programs/12_linux/patches/MIPSfpga_linux.patch  
+* https://github.com/zhelnio/ubuntu-hdl-tools-install  
+
+## mips, nscscc  
+* https://github.com/nscscc2019ucas/nscscc2019ucas/blob/master/display/soc_up/simu/soft/func/test.lds  
+* https://github.com/lxfei7310/nontrivial-mips/tree/master/loongson/soc_run_os/simu/soft/func  
+* https://github.com/leliyliu/augmips/blob/master/nscscc2019_release_v0.01/soc_run_os_v0.01/soc_up/simu/soft/func/start.S  
+* https://github.com/imhcyx/nscscc-pmon  
+* https://github.com/easter-mips/nscscc2020  
+* 针对参加龙芯杯的若干建议, 可参考书籍  
+* https://github.com/Silverster98/bit_nscscc_suggestion  
+* pmon
+* https://github.com/LoongSonOSTeamNKU/LoongsonCsprjManual/blob/master/chapter2.md  
+
+## (TODO) freertos  
+* https://github.com/MIPS/FreeRTOS/tree/mips  

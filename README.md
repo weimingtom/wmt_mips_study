@@ -67,6 +67,9 @@ LD =       $(CROSS_COMPILE)ld -EL
 * https://gitee.com/caogos/qemu_gdb_mips_hello  
 * qemu_gdb_mips_hello-master_v1_ubuntu140432_sde.tar.gz  
 
+## doc  
+* https://github.com/grantae/mips32r1_xum/tree/master/Documentation/MIPS  
+
 ## mips linux (vmlinux), for qemu -machine mipssim (and for -machine mips)      
 * https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.5.7.tar.gz  
 * https://www.linux-mips.org/wiki/Porting  

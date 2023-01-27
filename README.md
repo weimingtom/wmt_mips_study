@@ -381,6 +381,7 @@ $ ct-ng build
 * https://github.com/Silverster98/bit_nscscc_suggestion  
 * pmon
 * https://github.com/LoongSonOSTeamNKU/LoongsonCsprjManual/blob/master/chapter2.md  
+* https://github.com/sime-chill/Build_A_CPU_In_1_Month  
 
 ## (TODO) freertos  
 * https://github.com/MIPS/FreeRTOS/tree/mips  

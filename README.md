@@ -14,6 +14,7 @@ My MIPS study
 * golang or rust baremetal / bare, simulator (emulator), compiler, etc  
 
 ## TODO, gcc -S, asm volatile, for QtSpim    
+* (TODO) (IMP) use gcc-2.95.3 cross mips to gcc hello.c -S -mno-explicit-relocs  
 * https://blog.csdn.net/yt_42370304/article/details/84982864  
 * use "r" instead of "m" ???  
 ```
@@ -24,7 +25,7 @@ My MIPS study
 	:
 	:"m" ("The sum from 0 .. 100 is "));
 ```  
-* use la ???, instead $lo() and $hi()  
+* use la ???, instead %lo() and %hi(), see -mno-explicit-relocs (high version gcc not support ???)    
 ```
 	la $3, $LC0
 	add $a0, $zero, $3
@@ -36,7 +37,9 @@ My MIPS study
 * https://github.com/shihyu/Qemu.git
 * https://github.com/EduRenesto/indy/blob/ae9485e8b8731a223b3c153280d798808836b7d5/res/extra/90.simple.c
 * https://github.com/asherShores5/CompilerButBad/blob/d6a73cdd1c97bb9436cfd1bf78357f1510f9b689/MIPScode.h
-* https://github.com/search?l=C&q=syscall+4+print_str+mips&type=Code
+* https://github.com/search?l=C&q=syscall+4+print_str+mips&type=Code  
+* 安装mips编译器和模拟器/mips GCC编译环境搭建  
+* mips-sde-elf-gcc  example.c -S -mno-explicit-relocs  
 
 ## mips linux (vmlinux), for qemu -machine mipssim (and for -machine mips)      
 * https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.5.7.tar.gz  

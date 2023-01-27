@@ -242,8 +242,12 @@ root=/dev/ram console=ttyS0,115200 rdinit=/linuxrc
 ## imgtec CI20, JZ4780      
 * https://www.elinux.org/CI20_Hardware#Dedicated_UART_header  
 * https://www.elinux.org/MIPS_Creator_CI20  
-* https://github.com/nfd/ci20-hello-world  
+* (TODO) https://github.com/nfd/ci20-hello-world  
 * https://code.lardcave.net/2015/02/10/1/  
 * http://code.lardcave.net/2015/02/10/2/  
-
+```
+$ ct-ng mips-unknown-elf
+$ ct-ng menuconfig 
+$ ct-ng build
+```
 

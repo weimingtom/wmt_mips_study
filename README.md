@@ -44,6 +44,12 @@ jal	__main
 * 安装mips编译器和模拟器/mips GCC编译环境搭建  
 * mips-sde-elf-gcc  example.c -S -mno-explicit-relocs  
 
+## barebone hello, for qemu -machine mipssim    
+* http://web.archive.org/web/20160322170852/http://linux.junsun.net/porting-howto/  
+* barebone_v1_success_mipssim_ubuntu140432_sde.tar.gz  
+* https://gitee.com/caogos/qemu_gdb_mips_hello  
+* qemu_gdb_mips_hello-master_v1_ubuntu140432_sde.tar.gz  
+
 ## mips linux (vmlinux), for qemu -machine mipssim (and for -machine mips)      
 * https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.5.7.tar.gz  
 * https://www.linux-mips.org/wiki/Porting  

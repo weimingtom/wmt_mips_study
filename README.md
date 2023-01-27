@@ -243,9 +243,9 @@ root=/dev/ram console=ttyS0,115200 rdinit=/linuxrc
 * https://www.elinux.org/CI20_Hardware#Dedicated_UART_header  
 * https://www.elinux.org/MIPS_Creator_CI20  
 * (TODO) https://github.com/nfd/ci20-hello-world  
+* (TODO) https://github.com/avahidi/ci20-baremetal  
 * https://code.lardcave.net/2015/02/10/1/  
 * http://code.lardcave.net/2015/02/10/2/  
-
 
 ## crosstool-ng  
 * https://code.lardcave.net/2015/02/10/1/  

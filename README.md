@@ -279,3 +279,6 @@ $ ct-ng build
 * https://github.com/greyqwilson/MIPS32Processor_PreOwned  
 * https://electrobinary.blogspot.com/2021/02/alu-design-in-verilog-using-mips.html  
 * https://github.com/greyqwilson/CS3650_MIPS32ALU  
+
+## NaiveMIPS  
+* https://github.com/z4yx/NaiveMIPS-HDL  

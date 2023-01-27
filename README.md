@@ -142,7 +142,7 @@ My MIPS study
 ## rcore, Rust version of THU uCore OS Plus  
 * https://github.com/rcore-os/rCore  
 
-## virtualnoah  
+## virtualnoah, NP1100, JZ4740, qemu-NP_120730    
 * https://github.com/ljkgpxs/virtualnoah  
 * https://github.com/OpenNoah/virtualnoah  
 

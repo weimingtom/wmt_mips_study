@@ -74,6 +74,10 @@ My MIPS study
 * cd compile; make  
 * https://xinu.cs.mu.edu  
 * xinu-master_v4_xubuntu_mips_success.tar.gz  
+* (TODO) http://www.mscs.mu.edu/~brylow/xinu/  
+* (OLD) xinu_mips-latest.tgz, xinu_mips-latest.tar.bz2  
+* (NEW) xinu-master.zip  
+* wrt54gl, wrt160nl, (new) wl330ge, e2100l, arm rpi  
 
 ## os161, run on C simulator (sys161)    
 * http://www.os161.org  

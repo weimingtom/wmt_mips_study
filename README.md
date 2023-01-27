@@ -69,6 +69,7 @@ LD =       $(CROSS_COMPILE)ld -EL
 
 ## doc  
 * https://github.com/grantae/mips32r1_xum/tree/master/Documentation/MIPS  
+* https://pages.cs.wisc.edu/~larus/HP_AppA.pdf  
 
 ## mips linux (vmlinux), for qemu -machine mipssim (and for -machine mips)      
 * https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.5.7.tar.gz  

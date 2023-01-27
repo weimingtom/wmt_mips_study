@@ -13,6 +13,31 @@ My MIPS study
 * openwrt & buildroot   
 * golang or rust baremetal / bare, simulator (emulator), compiler, etc  
 
+## TODO, gcc -S, asm volatile, for QtSpim    
+* https://blog.csdn.net/yt_42370304/article/details/84982864  
+* use "r" instead of "m" ???  
+```
+    asm volatile(
+        "add $a0, $zero, %0;"
+        "addi $v0, $zero, 4;"
+        "syscall;"
+	:
+	:"m" ("The sum from 0 .. 100 is "));
+```  
+* use la ???, instead $lo() and $hi()  
+```
+	la $3, $LC0
+	add $a0, $zero, $3
+	addi $v0, $zero, 4
+	syscall;
+```
+* E:\android-ndk-r10e\toolchains\mips64el-linux-android-4.9\prebuilt\windows\bin\mips64el-linux-android-gcc -march=r3000 -g0 -s hello.c -S  
+* https://blog.csdn.net/weixin_40751723/article/details/120295374
+* https://github.com/shihyu/Qemu.git
+* https://github.com/EduRenesto/indy/blob/ae9485e8b8731a223b3c153280d798808836b7d5/res/extra/90.simple.c
+* https://github.com/asherShores5/CompilerButBad/blob/d6a73cdd1c97bb9436cfd1bf78357f1510f9b689/MIPScode.h
+* https://github.com/search?l=C&q=syscall+4+print_str+mips&type=Code
+
 ## mips linux (vmlinux), for qemu -machine mipssim (and for -machine mips)      
 * https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.5.7.tar.gz  
 * https://www.linux-mips.org/wiki/Porting  

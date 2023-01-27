@@ -59,6 +59,10 @@ jal	__main
 * see loongsonlab/loongson, for some prebuilt firmware, for example, initrd and vmlinux / vmlinuxz (without pmon)  
 * https://gitee.com/loongsonlab/linux-2.6.32  
 * loongson_mod_v2_self_build_linux.tar.gz, not through pmon    
+* NOTE: need add 115200 to vmlinux boot command line:  
+```
+root=/dev/ram console=ttyS0,115200 rdinit=/linuxrc 
+```
 
 ## pmon (a bootloader for loogson) for loogson (here not boot vmlinux), for qemu (need src mod）-machine ls1b      
 * https://mirrors.ustc.edu.cn/loongson/  

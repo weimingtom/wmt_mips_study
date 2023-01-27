@@ -59,7 +59,7 @@ jal	__main
 * see loongsonlab/loongson, for some prebuilt firmware, for example, initrd and vmlinux / vmlinuxz (without pmon)  
 * https://gitee.com/loongsonlab/linux-2.6.32  
 * loongson_mod_v2_self_build_linux.tar.gz, not through pmon    
-* NOTE: need add 115200 to vmlinux boot command line:  
+* NOTE: need to add 115200 to vmlinux boot command line:  
 ```
 root=/dev/ram console=ttyS0,115200 rdinit=/linuxrc 
 ```
@@ -97,6 +97,15 @@ root=/dev/ram console=ttyS0,115200 rdinit=/linuxrc
 * http://web.archive.org/web/20041010204139/http://www.tik.ee.ethz.ch/~topsy/index.html  
 * https://www.rose-hulman.edu/Class/se/csse490/cs490-csa/project/os/  
 * https://www.rose-hulman.edu/Class/se/csse490/cs490-csa/project/os/topsy.srec  
+* https://github.com/pahihu/Topsy/blob/master/User/link.scr  
+* need to mod User/link.scr, add 0x80040000 offset to every segment !!!
+```
+ .rodata . : AT( 0x80040000 + ADDR(.rodata) )
+ .data . : AT( 0x80040000 + ADDR(.data) )
+ .sbss . : AT( 0x80040000 + ADDR(.sbss) )
+ .bss . : AT( 0x80040000 + ADDR(.bss) )
+/* made 0x80040000 to every segment */
+···
 
 ## BUAA-OS, run on gxemul    
 * https://github.com/login256/BUAA-OS-2019/tree/lab6  

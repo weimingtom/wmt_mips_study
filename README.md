@@ -117,6 +117,7 @@ My MIPS study
 * https://homes.cs.washington.edu/~tom/nachos/  
 
 ## uclinux on psp 0.22  
+* psplinux, tested on real machine (for example PSP2000), but ppsspp and jpcsp not work  
 * uclinux_on_psp-0.22.zip  
 * https://sites.google.com/site/jacksonm88/  
 * https://sites.google.com/site/linuxonpspproject/  
@@ -136,8 +137,6 @@ My MIPS study
 
 ## rcore, Rust version of THU uCore OS Plus  
 * https://github.com/rcore-os/rCore  
-
-## skyeye  
 
 ## virtualnoah  
 * https://github.com/ljkgpxs/virtualnoah  

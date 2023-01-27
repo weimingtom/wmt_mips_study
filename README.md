@@ -132,6 +132,20 @@ jal	__main
 * https://sourceforge.net/p/spimsimulator/code/HEAD/tree/  
 * https://pages.cs.wisc.edu/~larus/spim.html  
 * https://ecs-network.serv.pacific.edu/past-courses/2012-fall-ecpe-170/tutorials/qtspim-tutorial  
+* QtSpim的数据段代码段可能是某种古老r3000机器的布局，但似乎也兼容mips32。我以前以为设置中的异常处理器是  
+打开一个程序，其实是用来替换内置的boot汇编文件，或者不使用boot代码：  
+* 可以加载多个.s汇编文件，会连接加载到同一个text段内，接在上一个的末尾。但不能批量添加，   
+需要手工逐个加。所以加载汇编文件的菜单操作其实相当于接在内置异常处理器的.text段代码后面。  
+* 汇编文件中.text的起始地址（例如.text 0x400000）参数只允许一定规则的偏移，例如只能40_0080  
+* 汇编文件中.text和.ktext必须在text段和ktext段范围内，例如40_0000至44_0000之间。这个范围似乎是固定的  
+* 设置中的异常处理器就是ktext段bootloader的代码（详细见spimsimulator源代码仓库中的exceptions.s，  
+可以在sf的仓库中看到qtspim的源码）  
+* 如果去掉异常处理器前面的勾，然后重启qtspim，或者菜单Reinitial Simulator，8000_0000的代码会清空。   
+也可以自己参照exceptions.s的代码替换自己的boot汇编  
+* 实际上设置中关闭内置的异常处理器汇编（去除勾），也可以正常运行汇编。可以通过菜单中Run Parameter   
+修改运行的起始地址，默认是40_0000。对运行的影响比较少，仍然可以syscall，只是运行到最后可能会报错，或者用单步运行  
+* 有时候菜单Reinitial Simulator也会出问题，导致加载汇编文件失败。最好是重启exe  
+* 我觉得设置中的bare machine按钮没什么用，似乎无法修改段的起始地址的规定范围，几乎总是用simple machine就可以了  
 
 ## litebsd, retrobsd    
 * https://github.com/sergev/LiteBSD  

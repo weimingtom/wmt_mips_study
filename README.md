@@ -240,6 +240,7 @@ root=/dev/ram console=ttyS0,115200 rdinit=/linuxrc
 ## chipkit uno32    
 
 ## imgtec CI20    
+* https://www.elinux.org/CI20_Hardware#Dedicated_UART_header  
 * https://www.elinux.org/MIPS_Creator_CI20  
 * https://github.com/nfd/ci20-hello-world  
 * https://code.lardcave.net/2015/02/10/1/  

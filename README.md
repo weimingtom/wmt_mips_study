@@ -104,8 +104,8 @@ root=/dev/ram console=ttyS0,115200 rdinit=/linuxrc
  .data . : AT( 0x80040000 + ADDR(.data) )
  .sbss . : AT( 0x80040000 + ADDR(.sbss) )
  .bss . : AT( 0x80040000 + ADDR(.bss) )
-/* made 0x80040000 to every segment */
-···
+/* make 0x80040000 offset to every segment */
+```
 
 ## BUAA-OS, run on gxemul    
 * https://github.com/login256/BUAA-OS-2019/tree/lab6  

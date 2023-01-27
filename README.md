@@ -234,3 +234,15 @@ root=/dev/ram console=ttyS0,115200 rdinit=/linuxrc
 * skyeye-testsuite-1.3.4_rc1\skyeye-testsuite\dyncom\hello-mips  
 * skyeye-testsuite-1.3.4_rc1\skyeye-testsuite\dyncom\hello_gs32eb1   
 
+## PIC32 Architecture and Programming  
+* https://johnloomis.org/microchip/pic32/resources.html  
+
+## chipkit uno32    
+
+## imgtec CI20    
+* https://www.elinux.org/MIPS_Creator_CI20  
+* https://github.com/nfd/ci20-hello-world  
+* https://code.lardcave.net/2015/02/10/1/  
+* http://code.lardcave.net/2015/02/10/2/  
+
+

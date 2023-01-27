@@ -136,3 +136,16 @@ My MIPS study
 
 ## rcore, Rust version of THU uCore OS Plus  
 * https://github.com/rcore-os/rCore  
+
+## skyeye  
+
+## virtualnoah  
+* https://github.com/ljkgpxs/virtualnoah  
+* https://github.com/OpenNoah/virtualnoah  
+
+## skyeye, for mips au1100 and gs32eb1  
+* skyeye-1.3.5_rc1.tar.bz2  
+* skyeye-testsuite-1.3.4_rc1.tar.gz  
+* skyeye-testsuite-1.3.4_rc1\skyeye-testsuite\dyncom\hello-mips  
+* skyeye-testsuite-1.3.4_rc1\skyeye-testsuite\dyncom\hello_gs32eb1   
+

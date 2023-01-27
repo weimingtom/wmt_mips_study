@@ -49,16 +49,14 @@ jal	__main
 * http://web.archive.org/web/20160322170852/http://linux.junsun.net/porting-howto/  
 * barebone_v1_success_mipssim_ubuntu140432_sde.tar.gz  
 ···
-#LOADADDR = 0xa0040000
+// LOADADDR = 0xa0040000
 LOADADDR  = 0x81000000
 RAMSIZE = 0x00100000		# 1MB
-# or 0x1000 # 4k
 
 CC =       $(CROSS_COMPILE)gcc -EL -fno-builtin
 LD =       $(CROSS_COMPILE)ld -EL
 ···
 ···
-/*#define         BASE                    0xb0000080*/
 #define         BASE                    0xbfd003f8
 //mips:    0xb4000000;
 //mipssim: 0xbfd00000;

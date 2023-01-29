@@ -414,4 +414,6 @@ $ ct-ng build
 * bootloader: https://github.com/s0duku/ics2020-s0duku/blob/main/abstract-machine/am/src/nemu/isa/mips32/boot/start.S  
 * bare metal app: https://github.com/NJU-ProjectN/am-kernels/tree/master/kernels/litenes  
 * os layer, but seem for bare metal: https://github.com/NJU-ProjectN/abstract-machine  
+* ics2020-s0duku-main_v3.tar.gz, build method see apt_install.txt  
+
 

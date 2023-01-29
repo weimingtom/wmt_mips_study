@@ -197,6 +197,7 @@ $ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
  .bss . : AT( 0x80040000 + ADDR(.bss) )
 /* make 0x80040000 offset to every segment */
 ```
+* (TODO) https://github.com/drh/lcc  
 
 ## BUAA-OS, run on gxemul    
 * https://github.com/login256/BUAA-OS-2019/tree/lab6  

@@ -401,8 +401,9 @@ $ ct-ng build
 * https://github.com/CreatorDev/Ci40_helloworld  
 * https://github.com/CreatorDev/ci-old  
 
-## (TODO) cemu, seem can load vmlinux    
+## (TODO) cemu, seem can load vmlinux (no mips kernel config doc ???) and ucore    
 * https://github.com/cyyself/cemu  
+* https://github.com/cyyself/cemu/blob/master/docs/riscv64-linux.md  
 
 ## (TODO) nemu  
 * https://github.com/NJU-ProjectN/nemu  

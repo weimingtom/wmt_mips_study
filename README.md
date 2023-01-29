@@ -216,7 +216,7 @@ $ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
 * (NEW) xinu-master.zip  
 * wrt54gl, wrt160nl, (new) wl330ge, e2100l, arm rpi  
 
-## os161, run on C simulator (sys161)    
+## os161, running on C simulator (sys161, for mipseb)    
 * http://www.os161.org  
 * https://student.cs.uwaterloo.ca/~cs350/common/Install161NonCS.html  
 * https://student.cs.uwaterloo.ca/~cs350/common/OS161main-S07.html  

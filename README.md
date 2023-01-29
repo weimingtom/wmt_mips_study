@@ -433,7 +433,8 @@ $ ct-ng build
 ## MangoMIPS32  
 * https://github.com/RickyTino/MangoMIPS32  
 
-## openmips  
+## OpenMIPS, 自己动手写CPU    
+* https://github.com/zach0zhang/Single_instruction_cycle_OpenMIPS  
 
 ## build-a-cpu, logisim  
 * https://github.com/ztreble/build-a-cpu  

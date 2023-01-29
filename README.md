@@ -396,7 +396,7 @@ $ ct-ng build
 
 ## (TODO) freertos  
 * https://github.com/MIPS/FreeRTOS/tree/mips  
-* freertos_v3_failed_can_boot.tar.gz  
+* freertos_v5_success.tar.gz  
 
 ## Creator Ci20, linux, android, openwrt  
 * https://elinux.org/CI20_Dev_Zone#Source_Code  

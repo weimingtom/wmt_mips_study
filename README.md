@@ -405,5 +405,13 @@ $ ct-ng build
 * https://github.com/cyyself/cemu  
 * https://github.com/cyyself/cemu/blob/master/docs/riscv64-linux.md  
 
-## (TODO) nemu  
+## (TODO) NJU-ProjectN, nemu for mips, etc  
+* https://github.com/NJU-ProjectN  
 * https://github.com/NJU-ProjectN/nemu  
+* https://github.com/s0duku/ics2020-s0duku  
+* libc: https://github.com/s0duku/ics2020-s0duku/tree/main/abstract-machine/klib/src  
+* linker script: https://github.com/s0duku/ics2020-s0duku/blob/main/abstract-machine/am/src/nemu/isa/mips32/boot/loader.ld  
+* bootloader: https://github.com/s0duku/ics2020-s0duku/blob/main/abstract-machine/am/src/nemu/isa/mips32/boot/start.S  
+* bare metal app: https://github.com/NJU-ProjectN/am-kernels/tree/master/kernels/litenes  
+* os layer, but seem for bare metal: https://github.com/NJU-ProjectN/abstract-machine  
+

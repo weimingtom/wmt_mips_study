@@ -79,12 +79,14 @@ LD =       $(CROSS_COMPILE)ld -EL
 * https://www.linux-mips.org/wiki/MIPSsim  
 * https://www.linux-mips.org/wiki/Emulators  
 * linux-2.x maybe ok  
+* https://github.com/kholia/mips-hacking  
 
 ## loogson linux (vmlinux), ls1b defconfig, linux-2.6.3, 4.19, 5.3, for qemu (need src mod) -machine ls1b    
 * https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.2.tar.gz  
 * https://gitee.com/loongsonlab/qemu  
 * https://gitee.com/loongsonlab/loongson  
 * see loongsonlab/loongson, for some prebuilt firmware, for example, initrd and vmlinux / vmlinuxz (without pmon)  
+* https://github.com/tinyclub/qemu-mipsel-ls232  
 * https://gitee.com/loongsonlab/linux-2.6.32  
 * loongson_mod_v2_self_build_linux.tar.gz, not through pmon    
 * NOTE: need to add 115200 to vmlinux boot command line:  
@@ -169,6 +171,7 @@ $ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
 * https://github.com/chyh1990/ucore-thumips  
 * https://github.com/chyh1990/qemu-thumips  
 * ucore_v3_success_from_Lan1keA_BIT-ucore_mips-master.tar.gz  
+* https://github.com/Lan1keA/ucore-mips-with-comment  
 
 ## rt-thread 20201229, for qemu -machine mipssim  
 * rt-thread_back_to_202012291854_min.zip  
@@ -311,6 +314,7 @@ $ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
 * (TODO) https://github.com/avahidi/ci20-baremetal  
 * https://code.lardcave.net/2015/02/10/1/  
 * http://code.lardcave.net/2015/02/10/2/  
+* https://github.com/lucvoo/ll-mips  
 * 在linux和buildroot里面出现的CI20开发板（都需要较新版，linux 5），  
 * 其实就是君正的JZ4780（我以前说的那个用于电子辞典的是JZ4740）。  
 * 另外qemu-system-mipsel里面不支持ci20，但我看了别人的模拟做法，  
@@ -368,8 +372,11 @@ $ ct-ng build
 * mips模型机在Sword板子部署在FPGA  
 * https://www.jianshu.com/p/86e0889755ca  
 * https://github.com/FlyGinger/MIPSfpga-on-SWORD  
+* https://github.com/flsgavin/MIPSfpga-Boot  
 * http://www.sword.org.cn/courses/digital_logic  
 * https://gitee.com/SWORDfpga/ComputerArchitecture/tree/master  
+* https://github.com/MIPSfpga/schoolMIPS  
+
 
 ## mips, nscscc  
 * https://github.com/nscscc2019ucas/nscscc2019ucas/blob/master/display/soc_up/simu/soft/func/test.lds  
@@ -382,6 +389,9 @@ $ ct-ng build
 * pmon
 * https://github.com/LoongSonOSTeamNKU/LoongsonCsprjManual/blob/master/chapter2.md  
 * https://github.com/sime-chill/Build_A_CPU_In_1_Month  
+* https://github.com/Gon-laze/GadgetMIPS-CPU-report  
+* https://github.com/leliyliu/augmips  
+* https://github.com/trialley/loongson_MIPS_demo  
 
 ## (TODO) freertos  
 * https://github.com/MIPS/FreeRTOS/tree/mips  
@@ -395,6 +405,7 @@ $ ct-ng build
 * https://elinux.org/CI20_Distros  
 * https://github.com/Pteridium/OpenWRT-experimental/tree/ci20-alpha  
 * https://github.com/Pteridium/OpenWRT-CI20  
+* https://github.com/avahidi/ci20-baremetal  
 
 ## Creator Ci40, openwrt  
 * https://github.com/CreatorDev/Ci40-platform-feed  
@@ -416,4 +427,22 @@ $ ct-ng build
 * os layer, but seem for bare metal: https://github.com/NJU-ProjectN/abstract-machine  
 * ics2020-s0duku-main_v3.tar.gz, build method see apt_install.txt (only test in x86)    
 
+## f32c  
+* https://github.com/f32c/f32c  
 
+## MangoMIPS32  
+* https://github.com/RickyTino/MangoMIPS32  
+
+## openmips  
+
+## build-a-cpu, logisim  
+* https://github.com/ztreble/build-a-cpu  
+
+## MiniMIPS32  
+* https://github.com/study34668/MiniMIPS32  
+
+## nontrivial-mips  
+* https://github.com/lxfei7310/nontrivial-mips  
+
+## MIPS246  
+* https://github.com/ceie246/MIPS246_Software  

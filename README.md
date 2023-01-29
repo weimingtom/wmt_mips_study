@@ -400,3 +400,9 @@ $ ct-ng build
 * https://github.com/CreatorDev/Ci40-platform-feed  
 * https://github.com/CreatorDev/Ci40_helloworld  
 * https://github.com/CreatorDev/ci-old  
+
+## (TODO) cemu, seem can load vmlinux    
+* https://github.com/cyyself/cemu  
+
+## (TODO) nemu  
+* https://github.com/NJU-ProjectN/nemu  

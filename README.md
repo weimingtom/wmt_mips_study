@@ -445,5 +445,5 @@ $ ct-ng build
 ## nontrivial-mips  
 * https://github.com/lxfei7310/nontrivial-mips  
 
-## MIPS246  
+## MIPS246 Compiler & Assembler    
 * https://github.com/ceie246/MIPS246_Software  

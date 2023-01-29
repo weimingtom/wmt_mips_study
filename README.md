@@ -451,3 +451,7 @@ $ ct-ng build
 
 ## cii, C Interfaces and Implementations, C语言接口与实现    
 * https://github.com/drh/cii/blob/master/src/swtch.s  
+
+## RIOT, before 2022.09  
+* https://github.com/RIOT-OS/RIOT/tree/2022.07-branch/boards/pic32-wifire/include  
+* https://gitee.com/bydvp/RIOT/tree/2022.07-branch/boards/pic32-wifire/include  

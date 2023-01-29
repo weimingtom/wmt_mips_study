@@ -447,3 +447,6 @@ $ ct-ng build
 
 ## MIPS246 Compiler & Assembler    
 * https://github.com/ceie246/MIPS246_Software  
+
+## cii, C Interfaces and Implementations, C语言接口与实现    
+* https://github.com/drh/cii/blob/master/src/swtch.s  

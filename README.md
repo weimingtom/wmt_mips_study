@@ -458,3 +458,6 @@ $ ct-ng build
 
 ## zephyr, qemu machine malta  
 * https://docs.zephyrproject.org/latest/boards/mips/qemu_malta/doc/index.html  
+
+## nuttx, for pic32m  
+* https://nuttx.apache.org/docs/latest/introduction/detailed_support.html#microchip-pic32mx2xx  

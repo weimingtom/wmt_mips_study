@@ -8,11 +8,12 @@ My MIPS study
 * (IMP) gxemul for godson 1 and 2 and mips  
 * (IMP) skyeye and skyeye testcases for godson and mips    
 * naken_asm  
-* gcc -S for qtspim  
+* gcc -S for qtspim ((IMP) can see Simulizer-0.43-beta/gcc-mips.sh how to process gcc output)    
 * see https://github.com/weimingtom/wmt_ai_study/blob/master/fpga_cpld_001.md  
 * openwrt & buildroot   
 * golang or rust baremetal / bare, simulator (emulator), compiler, etc  
 * (IMP) ucosii  
+* (IMP) Simulizer-0.43-beta  
 
 ## TODO, gcc -S, asm volatile, for QtSpim    
 * (TODO) (IMP) use gcc-2.95.3 cross mips to gcc hello.c -S -mno-explicit-relocs, need comment jal __ main, why ???
@@ -471,3 +472,6 @@ $ ct-ng build
 * https://github.com/Tengs-Penkwe/OpenMIPS/tree/master/ucosii_sourcecode  
 * https://github.com/yufeiran/OpenMIPS/tree/master/OpenMIPS/ucosii_sourcecode  
 
+## Simulizer, for r3000  
+* https://github.com/Simulizer/Simulizer  
+* Simulizer-0.43-beta.zip, need jdk8  

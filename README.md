@@ -437,6 +437,8 @@ $ ct-ng build
 
 ## OpenMIPS, 自己动手写CPU    
 * https://github.com/zach0zhang/Single_instruction_cycle_OpenMIPS  
+* https://github.com/Tengs-Penkwe/OpenMIPS  
+* https://github.com/yufeiran/OpenMIPS    
 
 ## build-a-cpu, logisim  
 * https://github.com/ztreble/build-a-cpu  
@@ -467,3 +469,5 @@ $ ct-ng build
 * mips_ucos_1.10.rar  
 * ucos2.8-run-mips.rar  
 * https://github.com/Tengs-Penkwe/OpenMIPS/tree/master/ucosii_sourcecode  
+* https://github.com/yufeiran/OpenMIPS/tree/master/OpenMIPS/ucosii_sourcecode  
+

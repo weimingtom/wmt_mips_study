@@ -12,6 +12,7 @@ My MIPS study
 * see https://github.com/weimingtom/wmt_ai_study/blob/master/fpga_cpld_001.md  
 * openwrt & buildroot   
 * golang or rust baremetal / bare, simulator (emulator), compiler, etc  
+* (IMP) ucosii  
 
 ## TODO, gcc -S, asm volatile, for QtSpim    
 * (TODO) (IMP) use gcc-2.95.3 cross mips to gcc hello.c -S -mno-explicit-relocs, need comment jal __ main, why ???
@@ -461,3 +462,8 @@ $ ct-ng build
 
 ## nuttx, for pic32m  
 * https://nuttx.apache.org/docs/latest/introduction/detailed_support.html#microchip-pic32mx2xx  
+
+## (TODO) ucosii    
+* mips_ucos_1.10.rar  
+* ucos2.8-run-mips.rar  
+* https://github.com/Tengs-Penkwe/OpenMIPS/tree/master/ucosii_sourcecode  

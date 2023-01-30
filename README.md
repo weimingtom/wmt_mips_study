@@ -455,3 +455,6 @@ $ ct-ng build
 ## RIOT, before 2022.09  
 * https://github.com/RIOT-OS/RIOT/tree/2022.07-branch/boards/pic32-wifire/include  
 * https://gitee.com/bydvp/RIOT/tree/2022.07-branch/boards/pic32-wifire/include  
+
+## zephyr, qemu machine malta  
+* https://docs.zephyrproject.org/latest/boards/mips/qemu_malta/doc/index.html  

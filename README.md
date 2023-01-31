@@ -310,6 +310,9 @@ $ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
 
 ## chipkit uno32    
 
+## pinguino32, PIC32  
+* https://code.google.com/archive/p/pinguino32/downloads  
+
 ## imgtec CI20, JZ4780      
 * https://www.elinux.org/CI20_Hardware#Dedicated_UART_header  
 * https://www.elinux.org/MIPS_Creator_CI20  

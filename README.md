@@ -486,6 +486,8 @@ $ ct-ng build
 
 ## gcc  
 * https://github.com/ChrisRx/mipsel-ecoff-toolchain  
+* https://blog.csdn.net/ailuo58882/article/details/102270410  
+mips-elf-gcc交叉编译环境的建立 (转载)  
 
 ## clang, llvm-gcc  
 * https://github.com/llvm/llvm-project/blob/main/lld/test/ELF/mips-32.s  

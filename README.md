@@ -483,3 +483,9 @@ $ ct-ng build
 
 ## tcc, tinycc, tinycc-mips  
 * https://github.com/lhzhang/tinycc-mips  
+
+## gcc  
+* https://github.com/ChrisRx/mipsel-ecoff-toolchain  
+
+## clang, llvm-gcc  
+* https://github.com/llvm/llvm-project/blob/main/lld/test/ELF/mips-32.s  

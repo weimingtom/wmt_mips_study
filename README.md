@@ -491,7 +491,7 @@ mips-elf-gcc交叉编译环境的建立 (转载)
 * https://www.mips.com/linux-toolchain/  
 * (see mips_linux_toolchain_src-1.1.tar.bz2) https://ir.nctu.edu.tw/bitstream/11536/44056/1/950301.pdf  
 * https://github.com/Krush206/uclinux-mipsel-toolchain  
-* (4.1.2) http://d2gosfejro2q5l.cloudfront.net/Mips_linux_toolchain_bin-1.1.tar.bz2  
+* (4.1.2) https://www.uclibc.org/downloads/binaries/0.9.30.1/  
 
 ## clang, llvm-gcc  
 * https://github.com/llvm/llvm-project/blob/main/lld/test/ELF/mips-32.s  

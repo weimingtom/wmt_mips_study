@@ -155,6 +155,7 @@ kernel hacking--->Built-in kernel command line
 	default string: root=/dev/ram console=ttyS0,115200 rdinit=/linuxrc
 $ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
 ```
+* 嵌入式Linux系统设计及应用-基于国产龙芯SOC3.1.0  
 
 ## pmon (a bootloader for loogson) for loogson (here not boot vmlinux), for qemu (need src mod）-machine ls1b      
 * https://mirrors.ustc.edu.cn/loongson/  
@@ -382,6 +383,7 @@ $ ct-ng build
 * http://www.sword.org.cn/courses/digital_logic  
 * https://gitee.com/SWORDfpga/ComputerArchitecture/tree/master  
 * https://github.com/MIPSfpga/schoolMIPS  
+* 数字设计和计算机体系结构 原书第2版, P.433  
 
 
 ## mips, nscscc  

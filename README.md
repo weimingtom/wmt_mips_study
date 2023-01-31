@@ -491,12 +491,11 @@ $ ct-ng build
 * https://github.com/ChrisRx/mipsel-ecoff-toolchain  
 * https://blog.csdn.net/ailuo58882/article/details/102270410  
 mips-elf-gcc交叉编译环境的建立 (转载)  
-* https://www.mips.com/linux-toolchain/  
+* (gcc-4.4.6) https://www.mips.com/linux-toolchain/  
 * (see mips_linux_toolchain_src-1.1.tar.bz2) https://ir.nctu.edu.tw/bitstream/11536/44056/1/950301.pdf  
-* https://github.com/Krush206/uclinux-mipsel-toolchain  
-* (gcc-4.1.2) https://www.uclibc.org/downloads/binaries/0.9.30.1/cross-compiler-mipsel.tar.bz2  
-* (gcc-4.2.1) Aboriginal Linux  
-http://landley.net/aboriginal/downloads/binaries/cross-compiler-mipsel.tar.gz  
+* uclinux: https://github.com/Krush206/uclinux-mipsel-toolchain  
+* (gcc-4.1.2) uclibc : https://www.uclibc.org/downloads/binaries/0.9.30.1/cross-compiler-mipsel.tar.bz2  
+* (gcc-4.2.1) Aboriginal Linux : http://landley.net/aboriginal/downloads/binaries/cross-compiler-mipsel.tar.gz  
 
 ## clang, llvm-gcc  
 * https://github.com/llvm/llvm-project/blob/main/lld/test/ELF/mips-32.s  

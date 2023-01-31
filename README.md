@@ -491,14 +491,15 @@ $ ct-ng build
 * https://github.com/ChrisRx/mipsel-ecoff-toolchain  
 * https://blog.csdn.net/ailuo58882/article/details/102270410  
 mips-elf-gcc交叉编译环境的建立 (转载)  
-* (gcc-4.4.6) https://www.mips.com/linux-toolchain/  
+* (gcc-4.4.6, not found) https://www.mips.com/linux-toolchain/  
 * (see mips_linux_toolchain_src-1.1.tar.bz2) https://ir.nctu.edu.tw/bitstream/11536/44056/1/950301.pdf  
-* uclinux: https://github.com/Krush206/uclinux-mipsel-toolchain  
+* (gcc-4.2.1) uclinux: https://github.com/Krush206/uclinux-mipsel-toolchain  
 * (gcc-4.1.2) uclibc : https://www.uclibc.org/downloads/binaries/0.9.30.1/cross-compiler-mipsel.tar.bz2  
 * (gcc-4.2.1) Aboriginal Linux : http://landley.net/aboriginal/downloads/binaries/cross-compiler-mipsel.tar.gz  
 * (gcc-4.8.2) https://www.linux-mips.org/wiki/Toolchains  
 * (gcc-6.3.0) https://stackoverflow.com/questions/42022659/how-to-get-a-smaller-toolchain-from-scratch  
 * (gcc-4.3.2) rtems : https://ftp.rtems.org/pub/rtems/archive/windows/4.9/build-5/rtems4.9-tools-mips-5.exe  
+* rtems gcc cygwin version (not found) see https://blog.csdn.net/coolbacon/article/details/6089478  
 
 ## clang, llvm-gcc  
 * https://github.com/llvm/llvm-project/blob/main/lld/test/ELF/mips-32.s  

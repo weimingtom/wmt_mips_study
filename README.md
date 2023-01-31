@@ -498,6 +498,7 @@ mips-elf-gcc交叉编译环境的建立 (转载)
 * (gcc-4.2.1) Aboriginal Linux : http://landley.net/aboriginal/downloads/binaries/cross-compiler-mipsel.tar.gz  
 * (gcc-4.8.2) https://www.linux-mips.org/wiki/Toolchains  
 * (gcc-6.3.0) https://stackoverflow.com/questions/42022659/how-to-get-a-smaller-toolchain-from-scratch  
+* (gcc-4.3.2) rtems : https://ftp.rtems.org/pub/rtems/archive/windows/4.9/build-5/rtems4.9-tools-mips-5.exe  
 
 ## clang, llvm-gcc  
 * https://github.com/llvm/llvm-project/blob/main/lld/test/ELF/mips-32.s  

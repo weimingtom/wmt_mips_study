@@ -507,3 +507,7 @@ mips-elf-gcc交叉编译环境的建立 (转载)
 
 ## lcc  
 * https://github.com/drh/lcc  
+
+## qemu  
+* https://repo.or.cz/qemu/qemu-loongson.git  
+* https://repo.or.cz/qemu/qemu-JZ.git  

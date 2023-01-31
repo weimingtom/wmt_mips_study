@@ -500,6 +500,7 @@ mips-elf-gcc交叉编译环境的建立 (转载)
 * (gcc-6.3.0) https://stackoverflow.com/questions/42022659/how-to-get-a-smaller-toolchain-from-scratch  
 * (gcc-4.3.2) rtems : https://ftp.rtems.org/pub/rtems/archive/windows/4.9/build-5/rtems4.9-tools-mips-5.exe  
 * rtems gcc cygwin version (not found) see https://blog.csdn.net/coolbacon/article/details/6089478  
+* (gcc-4.2 and above, Sourcery G++ Lite 4.2-85) https://sourcery.sw.siemens.com/GNUToolchain/subscription3130?lite=MIPS  
 
 ## clang, llvm-gcc  
 * https://github.com/llvm/llvm-project/blob/main/lld/test/ELF/mips-32.s  

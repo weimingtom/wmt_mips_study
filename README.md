@@ -157,6 +157,7 @@ kernel hacking--->Built-in kernel command line
 $ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
 ```
 * 嵌入式Linux系统设计及应用-基于国产龙芯SOC3.1.0  
+* https://mirrors.ustc.edu.cn/loongson/loongson1c_bsp/  
 
 ## pmon (a bootloader for loogson) for loogson (here not boot vmlinux), for qemu (need src mod）-machine ls1b      
 * https://mirrors.ustc.edu.cn/loongson/  

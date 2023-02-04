@@ -181,6 +181,8 @@ $ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
 * https://github.com/chyh1990/qemu-thumips  
 * ucore_v3_success_from_Lan1keA_BIT-ucore_mips-master.tar.gz  
 * https://github.com/Lan1keA/ucore-mips-with-comment  
+* 基于龙芯FPGA开发板的计算机系统综合实验  
+https://github.com/oscourse-tsinghua/LoongsonCsprj2017-manual  
 
 ## rt-thread 20201229, for qemu -machine mipssim  
 * rt-thread_back_to_202012291854_min.zip  

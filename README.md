@@ -245,8 +245,10 @@ https://github.com/chyyuu/os_tutorial_lab
 * 《操作系统设计：xinu方法》实验环境的搭建  
 * https://blog.csdn.net/cang_xing/article/details/79166001  
 * https://uclibc.org/downloads/binaries/0.9.30.1/cross-compiler-mips.tar.bz2  
-* http://xinu.cs.purdue.edu/files/Xinu-code-MIPS.tar.gz  
+* (dead) http://xinu.cs.purdue.edu/files/Xinu-code-MIPS.tar.gz  
 * https://github.com/robert-w-gries/rxinu  
+* https://xinu.cs.purdue.edu  
+* https://www.cs.purdue.edu/homes/comer/downloads/Xinu_Book_And_Code/other/Older_Versions/Xinu-code-MIPS.tar.gz  
 
 ## os161, running on C simulator (sys161, for mipseb)    
 * http://www.os161.org  

@@ -539,3 +539,6 @@ mips-elf-gcc交叉编译环境的建立 (转载)
 * https://repo.or.cz/qemu/qemu-loongson.git  
 * https://repo.or.cz/qemu/qemu-JZ.git  
 * https://people.debian.org/~aurel32/qemu/mipsel/  
+
+## mips_os  
+* https://github.com/LinHeLurking/mips_os  

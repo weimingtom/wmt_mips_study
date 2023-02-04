@@ -253,6 +253,8 @@ https://github.com/chyyuu/os_tutorial_lab
 * https://github.com/robinkrens/xinu-for-stm32  
 * https://github.com/jarrocha/XinuBBB   
 * https://github.com/9MMMinor/avrXinu-V7  
+* http://se.fi.uncoma.edu.ar/xinu-avr/  
+* https://github.com/zrafa/xinu-avr  
 
 ## os161, running on C simulator (sys161, for mipseb)    
 * http://www.os161.org  

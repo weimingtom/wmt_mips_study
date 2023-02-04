@@ -230,6 +230,7 @@ https://github.com/chyyuu/os_tutorial_lab
 * https://github.com/login256/BUAA-OS-2019/tree/master  
 * https://github.com/fmars/MIPS_OS_Kernel  
 * login256_BUAA-OS-2019-lab6_run_success.tar.gz  
+* https://github.com/rfhits/Operating-System-BUAA-2021  
 
 ## xinu, for qemu mipsel -machine mips (mipssim not work)  
 * https://github.com/xinu-os/xinu  
@@ -240,6 +241,12 @@ https://github.com/chyyuu/os_tutorial_lab
 * (OLD) xinu_mips-latest.tgz, xinu_mips-latest.tar.bz2  
 * (NEW) xinu-master.zip  
 * wrt54gl, wrt160nl, (new) wl330ge, e2100l, arm rpi  
+* 操作系统设计:Xinu方法  
+* 《操作系统设计：xinu方法》实验环境的搭建  
+* https://blog.csdn.net/cang_xing/article/details/79166001  
+* https://uclibc.org/downloads/binaries/0.9.30.1/cross-compiler-mips.tar.bz2  
+* http://xinu.cs.purdue.edu/files/Xinu-code-MIPS.tar.gz  
+* https://github.com/robert-w-gries/rxinu  
 
 ## os161, running on C simulator (sys161, for mipseb)    
 * http://www.os161.org  

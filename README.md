@@ -542,3 +542,6 @@ mips-elf-gcc交叉编译环境的建立 (转载)
 
 ## mips_os  
 * https://github.com/LinHeLurking/mips_os  
+
+## 从一道mips题目学习搭建mips环境及ROP  
+* https://cloud.tencent.com/developer/article/1745278  

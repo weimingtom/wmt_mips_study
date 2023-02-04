@@ -183,6 +183,14 @@ $ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
 * https://github.com/Lan1keA/ucore-mips-with-comment  
 * 基于龙芯FPGA开发板的计算机系统综合实验  
 https://github.com/oscourse-tsinghua/LoongsonCsprj2017-manual  
+* uCore OS实验指导书和源码网址 (2020)  
+https://github.com/chyyuu/ucore_os_docs  
+* ucore实验指导书  
+https://chyyuu.gitbooks.io/ucore_os_docs/content/  
+ucore labs 1-8 源码和参考答案 
+https://github.com/chyyuu/ucore_lab  
+os tutorial lab  
+https://github.com/chyyuu/os_tutorial_lab  
 
 ## rt-thread 20201229, for qemu -machine mipssim  
 * rt-thread_back_to_202012291854_min.zip  

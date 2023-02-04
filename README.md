@@ -165,6 +165,9 @@ $ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
 * https://gitee.com/brep/loongson1-pmon  
 * https://gitee.com/loongsonlab/qemu  
 * work_pmon.tar.gz  
+* https://blog.csdn.net/u012101272/article/details/123578005  
+* www.douban.com/note/184920595/  
+* https://gitee.com/CaesarKarry/embedded_godson_1c300b  
 
 ## xv6-mips, for qemu -machine mips (and -machine mipssim is ok, need modification)    
 * https://github.com/varmil/xv6-mips  

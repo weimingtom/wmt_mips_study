@@ -45,6 +45,7 @@ jal	__main
 * https://github.com/search?l=C&q=syscall+4+print_str+mips&type=Code  
 * 安装mips编译器和模拟器/mips GCC编译环境搭建  
 * mips-sde-elf-gcc  example.c -S -mno-explicit-relocs  
+* https://blog.csdn.net/wfxzf/article/details/88974144  
 
 ## barebone hello, for qemu -machine mipssim    
 * Jun Sun's Linux MIPS Porting Guide  

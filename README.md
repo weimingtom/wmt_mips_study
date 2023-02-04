@@ -159,6 +159,7 @@ $ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
 * 嵌入式Linux系统设计及应用-基于国产龙芯SOC3.1.0  
 * https://mirrors.ustc.edu.cn/loongson/loongson1b/  
 * https://mirrors.ustc.edu.cn/loongson/loongson1c_bsp/  
+* https://github.com/z4yx/ucore-thumips/tree/for-ls232-soc_up  
 
 ## pmon (a bootloader for loogson) for loogson (here not boot vmlinux), for qemu (need src mod）-machine ls1b      
 * https://mirrors.ustc.edu.cn/loongson/  
@@ -193,6 +194,7 @@ ucore labs 1-8 源码和参考答案
 https://github.com/chyyuu/ucore_lab  
 os tutorial lab  
 https://github.com/chyyuu/os_tutorial_lab  
+* https://github.com/z4yx/ucore-thumips/tree/for-ls232-soc_up  
 
 ## rt-thread 20201229, for qemu -machine mipssim  
 * rt-thread_back_to_202012291854_min.zip  
@@ -373,6 +375,7 @@ $ ct-ng build
 ## NaiveMIPS  
 * https://github.com/z4yx/NaiveMIPS-HDL  
 * https://github.com/z4yx/ucore-thumips  
+* https://github.com/z4yx/qemu-naivemips  
 
 ## step_into_mips  
 * https://github.com/lvyufeng/step_into_mips  

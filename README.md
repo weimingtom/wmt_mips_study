@@ -336,25 +336,6 @@ https://github.com/chyyuu/os_tutorial_lab
 ## pinguino32, PIC32  
 * https://code.google.com/archive/p/pinguino32/downloads  
 
-## imgtec CI20, JZ4780      
-* https://www.elinux.org/CI20_Hardware#Dedicated_UART_header  
-* https://www.elinux.org/MIPS_Creator_CI20  
-* (TODO) https://github.com/nfd/ci20-hello-world  
-* (TODO) https://github.com/avahidi/ci20-baremetal  
-* https://code.lardcave.net/2015/02/10/1/  
-* http://code.lardcave.net/2015/02/10/2/  
-* https://github.com/lucvoo/ll-mips  
-* 在linux和buildroot里面出现的CI20开发板（都需要较新版，linux 5），  
-* 其实就是君正的JZ4780（我以前说的那个用于电子辞典的是JZ4740）。  
-* 另外qemu-system-mipsel里面不支持ci20，但我看了别人的模拟做法，  
-* 似乎-machine mips就是可以模拟ci20的  
-* (TODO) qemu-system-mipsel -machine mips is ci20 ???, see avahidi/ci20-baremetal  
-* (TODO) u-boot command loads, to load srec, see avahidi/ci20-baremetal    
-* 我搞明白为什么很多OS项目都喜欢输出srec格式文件（S-Record），其实是个梗，  
-* 大概只有用过u-boot的人会明白。因为u-boot专门有个命令叫loads，  
-* 这里的s就是srec的意思，可以通过串口粘贴srec文件内容（其实是一堆数字字母文本），  
-* 就可以把固件烧录进去（srec内带有地址信息）  
-
 ## crosstool-ng  
 * https://code.lardcave.net/2015/02/10/1/  
 ```
@@ -428,7 +409,24 @@ $ ct-ng build
 * https://github.com/MIPS/FreeRTOS/tree/mips  
 * freertos_v5_success.tar.gz  
 
-## Creator Ci20, linux, android, openwrt  
+## imgtec CI20, JZ4780，Creator Ci20, linux, android, openwrt  
+* https://www.elinux.org/CI20_Hardware#Dedicated_UART_header  
+* https://www.elinux.org/MIPS_Creator_CI20  
+* (TODO) https://github.com/nfd/ci20-hello-world  
+* (TODO) https://github.com/avahidi/ci20-baremetal  
+* https://code.lardcave.net/2015/02/10/1/  
+* http://code.lardcave.net/2015/02/10/2/  
+* https://github.com/lucvoo/ll-mips  
+* 在linux和buildroot里面出现的CI20开发板（都需要较新版，linux 5），  
+* 其实就是君正的JZ4780（我以前说的那个用于电子辞典的是JZ4740）。  
+* 另外qemu-system-mipsel里面不支持ci20，但我看了别人的模拟做法，  
+* 似乎-machine mips就是可以模拟ci20的  
+* (TODO) qemu-system-mipsel -machine mips is ci20 ???, see avahidi/ci20-baremetal  
+* (TODO) u-boot command loads, to load srec, see avahidi/ci20-baremetal    
+* 我搞明白为什么很多OS项目都喜欢输出srec格式文件（S-Record），其实是个梗，  
+* 大概只有用过u-boot的人会明白。因为u-boot专门有个命令叫loads，  
+* 这里的s就是srec的意思，可以通过串口粘贴srec文件内容（其实是一堆数字字母文本），  
+* 就可以把固件烧录进去（srec内带有地址信息）  
 * https://elinux.org/CI20_Dev_Zone#Source_Code  
 * https://github.com/MIPS/CI20_linux  
 * https://github.com/MIPS/CI20_u-boot  
@@ -437,6 +435,7 @@ $ ct-ng build
 * https://github.com/Pteridium/OpenWRT-experimental/tree/ci20-alpha  
 * https://github.com/Pteridium/OpenWRT-CI20  
 * https://github.com/avahidi/ci20-baremetal  
+* https://github.com/wyatt8740/CI20_Linux  
 
 ## Creator Ci40, openwrt  
 * https://github.com/CreatorDev/Ci40-platform-feed  

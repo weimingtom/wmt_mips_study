@@ -546,3 +546,6 @@ mips-elf-gcc交叉编译环境的建立 (转载)
 * https://cloud.tencent.com/developer/article/1745278  
 * https://github.com/Q1IQ/ctf  
 
+## X1000 RT-Thread-XBurst  
+* https://github.com/XBurst/RT-Thread-XBurst/tree/master/bsp/x1000  
+

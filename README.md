@@ -548,4 +548,5 @@ mips-elf-gcc交叉编译环境的建立 (转载)
 
 ## X1000 RT-Thread-XBurst  
 * https://github.com/XBurst/RT-Thread-XBurst/tree/master/bsp/x1000  
+* https://github.com/Real-Thread/bsp_x1000  
 

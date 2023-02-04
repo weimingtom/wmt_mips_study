@@ -84,7 +84,7 @@ LD =       $(CROSS_COMPILE)ld -EL
 * linux-2.x maybe ok  
 * https://github.com/kholia/mips-hacking  
 
-## loogson linux (vmlinux), ls1b defconfig, linux-2.6.3, 4.19, 5.3, for qemu (need src mod) -machine ls1b    
+## loongson linux (vmlinux), ls1b defconfig, linux-2.6.3, 4.19, 5.3, for qemu (need src mod) -machine ls1b    
 * https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.2.tar.gz  
 * https://gitee.com/loongsonlab/qemu  
 * https://gitee.com/loongsonlab/loongson  
@@ -163,7 +163,7 @@ $ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
 * Buildroot 龙芯1C支持指南  
 https://www.cnblogs.com/zzb-Dream-90Time/p/7111612.html  
 
-## pmon (a bootloader for loogson) for loogson (here not boot vmlinux), for qemu (need src mod）-machine ls1b      
+## pmon (a bootloader for loongson) for loongson (here not boot vmlinux), for qemu (need src mod）-machine ls1b      
 * https://mirrors.ustc.edu.cn/loongson/  
 * https://gitee.com/brep/loongson1-pmon  
 * https://gitee.com/loongsonlab/qemu  
@@ -249,7 +249,7 @@ https://github.com/chyyuu/os_tutorial_lab
 * https://student.cs.uwaterloo.ca/~cs350/common/WorkingWith161.html  
 * work_os162_v1_success_some.tar.gz  
 
-## (TODO) loogson / godson fpga  
+## (TODO) loongson / godson fpga  
 * https://github.com/huitailangyz/B0911009Y-Computer-Architecture-Lab  
 * https://github.com/poorjobless/cpu_gs232  
 

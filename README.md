@@ -566,3 +566,5 @@ mips-elf-gcc交叉编译环境的建立 (转载)
 * https://github.com/Real-Thread/bsp_x1000  
 * https://github.com/RT-Thread/rt-thread/tree/stable-v3.0.x/bsp/x1000  
 
+## qemu, mipsel firmware emulation for auto-testing purposes  
+* https://github.com/lunixoid/qemu_mips  

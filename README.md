@@ -404,6 +404,9 @@ $ ct-ng build
 * https://github.com/MIPSfpga/schoolMIPS  
 * 数字设计和计算机体系结构 原书第2版, P.433  
 * https://github.com/u-boot/u-boot/tree/master/board/imgtec/xilfpga  
+* linux-4.4 to 4.14  
+* https://github.com/torvalds/linux/tree/v4.4/arch/mips/xilfpga   
+* https://github.com/torvalds/linux/tree/v4.14/arch/mips/xilfpga  
 
 ## mips, nscscc  
 * https://github.com/nscscc2019ucas/nscscc2019ucas/blob/master/display/soc_up/simu/soft/func/test.lds  

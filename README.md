@@ -551,6 +551,9 @@ mips-elf-gcc交叉编译环境的建立 (转载)
 * (gcc-4.2-85 and above, Sourcery G++ Lite 4.2-85) https://sourcery.sw.siemens.com/GNUToolchain/subscription3130?lite=MIPS  
 * https://gitee.com/bytes33/MIPS-TOOLS    
 * https://gitee.com/bei_yi_ning/mips_tools_win  
+* (gcc-3.0.4) vmips, unmodified versions of gcc-3.0.4, and binutils-2.15, configured for mipsel-ecoff, and compiled for cygwin :  
+http://www.dgate.org/vmips/utils/mips-tools/cygwin/cygwin-mips-tools.tar.gz  
+http://www.dgate.org/vmips/utils/mips-tools/cygwin/  
 
 ## clang, llvm-gcc  
 * https://github.com/llvm/llvm-project/blob/main/lld/test/ELF/mips-32.s  

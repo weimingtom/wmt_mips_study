@@ -456,6 +456,7 @@ $ ct-ng build
 * https://github.com/avahidi/ci20-baremetal  
 * https://github.com/wyatt8740/CI20_Linux  
 * https://github.com/u-boot/u-boot/tree/master/board/imgtec/ci20  
+* https://github.com/MIPS/CI20_u-boot/tree/ci20-v2013.10/board/imgtec/ci20  
 
 ## Creator Ci40, openwrt  
 * https://github.com/CreatorDev/Ci40-platform-feed  

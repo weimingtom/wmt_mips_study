@@ -387,7 +387,7 @@ $ ct-ng build
 ## edu.cornell.cs3410, mips logisim, cs3410.jar  
 * https://gitee.com/ForthewinQ/MIPS-CPU  
 
-## mipsfpga-plus, schoolMips  
+## mipsfpga-plus, schoolMips, xilfpga    
 * (TODO) https://github.com/flsgavin/MIPSfpga-Boot    
 * https://github.com/zyy0721/Minisys-OS  
 * https://github.com/MIPSfpga/schoolMIPS/tree/05_pipeline_ahb/program/00_counter  
@@ -403,7 +403,7 @@ $ ct-ng build
 * https://gitee.com/SWORDfpga/ComputerArchitecture/tree/master  
 * https://github.com/MIPSfpga/schoolMIPS  
 * 数字设计和计算机体系结构 原书第2版, P.433  
-
+* https://github.com/u-boot/u-boot/tree/master/board/imgtec/xilfpga  
 
 ## mips, nscscc  
 * https://github.com/nscscc2019ucas/nscscc2019ucas/blob/master/display/soc_up/simu/soft/func/test.lds  
@@ -451,11 +451,15 @@ $ ct-ng build
 * https://github.com/Pteridium/OpenWRT-CI20  
 * https://github.com/avahidi/ci20-baremetal  
 * https://github.com/wyatt8740/CI20_Linux  
+* https://github.com/u-boot/u-boot/tree/master/board/imgtec/ci20  
 
 ## Creator Ci40, openwrt  
 * https://github.com/CreatorDev/Ci40-platform-feed  
 * https://github.com/CreatorDev/Ci40_helloworld  
 * https://github.com/CreatorDev/ci-old  
+
+## malta  
+* https://github.com/u-boot/u-boot/tree/master/board/imgtec/malta  
 
 ## (TODO) cemu, seem can load vmlinux (no mips kernel config doc ???) and ucore    
 * https://github.com/cyyself/cemu  

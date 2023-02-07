@@ -554,6 +554,7 @@ mips-elf-gcc交叉编译环境的建立 (转载)
 * (gcc-3.0.4) vmips, unmodified versions of gcc-3.0.4, and binutils-2.15, configured for mipsel-ecoff, and compiled for cygwin :  
 http://www.dgate.org/vmips/utils/mips-tools/cygwin/cygwin-mips-tools.tar.gz  
 http://www.dgate.org/vmips/utils/mips-tools/cygwin/  
+need cygwin1.dll, can copy from WinAVR-20100110  
 
 ## clang, llvm-gcc  
 * https://github.com/llvm/llvm-project/blob/main/lld/test/ELF/mips-32.s  

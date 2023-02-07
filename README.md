@@ -14,6 +14,7 @@ My MIPS study
 * golang or rust baremetal / bare, simulator (emulator), compiler, etc  
 * (IMP) ucosii  
 * (IMP) Simulizer-0.43-beta  
+* u-boot qemu  
 
 ## TODO, gcc -S, asm volatile, for QtSpim    
 * (TODO) (IMP) use gcc-2.95.3 cross mips to gcc hello.c -S -mno-explicit-relocs, need comment jal __ main, why ???
@@ -575,3 +576,10 @@ mips-elf-gcc交叉编译环境的建立 (转载)
 
 ## qemu, mipsel firmware emulation for auto-testing purposes  
 * https://github.com/lunixoid/qemu_mips  
+
+## u-boot, u-boot qemu    
+* https://u-boot.readthedocs.io/en/v2020.04/board/emulation/qemu-mips.html#limitations-comments  
+* https://u-boot.readthedocs.io/en/latest/board/emulation/qemu-mips.html  
+* some mips boards not in documents, but in source  
+* https://github.com/u-boot/u-boot/tree/master/board/imgtec  
+

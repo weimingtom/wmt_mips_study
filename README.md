@@ -232,6 +232,7 @@ https://github.com/chyyuu/os_tutorial_lab
 * https://github.com/fmars/MIPS_OS_Kernel  
 * login256_BUAA-OS-2019-lab6_run_success.tar.gz  
 * https://github.com/rfhits/Operating-System-BUAA-2021  
+* https://github.com/Niupple/BUAA-OS-Niupple  
 
 ## xinu, for qemu mipsel -machine mips (mipssim not work)  
 * https://github.com/xinu-os/xinu  

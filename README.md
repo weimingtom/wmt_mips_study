@@ -584,3 +584,8 @@ mips-elf-gcc交叉编译环境的建立 (转载)
 * some mips boards not in documents, but in source  
 * https://github.com/u-boot/u-boot/tree/master/board/imgtec  
 
+## aoR3000, for r3000  
+* https://github.com/alfikpl/aoR3000  
+
+## vmips, for r3000  
+* http://www.dgate.org/vmips/works.shtml  

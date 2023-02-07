@@ -556,6 +556,14 @@ http://www.dgate.org/vmips/utils/mips-tools/cygwin/cygwin-mips-tools.tar.gz
 http://www.dgate.org/vmips/utils/mips-tools/cygwin/  
 need cygwin1.dll, can copy from WinAVR-20100110, from WinAVR-20100110-install.exe  
 https://sourceforge.net/projects/winavr/files/WinAVR/20100110/  
+```
+>mipsel-ecoff-gcc -v
+Reading specs from ../lib/gcc-lib/mipsel-ecoff/3.0.4/specs
+Configured with: ../gcc-3.0.4/configure --prefix=/usr/local/mipsel-ecoff --target=mipsel-ecoff 
+--disable-shared --disable-nls --with-gnu-as --with-gnu-ld
+Thread model: single
+gcc version 3.0.4
+```
 
 ## clang, llvm-gcc  
 * https://github.com/llvm/llvm-project/blob/main/lld/test/ELF/mips-32.s  

@@ -177,6 +177,7 @@ https://www.cnblogs.com/zzb-Dream-90Time/p/7111612.html
 * https://github.com/varmil/xv6-mips  
 * (not good) https://github.com/nullpo-head/xv6-mips  
 * xv6-mips-new_from_varmil_success_no_some_seconds_crash.tar.gz  
+* https://github.com/SKT-CPUOS/xv6-loongarch-exp  
 
 ## ucore, ucore-thumips (and for qemu -machine mipssim?)      
 * https://github.com/Lan1keA/BIT-ucore_mips  

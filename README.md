@@ -612,3 +612,7 @@ gcc version 3.0.4
 * https://github.com/dwelch67/pic32_samples  
 * https://code.google.com/archive/p/cui32/downloads  
 * https://github.com/bcquitevis23/cui32  
+
+## discobsd  
+* https://github.com/chettrick/discobsd  
+

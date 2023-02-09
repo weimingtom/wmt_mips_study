@@ -607,3 +607,8 @@ gcc version 3.0.4
 
 ## vmips, for r3000  
 * http://www.dgate.org/vmips/works.shtml  
+
+## cui32  
+* https://github.com/dwelch67/pic32_samples  
+* https://code.google.com/archive/p/cui32/downloads  
+* https://github.com/bcquitevis23/cui32  

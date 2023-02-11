@@ -342,6 +342,7 @@ https://github.com/chyyuu/os_tutorial_lab
 ## virtualnoah, NP1100, JZ4740, qemu-NP_120730    
 * https://github.com/ljkgpxs/virtualnoah  
 * https://github.com/OpenNoah/virtualnoah  
+* https://github.com/OpenNoahEdu/virtualnoah  
 
 ## skyeye, for mips au1100 and gs32eb1  
 * skyeye-1.3.5_rc1.tar.bz2  

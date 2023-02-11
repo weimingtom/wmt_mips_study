@@ -622,3 +622,10 @@ gcc version 3.0.4
 
 ## UBIBoot  
 * https://github.com/pcercuei/UBIBoot  
+
+## xburst  
+* https://github.com/Ingenic-community/Linux-XBurst  
+* https://github.com/Ingenic-community/uboot-xburst  
+* https://github.com/Ingenic-community/RT-Thread-XBurst  
+* https://github.com/JaminCheung/x-loader  
+

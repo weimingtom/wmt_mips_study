@@ -628,4 +628,5 @@ gcc version 3.0.4
 * https://github.com/Ingenic-community/uboot-xburst  
 * https://github.com/Ingenic-community/RT-Thread-XBurst  
 * https://github.com/JaminCheung/x-loader  
+* https://github.com/tobunto/ingenic-toolchain-v5.2  
 

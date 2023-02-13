@@ -163,6 +163,10 @@ $ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
 * https://github.com/z4yx/ucore-thumips/tree/for-ls232-soc_up  
 * Buildroot 龙芯1C支持指南  
 https://www.cnblogs.com/zzb-Dream-90Time/p/7111612.html  
+* https://github.com/sundm75/Loongson-Smartloong-V3.0-RTT  
+* https://files.loonglab.cn:8000  
+* http://www.openloongson.org/
+* https://www.bjlx.org.cn  
 
 ## pmon (a bootloader for loongson) for loongson (here not boot vmlinux), for qemu (need src mod）-machine ls1b      
 * https://mirrors.ustc.edu.cn/loongson/  

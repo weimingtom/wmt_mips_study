@@ -177,6 +177,8 @@ https://www.cnblogs.com/zzb-Dream-90Time/p/7111612.html
 * https://blog.csdn.net/u012101272/article/details/123578005  
 * www.douban.com/note/184920595/  
 * https://gitee.com/CaesarKarry/embedded_godson_1c300b  
+* https://sites.google.com/site/kontais/gxemul  
+* gxemul-0.4.3.godson.tar.gz  
 
 ## xv6-mips, for qemu -machine mips (and -machine mipssim is ok, need modification)    
 * https://github.com/varmil/xv6-mips  

@@ -167,6 +167,7 @@ https://www.cnblogs.com/zzb-Dream-90Time/p/7111612.html
 * https://files.loonglab.cn:8000  
 * http://www.openloongson.org/
 * https://www.bjlx.org.cn  
+* https://github.com/KianWeng/loongson-ejtag  
 
 ## pmon (a bootloader for loongson) for loongson (here not boot vmlinux), for qemu (need src mod）-machine ls1b      
 * https://mirrors.ustc.edu.cn/loongson/  

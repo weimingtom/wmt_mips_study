@@ -187,10 +187,11 @@ https://www.cnblogs.com/zzb-Dream-90Time/p/7111612.html
 
 ## ucore, ucore-thumips (and for qemu -machine mipssim?)      
 * https://github.com/Lan1keA/BIT-ucore_mips  
+ucore_v3_success_from_Lan1keA_BIT-ucore_mips-master.tar.gz  
+qemu-system-mipsel -M mipssim -m 32M -kernel ucore-kernel-initrd_2  
 * https://github.com/chyyuu/ucore_os_plus/tree/clang-dev  
 * https://github.com/chyh1990/ucore-thumips  
 * https://github.com/chyh1990/qemu-thumips  
-* ucore_v3_success_from_Lan1keA_BIT-ucore_mips-master.tar.gz  
 * https://github.com/Lan1keA/ucore-mips-with-comment  
 * 基于龙芯FPGA开发板的计算机系统综合实验  
 https://github.com/oscourse-tsinghua/LoongsonCsprj2017-manual  

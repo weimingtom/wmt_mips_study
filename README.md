@@ -206,8 +206,14 @@ https://github.com/chyyuu/ucore_lab
 os tutorial lab  
 https://github.com/chyyuu/os_tutorial_lab  
 * https://github.com/z4yx/ucore-thumips/tree/for-ls232-soc_up  
-* https://github.com/MrShawCode/hos-mips  
+
+
+## hos-mips  
+* https://github.com/MrShawCode/hos-mips/tree/gxemul   
 * https://github.com/klx3300/gxemul-hos  
+see https://github.com/MrShawCode/hos-mips/blob/gxemul/gxemul_run.sh  
+gxemul -E oldtestmips -C R6000 -M 512 obj/kernel/ucore-kernel-initrd  
+
 
 ## rt-thread 20201229, for qemu -machine mipssim  
 * rt-thread_back_to_202012291854_min.zip  

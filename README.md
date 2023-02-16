@@ -205,6 +205,8 @@ https://github.com/chyyuu/ucore_lab
 os tutorial lab  
 https://github.com/chyyuu/os_tutorial_lab  
 * https://github.com/z4yx/ucore-thumips/tree/for-ls232-soc_up  
+* https://github.com/MrShawCode/hos-mips  
+* https://github.com/klx3300/gxemul-hos  
 
 ## rt-thread 20201229, for qemu -machine mipssim  
 * rt-thread_back_to_202012291854_min.zip  

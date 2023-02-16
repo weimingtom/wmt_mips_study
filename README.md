@@ -208,7 +208,7 @@ https://github.com/chyyuu/os_tutorial_lab
 * https://github.com/z4yx/ucore-thumips/tree/for-ls232-soc_up  
 
 
-## hos-mips  
+## hos-mips, based on Tsinghua ucore OS, can run with gxemul 0.6.1 mod    
 * https://github.com/MrShawCode/hos-mips/tree/gxemul   
 * https://github.com/klx3300/gxemul-hos  
 see https://github.com/MrShawCode/hos-mips/blob/gxemul/gxemul_run.sh  

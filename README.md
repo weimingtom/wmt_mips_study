@@ -213,7 +213,7 @@ https://github.com/chyyuu/os_tutorial_lab
 * https://github.com/klx3300/gxemul-hos  
 see https://github.com/MrShawCode/hos-mips/blob/gxemul/gxemul_run.sh  
 gxemul -E oldtestmips -C R6000 -M 512 obj/kernel/ucore-kernel-initrd  
-
+work_hos_v1.tar.gz  
 
 ## rt-thread 20201229, for qemu -machine mipssim  
 * rt-thread_back_to_202012291854_min.zip  

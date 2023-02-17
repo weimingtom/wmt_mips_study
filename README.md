@@ -15,6 +15,7 @@ My MIPS study
 * (IMP) ucosii  
 * (IMP) Simulizer-0.43-beta  
 * u-boot qemu  
+* freertos, https://github.com/lengdongwl/Ls1bTest  
 
 ## TODO, gcc -S, asm volatile, for QtSpim    
 * (TODO) (IMP) use gcc-2.95.3 cross mips to gcc hello.c -S -mno-explicit-relocs, need comment jal __ main, why ???
@@ -168,6 +169,7 @@ https://www.cnblogs.com/zzb-Dream-90Time/p/7111612.html
 * http://www.openloongson.org/
 * https://www.bjlx.org.cn  
 * https://github.com/KianWeng/loongson-ejtag  
+* https://gitee.com/loongarch_community/Loongson-1c300b-OpenHarmony  
 
 ## pmon (a bootloader for loongson) for loongson (here not boot vmlinux), for qemu (need src mod）-machine ls1b      
 * https://mirrors.ustc.edu.cn/loongson/  

@@ -450,6 +450,7 @@ $ ct-ng build
 ## (TODO) freertos  
 * https://github.com/MIPS/FreeRTOS/tree/mips  
 * freertos_v5_success.tar.gz  
+* (TODO) https://github.com/lengdongwl/Ls1bTest  
 
 ## imgtec CI20, JZ4780，Creator Ci20, linux, android, openwrt  
 * https://www.elinux.org/CI20_Hardware#Dedicated_UART_header  

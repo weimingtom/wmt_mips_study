@@ -597,9 +597,10 @@ gcc version 3.0.4
 * https://github.com/drh/lcc  
 
 ## qemu  
+* https://www.aurel32.net/info/debian_mips_qemu.php  
+* https://people.debian.org/~aurel32/qemu/mipsel/  
 * https://repo.or.cz/qemu/qemu-loongson.git  
 * https://repo.or.cz/qemu/qemu-JZ.git  
-* https://people.debian.org/~aurel32/qemu/mipsel/  
 
 ## mips_os  
 * https://github.com/LinHeLurking/mips_os  

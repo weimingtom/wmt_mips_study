@@ -658,3 +658,8 @@ use -w
 * https://busybox.net/downloads/binaries/1.16.1/busybox-mips  
 not busybox-mipsel  
 
+## 龙芯LoongIDE  
+* mips-2015.05_from_sdelite_4.9.2_for_mips.rar  
+* LoongIDE_from_loongide_1.2_beta3_setup.rar  
+* loongide_1.2_beta3_setup.exe  
+

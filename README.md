@@ -648,9 +648,11 @@ gcc version 3.0.4
 * https://github.com/JaminCheung/x-loader  
 * https://github.com/tobunto/ingenic-toolchain-v5.2  
 
-## (TODO) Cfern, mipsem, busybox-mips    
+## Cfern, mipsem, busybox-mips    
 * https://github.com/alexyz/mipsem  
 search baidupan, mipsem_v1.7z  
+https://github.com/alexyz/mipsem/blob/master/src/cfern/Driver.java  
+use -w  
 * https://busybox.net/downloads/binaries/  
 * https://busybox.net/downloads/binaries/1.16.1/busybox-mips  
 not busybox-mipsel  

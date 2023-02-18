@@ -665,3 +665,5 @@ not busybox-mipsel
 * LoongIDE_from_loongide_1.2_beta3_setup.rar  
 * loongide_1.2_beta3_setup.exe  
 
+## (TODO) Educational kernel/rtos implementation for MIPS Malta QEMU  
+* https://github.com/goniz/gzOS  

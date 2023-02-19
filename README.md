@@ -184,6 +184,7 @@ https://www.cnblogs.com/zzb-Dream-90Time/p/7111612.html
 * www.douban.com/note/184920595/  
 * https://gitee.com/CaesarKarry/embedded_godson_1c300b  
 * https://sites.google.com/site/kontais/gxemul, gxemul-0.4.3.godson.tar.gz, only for loongson2 64bit, not good    
+* https://github.com/lshw/loongson1-pmon  
 
 ## xv6-mips, for qemu -machine mips (and -machine mipssim is ok, need modification)    
 * https://github.com/varmil/xv6-mips  

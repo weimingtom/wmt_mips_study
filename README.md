@@ -686,3 +686,6 @@ not busybox-mipsel
 ## sysmips, in Java (need JDK8)      
 * https://github.com/alexyz/sysmips  
 * running MIPS 4kc malta linux rom (linux source build not tested, only rom file)   
+
+## pcsx2  
+* https://github.com/PCSX2/pcsx2  

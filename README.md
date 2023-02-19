@@ -174,6 +174,11 @@ https://www.cnblogs.com/zzb-Dream-90Time/p/7111612.html
 * https://github.com/KianWeng/loongson-ejtag  
 * https://gitee.com/loongarch_community/Loongson-1c300b-OpenHarmony  
 * https://github.com/loongson-gz/qemu  
+* https://github.com/loongson-gz/ls1b-linux-3.18  
+* https://github.com/loongson-gz/loongson_1b_ejtag  
+* https://github.com/loongson-gz/loongson_1b_toolchain  
+* https://github.com/loongson-gz/loongson_1b_linux_2.6.21.5  
+* https://github.com/Red54/loongson1-linux-3.5  
 
 ## pmon (a bootloader for loongson) for loongson (here not boot vmlinux), for qemu (need src mod）-machine ls1b      
 * https://mirrors.ustc.edu.cn/loongson/  
@@ -185,6 +190,9 @@ https://www.cnblogs.com/zzb-Dream-90Time/p/7111612.html
 * https://gitee.com/CaesarKarry/embedded_godson_1c300b  
 * https://sites.google.com/site/kontais/gxemul, gxemul-0.4.3.godson.tar.gz, only for loongson2 64bit, not good    
 * https://github.com/lshw/loongson1-pmon  
+* https://github.com/loongson-gz/loongson_1b_pmon  
+* https://github.com/loongson-gz/pmon-ls1x  
+* 
 
 ## xv6-mips, for qemu -machine mips (and -machine mipssim is ok, need modification)    
 * https://github.com/varmil/xv6-mips  

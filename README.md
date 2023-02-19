@@ -16,6 +16,7 @@ My MIPS study
 * (IMP) Simulizer-0.43-beta  
 * u-boot qemu  
 * freertos, https://github.com/lengdongwl/Ls1bTest  
+* u-boot for ls232  
 
 ## TODO, gcc -S, asm volatile, for QtSpim    
 * (TODO) (IMP) use gcc-2.95.3 cross mips to gcc hello.c -S -mno-explicit-relocs, need comment jal __ main, why ???

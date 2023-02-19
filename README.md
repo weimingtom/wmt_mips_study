@@ -192,7 +192,6 @@ https://www.cnblogs.com/zzb-Dream-90Time/p/7111612.html
 * https://github.com/lshw/loongson1-pmon  
 * https://github.com/loongson-gz/loongson_1b_pmon  
 * https://github.com/loongson-gz/pmon-ls1x  
-* 
 
 ## xv6-mips, for qemu -machine mips (and -machine mipssim is ok, need modification)    
 * https://github.com/varmil/xv6-mips  

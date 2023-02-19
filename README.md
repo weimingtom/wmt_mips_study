@@ -682,3 +682,7 @@ not busybox-mipsel
 
 ## arm_now  
 * https://github.com/nongiach/arm_now  
+
+## sysmips, in Java (need JDK8)      
+* https://github.com/alexyz/sysmips  
+* running MIPS 4kc malta linux rom (linux source build not tested, only rom file)   

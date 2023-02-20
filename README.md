@@ -16,6 +16,7 @@ My MIPS study
 * (IMP) Simulizer-0.43-beta  
 * u-boot qemu  
 * freertos, https://github.com/lengdongwl/Ls1bTest  
+https://github.com/mugenZebra/UNO32-freeRTOS-port  
 * u-boot for ls232, 
 https://github.com/deepke/u-boot-mips  
 https://github.com/gnaygnil/ls1c_robot_uboot  

@@ -692,3 +692,12 @@ not busybox-mipsel
 
 ## pcsx2  
 * https://github.com/PCSX2/pcsx2  
+
+## nu32  
+* Embedded Computing and Mechatronics with the PIC32 Microcontroller  
+* 嵌入式计算与机电一体化技术：基于PIC32微控制器  
+* http://hades.mech.northwestern.edu/index.php/NU32  
+* https://textbooks.elsevier.com/web/product_details.aspx?isbn=9780124201651&Search=nu32&SearchCriteria=Keyword  
+* http://hades.mech.northwestern.edu/index.php/NU32_Software  
+* PIC32Quickstart.zip  
+

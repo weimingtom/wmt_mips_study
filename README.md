@@ -23,6 +23,8 @@ https://github.com/gnaygnil/ls1c_robot_uboot
 * uno32  
 https://github.com/rkujawa/chipKIT-minimal-application  
 * https://github.com/NJU-ProjectN/nemu  
+* (risc-v) https://github.com/OpenXiangShan/NEMU  
+see https://www.bilibili.com/video/BV1Zb4y1k7RJ/  
 * https://github.com/cyyself/cemu  
 * (see cemu) https://github.com/z4yx/ucore-thumips/tree/for-ls232-soc_up  
 

@@ -22,6 +22,8 @@ https://github.com/deepke/u-boot-mips
 https://github.com/gnaygnil/ls1c_robot_uboot  
 * uno32  
 https://github.com/rkujawa/chipKIT-minimal-application  
+* https://github.com/NJU-ProjectN/nemu  
+* https://github.com/cyyself/cemu  
 
 ## TODO, gcc -S, asm volatile, for QtSpim    
 * (TODO) (IMP) use gcc-2.95.3 cross mips to gcc hello.c -S -mno-explicit-relocs, need comment jal __ main, why ???

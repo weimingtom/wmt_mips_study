@@ -710,3 +710,6 @@ not busybox-mipsel
 
 ## CuRT_v1_MIPS  
 * https://github.com/algosenses/CuRT_v1_MIPS  
+* https://github.com/Rafe/CuRT  
+* https://github.com/jserv/CuRT  
+

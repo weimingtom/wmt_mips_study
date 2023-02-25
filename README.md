@@ -27,6 +27,7 @@ https://github.com/rkujawa/chipKIT-minimal-application
 see https://www.bilibili.com/video/BV1Zb4y1k7RJ/  
 * https://github.com/cyyself/cemu  
 * (see cemu) https://github.com/z4yx/ucore-thumips/tree/for-ls232-soc_up  
+* (TODO) https://github.com/grantae/mips32r1_xum/tree/master/Software/demos/XD1_Hello/src/os  
 
 ## TODO, gcc -S, asm volatile, for QtSpim    
 * (TODO) (IMP) use gcc-2.95.3 cross mips to gcc hello.c -S -mno-explicit-relocs, need comment jal __ main, why ???

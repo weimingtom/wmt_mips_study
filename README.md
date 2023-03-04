@@ -189,6 +189,7 @@ https://www.cnblogs.com/zzb-Dream-90Time/p/7111612.html
 * https://github.com/loongson-gz/loongson_1b_linux_2.6.21.5  
 * https://github.com/Red54/loongson1-linux-3.5  
 * https://github.com/sundm75/Loongson-Smartloong-V2.0  
+* 用“芯”探核: https://github.com/chenhuacai/linux-ulek  
 
 ## pmon (a bootloader for loongson) for loongson (here not boot vmlinux), for qemu (need src mod）-machine ls1b      
 * https://mirrors.ustc.edu.cn/loongson/  

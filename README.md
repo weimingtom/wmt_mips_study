@@ -126,12 +126,14 @@ Login/Password Management Utilities--->passwd(uncheck)
 Miscellaneous Utilities--->time(uncheck)
 Networking Utilities--->inetd(uncheck)ntpd(uncheck)
 Runit Utilities--->all(uncheck)
-(modify shell/shell_common.c) put '#if 0.. #endif' to shell/shell_common.c's printlim inside, comment inside code
-(modify shell/shell_common.c) put '#if 0.. #endif' to shell/shell_common.c's shell_builtin_unlimit(char **argv) inside, comment inside code
+* Then, (modify shell/shell_common.c) put '#if 0.. #endif' to shell/shell_common.c's 
+printlim() inside, comment inside code
+* Then, (modify shell/shell_common.c) put '#if 0.. #endif' to shell/shell_common.c's 
+shell_builtin_unlimit(char **argv) inside, comment inside code
 
-https://github.com/fdu/STM32F429I-disco_Buildroot/issues/1
+* see https://github.com/fdu/STM32F429I-disco_Buildroot/issues/1
 Init Utilities--->init->Support reading an inittab file(uncheck)
-comment_ strings (tty2...4) in file nit/init.c
+* Then (modify nit/init.c, put /*...*/ inside) comment strings (tty2...4) in file nit/init.c, like this:
 /*new_init_action(ASKFIRST, bb_default_login_shell, VC_2);
 new_init_action(ASKFIRST, bb_default_login_shell, VC_3);
 new_init_action(ASKFIRST, bb_default_login_shell, VC_4);*/

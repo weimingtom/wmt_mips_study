@@ -126,8 +126,8 @@ Login/Password Management Utilities--->passwd(uncheck)
 Miscellaneous Utilities--->time(uncheck)
 Networking Utilities--->inetd(uncheck)ntpd(uncheck)
 Runit Utilities--->all(uncheck)
-#if 0 to shell/shell_common.c printlim inside
-#if 0 to shell/shell_common.c shell_builtin_unlimit(char **argv) inside
+(modify shell/shell_common.c) put '#if 0.. #endif' to shell/shell_common.c's printlim inside, comment inside code
+(modify shell/shell_common.c) put '#if 0.. #endif' to shell/shell_common.c's shell_builtin_unlimit(char **argv) inside, comment inside code
 
 https://github.com/fdu/STM32F429I-disco_Buildroot/issues/1
 Init Utilities--->init->Support reading an inittab file(uncheck)

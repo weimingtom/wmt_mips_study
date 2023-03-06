@@ -721,3 +721,10 @@ not busybox-mipsel
 * https://github.com/Rafe/CuRT  
 * https://github.com/jserv/CuRT  
 
+## pic32, uno32  
+* 经过我的努力，终于把变砖的uno32救回来了。之前没办法烧录bootloader的原因也找到了，  
+是因为杜邦线的问题，导致无法检验设备id，我把杜邦线反转次序就正常了。  
+烧录也不是很明白，我用的是IPE v6，但我不清楚怎么烧录成功的，  
+可能是因为我勾选了高级模式，Allow Memory View，Program Memory，  
+也可能不是这样做（待考），我先烧录一个别的hex再烧录bootloader，  
+最后要拔出pickit3才能看到闪灯（？）  

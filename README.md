@@ -22,6 +22,7 @@ https://github.com/deepke/u-boot-mips
 https://github.com/gnaygnil/ls1c_robot_uboot  
 * uno32  
 https://github.com/rkujawa/chipKIT-minimal-application  
+https://github.com/chipKIT32/PIC32-avrdude-bootloader  
 * https://github.com/NJU-ProjectN/nemu  
 (risc-v) https://github.com/OpenXiangShan/NEMU  
 see https://www.bilibili.com/video/BV1Zb4y1k7RJ/  
@@ -396,6 +397,8 @@ work_hos_v1.tar.gz
 * https://johnloomis.org/microchip/pic32/resources.html  
 
 ## chipkit uno32    
+* https://github.com/chipKIT32/PIC32-avrdude-bootloader  
+* https://github.com/chipKIT32/chipKIT-digiboot  
 
 ## pinguino32, PIC32  
 * https://code.google.com/archive/p/pinguino32/downloads  

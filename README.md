@@ -399,6 +399,7 @@ work_hos_v1.tar.gz
 ## chipkit uno32    
 * https://github.com/chipKIT32/PIC32-avrdude-bootloader  
 * https://github.com/chipKIT32/chipKIT-digiboot  
+* https://github.com/Microchip-MPLAB-Harmony/core_apps_pic32mx  
 
 ## pinguino32, PIC32  
 * https://code.google.com/archive/p/pinguino32/downloads  

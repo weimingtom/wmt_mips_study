@@ -730,6 +730,8 @@ not busybox-mipsel
 也可能不是这样做（待考），我先烧录一个别的hex再烧录bootloader，  
 最后要拔出pickit3才能看到闪灯（？）  
 * 只需要烧录bootloader，然后拔掉pickit3，就可以看到闪灯效果，不需要再烧录其他hex文件  
+* 如果出现识别不到设备id，或者提示电压不够，
+请检查杜邦线是不是不通（例如反转过来次序），或者重新插拔pickit3的usb  
 
 ## Fishino32, PIC32MX470F512HI/MR  
 * http://www.fishino.it/arduinoide/package_fishino_index.json  

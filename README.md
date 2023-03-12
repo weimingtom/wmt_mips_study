@@ -731,6 +731,7 @@ not busybox-mipsel
 最后要拔出pickit3才能看到闪灯（？）  
 
 ## Fishino32, PIC32MX470F512HI/MR  
+* http://www.fishino.it/arduinoide/package_fishino_index.json  
 * https://fishino.it/fishino32.html  
 * https://fishino.it/fishino-piranha-133.html  
 PIC32MX470F512H-120I/PT  

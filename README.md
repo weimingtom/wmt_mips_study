@@ -729,3 +729,11 @@ not busybox-mipsel
 可能是因为我勾选了高级模式，Allow Memory View，Program Memory，  
 也可能不是这样做（待考），我先烧录一个别的hex再烧录bootloader，  
 最后要拔出pickit3才能看到闪灯（？）  
+
+## Fishino32, PIC32MX470F512HI/MR  
+* https://fishino.it/fishino32.html  
+* https://fishino.it/fishino-piranha-133.html  
+PIC32MX470F512H-120I/PT  
+* https://fishino.it/fishino-shark-135.html  
+PIC32MX470F512L-120I/PF  
+

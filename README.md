@@ -431,6 +431,10 @@ $ ct-ng build
 
 ## step_into_mips  
 * https://github.com/lvyufeng/step_into_mips  
+* https://www.bilibili.com/video/BV1pK4y1C7es/  
+* 教你写一个简单的CPU  
+* 这个是单周期mips（出自重庆大学），没有实现多周期mips，  
+* 作者说这个是比较靠谱（好）（龙芯）的开源教学实现  
 
 ## minimips32  
 * https://github.com/study34668/MiniMIPS32  

@@ -207,6 +207,19 @@ https://www.cnblogs.com/zzb-Dream-90Time/p/7111612.html
 * https://github.com/lshw/loongson1-pmon  
 * https://github.com/loongson-gz/loongson_1b_pmon  
 * https://github.com/loongson-gz/pmon-ls1x  
+* build method:  
+```
+xubuntu 200464
+prepare, see https://github.com/sergev/qemu/wiki
+sudo apt-get install libpixman-1-dev libfdt-dev zlib1g-dev libglib2.0-dev libsdl-dev
+see 	(IMP) qemu loongson build mothod!!!!
+see 	(IMP) pmon loongson build mothod!!!!
+```
+* run method:  
+```
+cd qemu_pmon2/bin
+SERIAL=2 ./qemu-system-mipsel -M ls1b -serial stdio -bios pmon_ls1b_dev.bin 
+```
 
 ## xv6-mips, for qemu -machine mips (and -machine mipssim is ok, need modification)    
 * https://github.com/varmil/xv6-mips  

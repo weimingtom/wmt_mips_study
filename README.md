@@ -216,7 +216,8 @@ prepare, see https://github.com/sergev/qemu/wiki
 sudo apt-get install libpixman-1-dev libfdt-dev zlib1g-dev libglib2.0-dev libsdl-dev
 see 	(IMP) qemu loongson build mothod!!!!
 see 	(IMP) pmon loongson build mothod!!!!
-...
+```
+```
 (build qemu source mod for ls1b)  
 $ git clone https://gitee.com/loongsonlab/qemu
 $ cd qemu
@@ -225,6 +226,9 @@ $ cd build2
 $ ../configure --target-list=mipsel-softmmu --disable-werror --prefix=/home/wmt/work_pmon/qemu_pmon2
 $ make
 $ make install
+(build pmon for ls1b)  
+$ cd ../../loongson1-pmon  
+$ ./build_ls1b_dev.sh  
 ```
 * run method:  
 ```

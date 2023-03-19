@@ -785,3 +785,6 @@ PIC32MX470F512L-120I/PF
 * https://github.com/binsgit/mips-yamon  
 * https://www.mips.com/develop/tools/boot-loaders/  
 * search baidupan, yamon-src-02.04.tar.gz  
+
+## TinyMIPS  
+* http://staff.ustc.edu.cn/~han/CS152CD/  

@@ -226,9 +226,12 @@ $ cd build2
 $ ../configure --target-list=mipsel-softmmu --disable-werror --prefix=/home/wmt/work_pmon/qemu_pmon2
 $ make
 $ make install
+```
+```
 (build pmon for ls1b)  
 $ cd ../../loongson1-pmon  
 $ ./build_ls1b_dev.sh  
+(get pmon_ls1b_dev.bin)  
 ```
 * run method:  
 ```

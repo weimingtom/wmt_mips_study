@@ -208,6 +208,8 @@ https://www.cnblogs.com/zzb-Dream-90Time/p/7111612.html
 * https://github.com/loongson-gz/loongson_1b_pmon  
 * https://github.com/loongson-gz/pmon-ls1x  
 * build method:  
+qemu: https://gitee.com/loongsonlab/qemu  
+pmon: loongson1-pmon (from https://gitee.com/brep/loongson1-pmon ?)  
 ```
 xubuntu 200464
 prepare, see https://github.com/sergev/qemu/wiki

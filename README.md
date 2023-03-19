@@ -788,3 +788,7 @@ PIC32MX470F512L-120I/PF
 
 ## TinyMIPS  
 * http://staff.ustc.edu.cn/~han/CS152CD/  
+
+## MIPS SDE-lite, sde-gcc, sde-run, for Windows / Cygwin and Linux  
+* http://staff.ustc.edu.cn/~han/CS152CD/Content/Software/SDElite/clickthru.html  
+* http://staff.ustc.edu.cn/~han/CS152CD/, software->MIPS SDE-lite    

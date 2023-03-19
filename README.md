@@ -233,6 +233,8 @@ $ SERIAL=2 ./qemu-system-mipsel -M ls1b -serial stdio -bios pmon_ls1b_dev.bin
 ```
 * https://github.com/weimingtom/loongson1-pmon_fork  
 * https://github.com/weimingtom/qemu_pmon_fork  
+* (not good) 龙芯杯无开发板如何开发和调试linux  
+https://blog.mxdon.cool/2021/无开发板如何开发linux系统内核/  
 
 ## xv6-mips, for qemu -machine mips (and -machine mipssim is ok, need modification)    
 * https://github.com/varmil/xv6-mips  

@@ -213,7 +213,7 @@ pmon: loongson1-pmon (from https://gitee.com/brep/loongson1-pmon ?)
 ```
 xubuntu 200464
 prepare, see https://github.com/sergev/qemu/wiki
-sudo apt-get install libpixman-1-dev libfdt-dev zlib1g-dev libglib2.0-dev libsdl-dev
+$ sudo apt-get install libpixman-1-dev libfdt-dev zlib1g-dev libglib2.0-dev libsdl-dev
 see 	(IMP) qemu loongson build mothod!!!!
 see 	(IMP) pmon loongson build mothod!!!!
 ```

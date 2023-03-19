@@ -789,11 +789,10 @@ PIC32MX470F512L-120I/PF
 ## TinyMIPS  
 * http://staff.ustc.edu.cn/~han/CS152CD/  
 
-## (IMP) MIPS SDE-lite, sde-gcc, sde-run, for Windows / Cygwin and Linux  
+## (IMP) MIPS SDE-lite, sde-gcc, sde-run, sde-gdb, for Windows / Cygwin and Linux  
 * http://staff.ustc.edu.cn/~han/CS152CD/Content/Software/SDElite/clickthru.html  
 * http://staff.ustc.edu.cn/~han/CS152CD/, software->MIPS SDE-lite    
 * (IMP) http://staff.ustc.edu.cn/~han/CS152CD/Content/Software/SDElite/sde-guide.pdf  
 * Computer Organization and Design  
 * (TOOD) MIPSSW-MSDE-v5.03.06.tgz\.\sde\examples\hello   
 * (TODO) maybe sde-gdb can use mipssim ???  
-

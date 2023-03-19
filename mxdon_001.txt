@@ -1,0 +1,179 @@
+https://blog.mxdon.cool/2021/无开发板如何开发linux系统内核/
+
+龙芯杯无开发板如何开发和调试linux
+发表于2021-12-05|更新于2022-09-19|嵌入式Linux
+字数总计:2k|阅读时长:7分钟|阅读量:87
+龙芯杯无开发板如何开发和调试linux
+背景
+因为龙芯杯的cpu是32位的，具体来说是基于GS232的，恰好给的pmon引导文件是用于ls1b的，ls1b的核也是GS232的，所以就想到可以直接基于ls1b的虚拟机来开发操作系统，这样就可以加快操作系统的开发周期，而不需要依托于上板才能看出操作系统存在的问题(大多数)。
+
+Qemu搭建
+虚拟机采用qemu，因为qemu支持ls1b，pmon的话可以直接使用发布包里面给的，也可以使用龙芯开源的ls1b的pmon，后者开机有图形显示，仅此而已，都是够用的。
+
+首先是下载和安装qemu，从官网和清华源之类的地方下载是只有很少龙芯机器支持的，这里用https://gitee.com/martinqiao/qemu.git
+
+配置和编译如下：
+
+BASH
+1
+2
+3
+4
+mkdir build4mips
+cd build4mips
+../configure --target-list=mipsel-softmmu --disable-werror
+make
+其中--target-list后面的选项，在此调试需求下，必须的是mipsel-softmmu，有更多兴趣的可以加上mips64el-softmmu，mips64el-linux-user，mipsel-linux-user等，自行了解即可。其中带有softmmu的选项是系统级虚拟机，linux-user为用户级虚拟机。
+
+../configure的时候如果出现ERROR报错，缺少依赖的话，用apt-cache search 依赖，然后再安装即可，如果不报ERROR的错，应该就可以直接make
+利用qemu测试pmon
+在真实的机器上是绕不开BootLoader这一层的，在龙芯里也就是PMON，在Qemu中可以带着PMON一起运行Linux。
+BASH
+1
+qemu-5.2.0/build4mips/mipsel-softmmu/qemu-system-mipsel -M ls1b -serial stdio -m 2048 -bios ../loongson/pmon/zloader.ls1b/gzrom.bin
+利用Qemu和Pmon测试操作系统
+利用qemu调试操作系统
+
+做系统开发的话嘛，写系统大家就各自加油吧，太难讲了（等以后的同学完善这一块吧），然后调试就是用这种方式。首先要准备一个写好的内核。就是一般编译出来的vmlinux文件（啊我好罗嗦）
+
+由于自己写的，还不行，所以就用源码编译一份，用作演示
+
+提供linux内核
+qemu支持带pmon引导操作系统，当然更广为人知的是直接引导操作系统，然而直接引导一个操作系统可能不止需要一个操作系统的内核，还需要模拟内存的磁盘文件，设备树文件等，而且按照龙芯杯的需求，只需要一个内核文件即可，所以我们只做一个操作系统的内核即可（但是没有根文件系统就没法交互）。
+
+此处参考最后文末最后一篇文章
+
+获取源码http://ftp.loongnix.org/embedd/ls1b/bootloader/
+
+在http://ftp.loongnix.org/embed/ls1b/boot/ 下载ramdisk.tar.gz，并将其解压到/mnt/ramdisk1 目录中（解决某种报错，遇到就知道了）
+
+cp config.ls1b .config修改内核配置
+
+make vmlinux ARCH=mips编译内核
+
+mipsel-linux-strip vmlinux精简内核
+
+依赖问题自行解决……
+
+这时在源码目录下就出现了vmlinux文件，也就可以使用了。
+
+搭建tftp服务器
+大赛发布包有提供这样的文件教程，但是是windows的，可能在windows下大家更好操作，但是我已经好久没碰windows了…… 所以linux的，凑合看吧……
+
+安装tftp-server，在不同的发行版，包的名字可能不太一样，自己查一下吧（龙芯的操作系统上叫tftp-server，我在网上看别的都是tftpd大家自行斟酌）
+开启tftp服务，然后查看服务，这一点貌似都是一样的：
+BASH
+1
+2
+systemctl start tftp.service
+systemctl status tftp.service
+其实目的是查看tftp的配置文件和根目录：
+图中1是tftp的配置文件所在，2是tftp的根目录，打开配置文件，修改根目录为自己想要的地方就行
+qemu+pmon+linux
+OK，准备结束，正文开始，命令如下：
+
+BASH
+1
+build4mips/mipsel-softmmu/qemu-system-mipsel -M ls1b -bios ../gzrom_ls1b.bin -serial stdio -m 2048 -smp 1 -net nic -nic user,net=10.20.4.0/24,host=10.20.4.16,tftp=/home/loongson/chip/
+写成了代码格式，不知道大家能不能看完整吼吼吼就这样先～
+
+稍作说明，pmon的加载和之前测试pmon的过程一样，区别在于增加了选项：
+-net nic -nic user,net=10.20.4.0/24,host=10.20.4.16,tftp=/home/loongson/chip/
+
+其中-net nic -nic user是增加了用户级网络配置，至于桥配置、tap配置等内容自行了解，我也不会。
+
+后面的net=10.20.4.0/24是配置qemu的网络，其实不配这个好像也行，为什么说不配也行呢，因为pmon里还要重新配置，跟这个没关系，但是我不配就会失败……不明白，成功就行吧先
+
+host=10.20.4.16是我的主机ip（内部机密，切勿泄漏）
+
+tftp=/home/loongson/chip/是tftp的根目录，这个不配不行，不配的话在pmon里load的时候会显示没有权限。
+
+经过上述的配置，进入到pmon的界面，跟之前介绍的pmon测试一样，但是这时，我们配置pmon的ip就可以和主机通信了：
+
+首先查看设备列表：
+
+PLAINTEXT
+1
+devls
+选择带net字样的设备名词，我这里是syn0（不同设备好像不一样？我还没试过家里的电脑hhhh大家试一下）
+
+开启网络设备
+
+BASH
+1
+ifconfig syn0 up
+配置网络，这里当然要配置和主机ip同网段的地址，但是神奇的是，必须要把最后一位置0,比如我的ip是10.20.4.16,我给pmon配置10.20.4.11就不行，但是配置10.20.4.0就可以。
+
+还记得上面的命令是net=10.20.4.0/24，这里哪怕是改成net=10.20.4.11/24，在pmon里配置网络时也还是只有10.20.4.0可以，就很神奇。
+
+配置网络命令为：
+
+BASH
+1
+ifconfig syn0 10.20.4.0 netmask 255.255.254.0
+完整图示如下：
+
+其中1是开启网卡，2是配置网络，3是查看网络状态。
+
+load内核
+首先我是把前面准备的内核文件vmlinux放在了/home/loongson/chip/目录下，也就是tftp服务器的根目录，所以load的时候如下即可：
+
+BASH
+1
+load tftp://10.20.4.16/vmlinux
+如下图，load成功
+
+
+进入linux系统
+大赛的发布包上一点和这一点都说的比较清楚了：
+
+BASH
+1
+g console=ttyS0,115200 rdinit=sbin/init
+其中115200是波特率，也就是GS232的串口波特率，咱们做系统调试的就不用改这个了。
+
+
+看到32个寄存器的初始值了吧，跑了一大堆日志，然后就进入系统了：
+
+
+完成。
+
+调试
+其实上面说的都是测试，调试的话是依赖于qemu的gdb支持，可以按行调试代码！不过上述测试就够我们开发了系统了。调试也就是锦上添花，如虎添翼，伤口撒盐
+
+那么如何调试呢?
+
+首先要会一点点gdb，本文不介绍。
+
+一般的调试，在qemu命令行添加-g 1234之类的选项，就可以在另一个终端打开gdb，然后输入target remote :1234就可以调试了
+
+调试系统内核，参考https://www.cnblogs.com/powerrailgun/p/12161295.html：
+
+命令如下：
+
+build4mips/mipsel-softmmu/qemu-system-mipsel -M ls1b -bios ../gzrom_ls1b.bin -serial stdio -m 4096 -net nic -nic user,net=10.20.4.0/24,host=10.20.4.16,tftp=/home/loongson/chip/ -smp 1 -S -gdb tcp::1235
+
+主要看最后的内容，tcp::1235和-g 1235是类似的。然后打开gdb调试，然后使用ni和si进行汇编级别的单步调试。
+
+其他内容
+网上有介绍别的可以调试内核的，我觉得吧，也挺麻烦的，而且线上的速度也不如本地调试快（其实qemu也用到了相关的子模块）。有兴趣可以参考：
+https://www.oschina.net/news/108450/linux-lab-0-2-rc1-released
+
+还有内核的构建之类的，参考：
+https://blog.csdn.net/tongxin1101124/article/details/90213727
+
+指令级调试：http://happyseeker.github.io/virt/2017/07/06/qemu-i386-crash-in-linux-user-mode-on-loongson.html
+
+系统内核调试：https://www.cnblogs.com/powerrailgun/p/12161295.html
+
+文章作者: Mxdon
+文章链接: http://blog.mxdon.cool/2021/%E6%97%A0%E5%BC%80%E5%8F%91%E6%9D%BF%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91linux%E7%B3%BB%E7%BB%9F%E5%86%85%E6%A0%B8/
+版权声明: 本博客所有文章除特别声明外，均采用 CC BY-NC-SA 4.0 许可协议。转载请注明来自 Mxdon！
+Linux龙芯gdb
+
+
+作者: Mxdon
+链接: https://blog.mxdon.cool/2021/%E6%97%A0%E5%BC%80%E5%8F%91%E6%9D%BF%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91linux%E7%B3%BB%E7%BB%9F%E5%86%85%E6%A0%B8/
+来源: Mxdon
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+

@@ -222,6 +222,8 @@ see 	(IMP) pmon loongson build mothod!!!!
 cd qemu_pmon2/bin
 SERIAL=2 ./qemu-system-mipsel -M ls1b -serial stdio -bios pmon_ls1b_dev.bin 
 ```
+* https://github.com/weimingtom/loongson1-pmon_fork  
+* https://github.com/weimingtom/qemu_pmon_fork  
 
 ## xv6-mips, for qemu -machine mips (and -machine mipssim is ok, need modification)    
 * https://github.com/varmil/xv6-mips  

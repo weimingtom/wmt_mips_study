@@ -796,3 +796,7 @@ PIC32MX470F512L-120I/PF
 * Computer Organization and Design  
 * (TOOD) MIPSSW-MSDE-v5.03.06.tgz\.\sde\examples\hello   
 * (TODO) maybe sde-gdb can use mipssim ???  
+* search baidupan, COD3E_计算机组成与设计.iso, 第3版  
+* 计算机组成与设计：硬件/软件接口  
+
+

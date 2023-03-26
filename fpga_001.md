@@ -25,8 +25,7 @@
 * https://github.com/MIPSfpga/schoolMIPS  
 * search MIPSfpga_GSG_v2.0.0.zip  
 * (?) schoolMIPS_v2.rar  
-
-## mipsfpga_v1.rar  
+* (?) mipsfpga_v1.rar    
 
 ## 重庆大学, 单周期(single cycle) mips  
 * https://github.com/lvyufeng/step_into_mips  

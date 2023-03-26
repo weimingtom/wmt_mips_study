@@ -1,6 +1,9 @@
 # wmt_mips_study
 My MIPS study
 
+## FPGA  
+* https://github.com/weimingtom/wmt_mips_study/blob/master/fpga_001.md  
+
 ## TODO
 * (IMP) Compile mingw mips cross gcc version 2    
 * (IMP) https://github.com/ljkgpxs/virtualnoah  

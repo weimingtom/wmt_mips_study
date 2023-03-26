@@ -55,10 +55,11 @@ https://www.jianshu.com/p/86e0889755ca
 ## PicoMIPS  
 
 
-## MiniMIPS32  
+## (TODO, IMP) MiniMIPS32  
 * 计算机系统设计（上册）——基于FPGA的RISC处理器设计与实现  
 * https://github.com/study34668/MiniMIPS32  
-
+* minimips32_v8_20221114_坑未处理.rar  
+* 计算机系统设计（下册）  
 
 ## mips in cii (C Interfaces and Implementaions)  
 * https://github.com/drh/cii/blob/master/src/swtch.s  

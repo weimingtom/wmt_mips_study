@@ -1,3 +1,47 @@
+
+## altera 64bit version 12  
+* EP4CE10F17C8  
+* 新起点FPGA开发板IO引脚分配表_v2_ref.xlsx  
+
+## (TODO, IMP) MiniMIPS32  
+* 计算机系统设计（上册）——基于FPGA的RISC处理器设计与实现  
+* https://github.com/study34668/MiniMIPS32  
+* minimips32_v8_20221114_坑未处理.rar  
+* 计算机系统设计（下册）  
+
+## cpu31_v4_e10_success.rar  
+
+## 搭建你的数字积木——数字电路与逻辑设计（Verilog HDL&Vivado版）  
+* https://github.com/xupsh/Digital-Design-Lab  
+* http://www.tup.tsinghua.edu.cn/booksCenter/book_07172301.html  
+* search baidupan, mipscpu_v2_e10_success.rar  
+
+## minisys2_v3_e10_success.rar  
+
+## minisys3_v1.rar  
+## minisys_v1.rar  
+
+## schoolMIPS, MIPSfpga  
+* https://github.com/MIPSfpga/schoolMIPS  
+* search MIPSfpga_GSG_v2.0.0.zip  
+* (?) schoolMIPS_v2.rar  
+
+## mipsfpga_v1.rar  
+
+## 重庆大学, 单周期(single cycle) mips  
+* https://github.com/lvyufeng/step_into_mips  
+* https://www.bilibili.com/video/BV1pK4y1C7es  
+
+## 龙芯教育 / CPU设计实战, MIPS, LoongsonArch      
+* 《CPU设计实战》实验资源  
+* https://gitee.com/loongson-edu/cdp-lab  
+* https://github.com/cebarobot/UCAS-CALab-mycpu_verify  
+* https://github.com/cebarobot/UCAS-CALab-mycpu_axi_verify  
+* https://github.com/cebarobot/UCAS-CALab-mycpu_sram_verify  
+
+## ---
+
+
 ## MIPS, Digital Design and Computer Architecture  
 * 数字设计和计算机体系结构 原书第2版  
 * https://textbooks.elsevier.com/web/product_details.aspx?isbn=9780123944245  
@@ -7,24 +51,11 @@
 * mipsfpga  
 * https://github.com/MIPSfpga/digital-design-lab-manual  
 
-## schoolMIPS, MIPSfpga  
-* https://github.com/MIPSfpga/schoolMIPS  
-* search MIPSfpga_GSG_v2.0.0.zip  
-
-## 搭建你的数字积木——数字电路与逻辑设计（Verilog HDL&Vivado版）  
-* https://github.com/xupsh/Digital-Design-Lab  
-* http://www.tup.tsinghua.edu.cn/booksCenter/book_07172301.html  
-* search baidupan, mipscpu_v2_e10_success.rar  
-
 ## XUP官方指定的入门级FPGA教学板卡-Basys3  
 * https://www.sytek.ltd/productinfo/1532427.html  
 
 ## 单周期mips, 搭建你的数字积木——数字电路与逻辑设计  
 * https://github.com/xupsh/Digital-Design-Lab/tree/master/Chapter_14/RISC  
-
-## 重庆大学, 单周期(single cycle) mips  
-* https://github.com/lvyufeng/step_into_mips  
-* https://www.bilibili.com/video/BV1pK4y1C7es  
 
 ## mips的汇编方法（准确说是mips32el）：
 （1）生成二进制的方法：用mars生成汇编二进制（参数参考schoolmips）；  
@@ -54,13 +85,6 @@ https://www.jianshu.com/p/86e0889755ca
 
 ## PicoMIPS  
 
-
-## (TODO, IMP) MiniMIPS32  
-* 计算机系统设计（上册）——基于FPGA的RISC处理器设计与实现  
-* https://github.com/study34668/MiniMIPS32  
-* minimips32_v8_20221114_坑未处理.rar  
-* 计算机系统设计（下册）  
-
 ## mips in cii (C Interfaces and Implementaions)  
 * https://github.com/drh/cii/blob/master/src/swtch.s  
 * search baidupan, cii20.zip  
@@ -75,14 +99,6 @@ https://github.com/nullpo-head/xv6-mips
 ## picomips  
 https://github.com/karthik-0398/picoMIPS  
 search csdn  
-
-## 龙芯教育 / CPU设计实战, MIPS, LoongsonArch      
-* 《CPU设计实战》实验资源  
-* https://gitee.com/loongson-edu/cdp-lab  
-* https://github.com/cebarobot/UCAS-CALab-mycpu_verify  
-* https://github.com/cebarobot/UCAS-CALab-mycpu_axi_verify  
-* https://github.com/cebarobot/UCAS-CALab-mycpu_sram_verify  
-
 
 ## ghidra, mips decompile  
 * https://github.com/NationalSecurityAgency/ghidra/releases  

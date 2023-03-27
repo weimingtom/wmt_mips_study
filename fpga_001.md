@@ -386,3 +386,9 @@ http://www.loongnix.cn/zh/toolchain/GNU/
 * https://github.com/Uberi/uw-cs350-development-environment  
 * https://cgi.cse.unsw.edu.au/~cs3231/os161/index.php  
 * https://cgi.cse.unsw.edu.au/~cs3231/doc/R3000.pdf  
+
+## (TODO) 数字设计和计算机体系结构  
+* https://booksite.elsevier.com/9780123944245/  
+* https://www.elsevier.com/books/digital-design-and-computer-architecture/harris/978-0-12-394424-5  
+* (IMP) DDCA_Labs_companion.zip, mipstop.sv, DE2  
+* (IMP) DDCA2e_HDL_03-11-2015.zip, 07-mipssingle.sv    

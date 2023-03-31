@@ -37,6 +37,10 @@ see https://www.bilibili.com/video/BV1Zb4y1k7RJ/
 * DDCA2e_HDL_03-11-2015.zip  
 07-mipssingle.sv, From Section 7.6 of Digital Design & Computer Architecture    
 07-mipsmulti.sv  
+* DDCA_Labs_companion.zip  
+Lab 9: MIPS Single-Cycle Processor  
+Lab 10: Multicycle Processor (Part 1)  
+Lab 11: Multicycle Processor (Part 2)  
 
 ## TODO, gcc -S, asm volatile, for QtSpim    
 * (TODO) (IMP) use gcc-2.95.3 cross mips to gcc hello.c -S -mno-explicit-relocs, need comment jal __ main, why ???

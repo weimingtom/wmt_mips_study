@@ -33,7 +33,7 @@ see https://www.bilibili.com/video/BV1Zb4y1k7RJ/
 * (see cemu) https://github.com/z4yx/ucore-thumips/tree/for-ls232-soc_up  
 * (TODO) https://github.com/grantae/mips32r1_xum/tree/master/Software/demos/XD1_Hello/src/os  
 * https://github.com/evosynth/led_flash_wi-fire  
-* 数字设计和计算机体系结构  
+* 数字设计和计算机体系结构, MIPSfpga  
 
 ## TODO, gcc -S, asm volatile, for QtSpim    
 * (TODO) (IMP) use gcc-2.95.3 cross mips to gcc hello.c -S -mno-explicit-relocs, need comment jal __ main, why ???

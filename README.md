@@ -640,6 +640,7 @@ $ ct-ng build
 
 ## tcc, tinycc, tinycc-mips  
 * https://github.com/lhzhang/tinycc-mips  
+* 我发现有人吐槽tinycc（通常叫tcc）不支持MIPS，太难了（可不可以照着RISC-V来改），不过另一个编译器clang应该是可以输出MIPS的机器码  
 
 ## gcc  
 * https://github.com/ChrisRx/mipsel-ecoff-toolchain  

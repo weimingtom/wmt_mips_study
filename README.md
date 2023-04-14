@@ -811,4 +811,7 @@ PIC32MX470F512L-120I/PF
 * search baidupan, COD3E_计算机组成与设计.iso, 第3版  
 * 计算机组成与设计：硬件/软件接口  
 
+## mraa, libmraa  
+* https://github.com/eclipse/mraa/blob/master/docs/linkit_7688.md  
+* https://github.com/eclipse/mraa/blob/master/src/mips/mediatek.c  
 

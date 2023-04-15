@@ -816,5 +816,6 @@ PIC32MX470F512L-120I/PF
 * https://github.com/eclipse/mraa/blob/master/src/mips/mediatek.c  
 
 ## HUST OS ???  
+* 华中科技大学计算机学院计算机组成原理课程设计, logisim run hex (?)        
 * https://github.com/Starrylay/awesome-HUST-CS-MIPS-CPU  
 * https://github.com/ver217/MIPS-CPU-TOY   

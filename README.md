@@ -815,3 +815,6 @@ PIC32MX470F512L-120I/PF
 * https://github.com/eclipse/mraa/blob/master/docs/linkit_7688.md  
 * https://github.com/eclipse/mraa/blob/master/src/mips/mediatek.c  
 
+## HUST OS ???  
+* https://github.com/Starrylay/awesome-HUST-CS-MIPS-CPU  
+* https://github.com/ver217/MIPS-CPU-TOY   

@@ -41,6 +41,7 @@ see https://www.bilibili.com/video/BV1Zb4y1k7RJ/
 Lab 9: MIPS Single-Cycle Processor  
 Lab 10: Multicycle Processor (Part 1)  
 Lab 11: Multicycle Processor (Part 2)  
+* MIPS Embedded OS (MEOS)  
 
 ## TODO, gcc -S, asm volatile, for QtSpim    
 * (TODO) (IMP) use gcc-2.95.3 cross mips to gcc hello.c -S -mno-explicit-relocs, need comment jal __ main, why ???
@@ -819,3 +820,6 @@ PIC32MX470F512L-120I/PF
 * 华中科技大学计算机学院计算机组成原理课程设计, logisim run hex (?)        
 * https://github.com/Starrylay/awesome-HUST-CS-MIPS-CPU  
 * https://github.com/ver217/MIPS-CPU-TOY   
+
+## MIPS Embedded OS (MEOS)  
+* https://github.com/MIPS/meos  

@@ -841,5 +841,5 @@ usage: ProgramAssembler <mips-asm-file>
 ## MIPS Embedded OS (MEOS)  
 * https://github.com/MIPS/meos  
 
-## X1500  
+## 君正 X1500 ???    
 * https://github.com/IceForgTW/X1500  

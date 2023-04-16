@@ -844,5 +844,5 @@ usage: ProgramAssembler <mips-asm-file>
 ## 君正 X1500 ???    
 * https://github.com/IceForgTW/X1500  
 
-## mipseltools-gcc412-lnx26, jz4740 gcc toolchain  
+## mipseltools-gcc412-lnx26, 君正jz4740 gcc toolchain  
 * https://gitee.com/piaoxuebingfeng/mipseltools-gcc412-lnx26  

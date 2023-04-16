@@ -824,6 +824,13 @@ PIC32MX470F512L-120I/PF
 * cs3410.jar  
 * java -jar logisim-hust-20200118.exe  
 * some risc-v  
+* some mips java emulator code is in cs3410.jar  
+* 有人做了logisim的mips器件插件，用于模拟mips，叫cs3410.jar，  
+出处不详（可能是外面的课程，可能是闭源的），可以反编译，  
+看到里面好像是有一个Java写的mips汇编器。。。  
+有人甚至把它改成risc-v版和arm版。。。  
+我没试过，有课程用到这个东西去模拟mips的cpu，  
+有本叫《计算机组成原理实践教程——从逻辑门到CPU》  
 
 ## MIPS Embedded OS (MEOS)  
 * https://github.com/MIPS/meos  

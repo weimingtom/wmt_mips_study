@@ -836,6 +836,7 @@ PIC32MX470F512L-120I/PF
 usage: ProgramAssembler <mips-asm-file>  
 ```
 * mips-probe.jar: hust2020.Probe2#paintInstance: 反汇编器  
+* Mars4_5.jar, MIPS汇编工具及测试用例4.7, 很多可以用mars运行的汇编例子  
 
 ## MIPS Embedded OS (MEOS)  
 * https://github.com/MIPS/meos  

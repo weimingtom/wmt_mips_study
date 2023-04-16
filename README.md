@@ -831,6 +831,8 @@ PIC32MX470F512L-120I/PF
 有人甚至把它改成risc-v版和arm版。。。  
 我没试过，有课程用到这个东西去模拟mips的cpu，  
 有本叫《计算机组成原理实践教程——从逻辑门到CPU》  
+* cs3410.jar: edu.cornell.cs3410.ProgramAssembler#main: 汇编器, usage: ProgramAssembler <mips-asm-file>  
+* mips-probe.jar: hust2020.Probe2#paintInstance: 反汇编器  
 
 ## MIPS Embedded OS (MEOS)  
 * https://github.com/MIPS/meos  

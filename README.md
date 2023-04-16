@@ -846,3 +846,6 @@ usage: ProgramAssembler <mips-asm-file>
 
 ## mipseltools-gcc412-lnx26, 君正jz4740 gcc toolchain  
 * https://gitee.com/piaoxuebingfeng/mipseltools-gcc412-lnx26  
+* https://github.com/OpenNoah/mipseltools-gcc412-lnx26  
+* https://github.com/OpenNoahEdu/ingenic-mipseltools-gcc412-glibc236-lnx26  
+

@@ -820,6 +820,10 @@ PIC32MX470F512L-120I/PF
 * 华中科技大学计算机学院计算机组成原理课程设计, logisim run hex (?)        
 * https://github.com/Starrylay/awesome-HUST-CS-MIPS-CPU  
 * https://github.com/ver217/MIPS-CPU-TOY   
+* mips-probe.jar  
+* cs3410.jar  
+* java -jar logisim-hust-20200118.exe  
+* some risc-v  
 
 ## MIPS Embedded OS (MEOS)  
 * https://github.com/MIPS/meos  

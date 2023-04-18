@@ -42,6 +42,7 @@ Lab 9: MIPS Single-Cycle Processor
 Lab 10: Multicycle Processor (Part 1)  
 Lab 11: Multicycle Processor (Part 2)  
 * MIPS Embedded OS (MEOS)  
+* (TODO) https://github.com/yajin/jz-hacking/blob/master/wiki/qemujz.wiki   
 
 ## TODO, gcc -S, asm volatile, for QtSpim    
 * (TODO) (IMP) use gcc-2.95.3 cross mips to gcc hello.c -S -mno-explicit-relocs, need comment jal __ main, why ???

@@ -42,7 +42,9 @@ Lab 9: MIPS Single-Cycle Processor
 Lab 10: Multicycle Processor (Part 1)  
 Lab 11: Multicycle Processor (Part 2)  
 * MIPS Embedded OS (MEOS)  
-* (TODO) https://github.com/yajin/jz-hacking/blob/master/wiki/qemujz.wiki   
+* (TODO) https://github.com/yajin/jz-hacking/blob/master/wiki/qemujz.wiki  
+(TODO) how to run this qemu-JZ ????   
+
 
 ## TODO, gcc -S, asm volatile, for QtSpim    
 * (TODO) (IMP) use gcc-2.95.3 cross mips to gcc hello.c -S -mno-explicit-relocs, need comment jal __ main, why ???
@@ -850,7 +852,9 @@ usage: ProgramAssembler <mips-asm-file>
 * https://github.com/OpenNoahEdu/ingenic-mipseltools-gcc412-glibc236-lnx26  
 * https://gitee.com/piaoxuebingfeng/mipseltools-gcc412-lnx26  
 
-## qemu-JZ, jz-hacking google code archive    
+## (TODO) qemu-JZ, jz-hacking google code archive    
 * https://code.google.com/archive/p/jz-hacking/downloads  
 * https://repo.or.cz/w/qemu/qemu-JZ.git  
 * https://github.com/yajin/jz-hacking/blob/master/wiki/qemujz.wiki  
+* (TODO) qemu-JZ_20090207.tar.gz, jz_linux_2.6.24.3_20090624.tar.bz2, qemu-JZ-d1ef263.tar.gz  
+* 研究一下怎么跑这个qemu-JZ    

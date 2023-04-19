@@ -44,6 +44,7 @@ Lab 11: Multicycle Processor (Part 2)
 * MIPS Embedded OS (MEOS)  
 * (TODO) https://github.com/yajin/jz-hacking/blob/master/wiki/qemujz.wiki  
 (TODO) how to run this qemu-JZ ????   
+see https://code.google.com/archive/p/jz-hacking/wikis/qemujz.wiki    
 
 
 ## TODO, gcc -S, asm volatile, for QtSpim    
@@ -858,3 +859,6 @@ usage: ProgramAssembler <mips-asm-file>
 * https://github.com/yajin/jz-hacking/blob/master/wiki/qemujz.wiki  
 * (TODO) qemu-JZ_20090207.tar.gz, jz_linux_2.6.24.3_20090624.tar.bz2, qemu-JZ-d1ef263.tar.gz  
 * 研究一下怎么跑这个qemu-JZ    
+* see https://code.google.com/archive/p/jz-hacking/wikis/qemujz.wiki  
+* ./qemu-system-mipsel -M pavo -mtdblock pavo-nand.bin  
+

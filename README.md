@@ -850,6 +850,7 @@ usage: ProgramAssembler <mips-asm-file>
 * https://github.com/OpenNoahEdu/ingenic-mipseltools-gcc412-glibc236-lnx26  
 * https://gitee.com/piaoxuebingfeng/mipseltools-gcc412-lnx26  
 
-## qemu-JZ  
+## qemu-JZ, jz-hacking google code archive    
+* https://code.google.com/archive/p/jz-hacking/downloads  
 * https://repo.or.cz/w/qemu/qemu-JZ.git  
 * https://github.com/yajin/jz-hacking/blob/master/wiki/qemujz.wiki  

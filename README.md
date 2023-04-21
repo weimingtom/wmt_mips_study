@@ -864,3 +864,15 @@ usage: ProgramAssembler <mips-asm-file>
 
 ## JZ4740 Pavo Board    
 * https://github.com/OpenNoahEdu/ingenic-4740  
+
+## JZ4740 MIPS version  
+* https://handwiki.org/wiki/Company:Ingenic_Semiconductor  
+* https://handwiki.org/wiki/List_of_MIPS_architecture_processors  
+* http://www.ingenic.com.cn/en/?xburst.html  
+* MIPS32 rev1: Jz4720, Jz4725B, Jz4730  
+* MIPS32 rev1 + SIMD: Jz4740  
+* MIPS32 rev1 + SIMD2: Jz4750, Jz4755, Jz4760  
+* MIPS32 rev2 + SIMD2: Jz4770, Jz4775  
+* Dual MIPS32 rev2 + SIMD2: Jz4780  
+* MIPS32 + SIMD (r5?): x1000  
+* Dual MIPS32 + SIMD (r5?): x2000  

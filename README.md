@@ -862,3 +862,5 @@ usage: ProgramAssembler <mips-asm-file>
 * see https://code.google.com/archive/p/jz-hacking/wikis/qemujz.wiki  
 * ./qemu-system-mipsel -M pavo -mtdblock pavo-nand.bin  
 
+## JZ4740 Pavo Board    
+* https://github.com/OpenNoahEdu/ingenic-4740  

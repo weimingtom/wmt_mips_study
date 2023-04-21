@@ -1,0 +1,108 @@
+https://handwiki.org/wiki/Company:Ingenic_Semiconductor
+
+Company:Ingenic Semiconductor
+From HandWiki
+NamespacesCompanyDiscussionPage actionsReadView source
+Ingenic Semiconductor Co., Ltd.
+Logo-Ingenic RGB-500x187.png
+Native name	君正集成电路股份有限公司
+Traded as	Ingenic Semiconductor
+Industry	Fabless semiconductors, Semiconductors, Integrated circuit design
+Founded	2005; 18 years ago
+Founder	Liu Qiang (刘强)
+Headquarters	Beijing, China
+Key people	Liu Qiang (Chairman)
+Products	CPUs (XBurst), SoCs (JZxxx)
+Website	www.ingenic.com.cn/en
+Ingenic Semiconductor is a Chinese fabless semiconductor company based in Beijing, China founded in 2005. They purchased licenses for the MIPS architecture instruction sets in 2009 and design CPU-microarchitectures based on them. They also design system on a chip products including their CPUs and licensed semiconductor intellectual property blocks from third parties, such as Vivante Corporation, commission the fabrication of integrated circuits at semiconductor fabrication plants and sell them.
+
+
+Contents
+1	XBurst microarchitecture
+2	XBurst2 microarchitecture
+3	XBurst-based SoCs
+3.1	Adoption
+4	See also
+5	References
+6	External links
+XBurst microarchitecture
+Early XBurst CPU microarchitectures were based upon the MIPS32 revision 1 and newer models are based on the MIPS32 revision 2 instruction set. It implements an 8-stage pipeline. XBurst CPU technology consists of 2 parts:
+
+A RISC/SIMD/DSP hybrid instruction set architecture which enables the processor to have the capability of computation, signal processing and video processing. This includes the Media Extension Unit (MXU), a 32-bit SIMD extension. All JZ47xx series CPUs with Xburst uA support MXU, except for the JZ4730.[1][2]
+MXU has its own register set, distinct from the general purpose MIPS registers. It consists of sixteen 32-bit data registers and a 32-bit control register.[3] CPUs which support MXU are used in MIPS Creator single-board computers. They are also present in various tablets, handheld game devices, and embedded devices.
+XBurst2 microarchitecture
+XBurst2 development was, in summer 2013, expected to be completed by the first half of 2014.[4] However, XBurst2 was eventually introduced in 2020 in the X2000,[5] with the microarchitecture offering a dual-issue/dual-threaded CPU design based on MIPS32 Release 5.[6]
+
+XBurst-based SoCs
+
+Ingenic JZ4725
+SoCs incorporating the XBurst microarchitecture:[7]
+
+Model	Launch	Fab (nm)	XBurst version	MIPS architecture version	Core clock (MHz)	L1 Dcache
+[kB]	L1 Icache
+[kB]	L2 cache
+[kB]	FPU	GPU	VPU	Datasheet	Package	Notes
+Jz4720	2005	180	XBurst1	MIPS32 rev1	240	16	16	N/A	N/A	N/A	N/A	Jz4720		
+Jz4725B	2005	160	XBurst1	360	Jz4725		
+Jz4730	2005	180	XBurst1	336	Jz4730		
+Jz4740	2007	180	XBurst1	MIPS32 rev1 + SIMD	360	Jz4740		adds RMVB, MPEG-1/2/4 decoding capability up to D-1 resolution thanks to SIMD instruction set
+Jz4750	2009	180	XBurst1	MIPS32 rev1 + SIMD2	360	480p	Jz4750		adds TV encoder
+Jz4755	2009	160	XBurst1	400	576P	Jz4755	QFP176	second core is for video processing only
+Jz4760	2010	130	XBurst1	600	yes	Vivante GC200	720p	JZ4760
+JZ4760B	BGA345	second core is for video processing only, IEEE754-complient FPU
+Jz4770	2011	65	XBurst1	MIPS32 rev2 + SIMD2	1000	256	yes	Vivante GC860[8]	1080p	JZ4770	BGA379	1080p video decoding unit for h.264, VC-1 and VP8 (a secondary 500 MHz MIPS processor with SIMD extension)
+Jz4775[9]		65	XBurst1	MIPS32 rev2 + SIMD2	1000	32	32	256	yes	X2D Core	720p	JZ4775	BGA314	720p video decoding unit for h.264, VC-1 and VP8 (a secondary 500 MHz MIPS processor with SIMD extension)
+Jz4780	2012	40	XBurst1	Dual MIPS32 rev2 + SIMD2	1200[10]	32 each	32 each	512	yes	PowerVR SGX 540	1080p	JZ4780	BGA390	Dual core (SMP) XBurst CPU, 1080p video decoding unit for h.264, VC-1 and VP8 (a secondary 500 MHz MIPS processor with SIMD extension)
+x1000[11]	2015[12]	65	XBurst1	MIPS32 + SIMD	1000	16	16	128	yes			x1000	BGA190	LPDDR 32/64MB, SLCD interface, Camera interface, Audio Codec up to 192 kHz
+x2000	2020[13]	28	XBurst2	Dual MIPS32 + SIMD	1500	32 each	32 each	512	yes		1080p	x2000	BGA270	LPDDR2/3 128/256MB
+Adoption
+XBurst1-based SoCs are commonly used in tablet computers, portable media players, digital photo frames and GPS devices:
+
+The JZ4730 CPU is used in the Skytone Alpha-400 and its variants.[14] The Jz4720 is utilized in the Copyleft Hardware project Ben NanoNote.[15] Another popular device, the Dingoo gaming handheld, uses the JZ4732, a de facto JZ4740. Game Gadget is using the JZ4750. Velocity Micro T103 Cruz and T301 Cruz 7-Inch Android 2.0 Tablets used JZ4760. The JZ4770 SoC is used in several of the Ainol Novo 7 Android tablets[16] and 3Q Tablet PC Qoo! IC0707A/4A40. JZ4770 SoC is also used in the dedicated handheld NEOGEO-X[17] and open source handheld GCW Zero[18] running on OpenDingux.[19] The JZ4780 is used in ImgTec's MIPS based single-board computer (SBC); The Creator CI20[20]
+
+Manufacturer	Model(s)	Type	CPU	Operating System
+Qi Hardware	Ben NanoNote	Handheld Computer	Ingenic JZ4720	OpenWRT (custom)
+Skytone	Skytone Alpha-400	Netbook	Ingenic JZ4730	Linux
+unknown	Dingoo	Handheld Game Console	Ingenic JZ4732	OpenDingux
+unknown	Game Gadget	Handheld Game Console	Ingenic JZ4750	unknown
+Velocity Micro	Cruz T103, T301	Tablet	Ingenic JZ4760	Android 2.0
+GCW	GCW Zero	Handheld Game Console	Ingenic JZ4770	OpenDingux
+unknown	NEOGEO-X	Handheld Game Console	Ingenic JZ4770	unknown
+ImgTec	Creator CI20	Single-board computer	Ingenic JZ4780	Linux
+See also
+Lantiq
+Cavium
+Loongson
+Qualcomm Atheros
+MediaTek
+OpenWrt
+Ainol
+Ben Nanonote
+References
+ "JZ4780 Mobile Application Processor - Programming Manual". Imagination Technologies.
+ "Development:MXU".
+ "Ingenic SIMD/DSP Instruction Set". Ingenic Semiconductor Co. Ltd..
+ "XBurst2 SoC being developed".
+ "Ingenic added X2000 multi-core heterogeneous cross-border processor and halley5 development platform" (Press release). Retrieved 13 December 2020.
+ "Ingenic CPU Technologies".
+ "Ingenic Xburst Products".
+ "::: Vivante Corporation I News :::".
+ Suspected to be called as JZ4774 sometime
+ JZ4780 Mobile Application Processor Data Sheet
+ "Ingenic Semiconductor_M200 M150 JZ4780 JZ4775 JZ4760B".
+ Williams, Alun (2015-10-07). "1GHz MIPS chip aimed at human-machine interfacing" (in en-GB).
+ "1GHz MIPS chip aimed at human-machine interfacing". 2020-07-12.
+ Hachman, Mark (May 30, 2008). "Mystery Chip Powers New $299 UMPC - News and Analysis by PC Magazine". 080707 pcmag.com
+ Ben NanoNote Hardware Components
+ "$79 Ainol Novo 7 Paladin Tablet Does Ice Cream Sandwich".
+ "Neo-Geo X official site".
+ "GCW-Zero official site".
+ http://www.mips.com/news-events/newsroom/newsindex/index.dot?id=71045 Lowest-Cost Android 4.1 Tablet in 2012 is based in MIPS
+ "Tom's Hardware CI20". 19 December 2014.
+External links
+Application Processor Overview
+Linux developer page
+rockbox.org, Hardware docs
+MT-V656 (JZ4755)
+Ingenic Semiconductor Licenses MIPS32® Architecture for Mobile Devices (January 4, 2011)
+EE Times Article

@@ -876,3 +876,8 @@ usage: ProgramAssembler <mips-asm-file>
 * Dual MIPS32 rev2 + SIMD2: Jz4780  
 * MIPS32 + SIMD (r5?): x1000  
 * Dual MIPS32 + SIMD (r5?): x2000  
+
+## 君正m150_cnx-software  
+* https://www.cnx-software.com/2015/02/10/ingenic-halley-is-20-linux-based-iot-board-with-wi-fi-and-bluetooth-4-1-connectivity/  
+
+## 君正jz4740_pavo开发板  

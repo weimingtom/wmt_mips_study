@@ -904,3 +904,6 @@ ramdisk 修改路径：arch/mips/xburst/soc-4775/chip-m150/halley/common/
 ## IngenicHAL  
 * https://github.com/Ingenic-community/IngenicHAL  
 * https://github.com/Ingenic-community/IngenicHAL/blob/main/examples/st7789_bitbang.c  
+
+## Ingenic T31  
+* https://github.com/cgrrty/Ingenic-SDK-T31-1.1.1-20200508  

@@ -900,3 +900,7 @@ ramdisk 修改路径：arch/mips/xburst/soc-4775/chip-m150/halley/common/
 2，系统启动进入Buildroot时，密码为：root  
 
 ## 君正jz4740_pavo开发板  
+
+## IngenicHAL  
+* https://github.com/Ingenic-community/IngenicHAL  
+* https://github.com/Ingenic-community/IngenicHAL/blob/main/examples/st7789_bitbang.c  

@@ -879,5 +879,24 @@ usage: ProgramAssembler <mips-asm-file>
 
 ## 君正m150_cnx-software  
 * https://www.cnx-software.com/2015/02/10/ingenic-halley-is-20-linux-based-iot-board-with-wi-fi-and-bluetooth-4-1-connectivity/  
+* https://imgtec.eetrend.com/d6-imgtec/forum/2015-02/4851.html  
+* $ export PATH=path/to/SDK/binaries/toolchain/mips-gcc472-glibc216/bin:$PATH  
+$ export CROSS_COMPILE=mips-linux-gnu-  
+uboot：  
+$ make halley_uImage_spinor  
+kernel：  
+$ make halley_linux_defconfig  
+$ make uImage  
+* 提醒：  
+文件系统默认挂载ramdisk（rootfs.cpio.gz），若要使用WIFI需将ramdisk更改为（rootfs_wifi.cpio.gz）,两个ramdisk都支持ADB。  
+ramdisk 修改路径：arch/mips/xburst/soc-4775/chip-m150/halley/common/  
+烧录工具：  
+烧录工具已经存放到代码目录下，其下载路径：binaries/host-tools/BurnerBinary/latest-halley-linux-burner  
+注意，0.25.1烧录工具烧录Halley,使用配置暂时如下：  
+1，平台：4775  
+2，板级：gemini_spi_lpddr.cfg  
+系统操作中注意事项：  
+1，WIFI 信号不好，需外接天线，同时WIFI距热点较远时，信号衰减较大，频偏未校准，建议使用airkiss调试时靠近WIFI热点（三米以内）。  
+2，系统启动进入Buildroot时，密码为：root  
 
 ## 君正jz4740_pavo开发板  

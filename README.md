@@ -907,3 +907,11 @@ ramdisk 修改路径：arch/mips/xburst/soc-4775/chip-m150/halley/common/
 
 ## Ingenic T31  
 * https://github.com/cgrrty/Ingenic-SDK-T31-1.1.1-20200508  
+
+## opendingux buildroot and linux and qemu-system-mipsel        
+* http://prizma.bmstu.ru/~exmortis/posts/2015-04-23-opendingux-qemu.html  
+* https://github.com/dmitrysmagin/opendingux-buildroot  
+* https://github.com/mthuurne/opendingux-buildroot  
+* https://github.com/dmitrysmagin/linux  
+* https://github.com/gcwnow/linux  
+* https://steward-fu.github.io/website/handheld/a320/opendingux/os_qemu.htm  

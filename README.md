@@ -915,3 +915,6 @@ ramdisk 修改路径：arch/mips/xburst/soc-4775/chip-m150/halley/common/
 * https://github.com/dmitrysmagin/linux  
 * https://github.com/gcwnow/linux  
 * https://steward-fu.github.io/website/handheld/a320/opendingux/os_qemu.htm  
+
+## mimiker  
+* https://github.com/cahirwpz/mimiker  

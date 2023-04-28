@@ -905,6 +905,7 @@ ramdisk 修改路径：arch/mips/xburst/soc-4775/chip-m150/halley/common/
 https://github.com/OpenNoah/bmkernel/blob/master/main.c  
 * https://github.com/OpenNoah/OpenNoah.github.io/tree/master/datasheet  
 * qt2: https://github.com/OpenNoah/qt-2.3.10   
+* https://github.com/retrofw/kernel/blob/main/README-JZ  
 
 ## IngenicHAL  
 * https://github.com/Ingenic-community/IngenicHAL  

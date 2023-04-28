@@ -907,6 +907,7 @@ https://github.com/OpenNoah/bmkernel/blob/master/main.c
 * qt2: https://github.com/OpenNoah/qt-2.3.10   
 * kernel readme: https://github.com/retrofw/kernel/blob/main/README-JZ  
 * busybox: https://github.com/OpenNoah/rootfs  
+https://github.com/OpenNoah/rootfs/releases  
 
 ## IngenicHAL  
 * https://github.com/Ingenic-community/IngenicHAL  

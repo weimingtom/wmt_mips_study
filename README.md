@@ -902,7 +902,9 @@ ramdisk 修改路径：arch/mips/xburst/soc-4775/chip-m150/halley/common/
 ## 君正jz4740_pavo开发板  
 * search, 君正jz4740_pavo开发板  
 * (?TODO, bare-metal) https://github.com/OpenNoah/bmkernel/tree/master  
+https://github.com/OpenNoah/bmkernel/blob/master/main.c  
 * https://github.com/OpenNoah/OpenNoah.github.io/tree/master/datasheet  
+* qt2: https://github.com/OpenNoah/qt-2.3.10   
 
 ## IngenicHAL  
 * https://github.com/Ingenic-community/IngenicHAL  

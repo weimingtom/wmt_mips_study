@@ -911,6 +911,10 @@ https://github.com/OpenNoah/rootfs/releases
 * see 源码中国  
 * 君正4750开发板使用日记6-uCOS(minios)的开发配置试验  
 https://blog.csdn.net/huzgd/article/details/6065818  
+* from virtualmips  
+https://elinux.org/CELinux_040503_Release  
+https://osdn.net/projects/sfnet_virtualmips/  
+https://sourceforge.net/projects/virtualmips/files/virtualmips/  
 
 ## IngenicHAL  
 * https://github.com/Ingenic-community/IngenicHAL  

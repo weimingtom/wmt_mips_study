@@ -1,0 +1,257 @@
+君正4750开发板使用日记6-uCOS(minios)的开发配置试验
+
+https://blog.csdn.net/huzgd/article/details/6065818  
+
+
+君正4750开发板使用日记6-uCOS(minios)的开发配置试验
+
+huzgd
+
+于 2010-12-09 15:53:00 发布
+
+5649
+ 收藏
+分类专栏： 嵌入开发 文章标签： ubuntu triggers assembly makefile 文档 gcc
+版权
+
+嵌入开发
+专栏收录该内容
+8 篇文章0 订阅
+订阅专栏
+大半年没有搞君正的开发板了，最近总算有机会再试试JZ4750的uc/osII配置。也在此做个记录，供参阅。
+
+
+
+ucos要在linux环境下编译，我仍是在windows下用VMWare UbuntuServer910虚拟机，用Putty连接登录后执行命令。我一开始并没有拿到了JZ4750的ucos的SDK（随机光盘上只有一个可烧录的DEMO），于是从君正官网的FTP里下载了Jz-uCOS-Development-guide.pdf、mipsel-4.1.2-nopic.tar.bz2、ucosii.tar等文件，然后将所有JZ的安装文件打包成ISO挂在虚拟机光驱上，按照Jz-uCOS-Development-guide.pdf里的说明，进行解压安装。
+
+ 
+
+首先是挂载光盘，安装编译器工具链：
+
+root@ubuntu:~# mkdir -p /opt
+root@ubuntu:~# cd /opt
+
+根据过去的经验，GCC等基本编译包是必须要装的：
+root@ubuntu:/opt# apt-get install build-essential
+...
+root@ubuntu:/opt# mount /dev/cdrom /mnt
+mount: block device /dev/sr0 is write-protected, mounting read-only
+root@ubuntu:/opt# ls /mnt
+ucosii.tar  mipsel-4.1.2-nopic.tar.bz2
+root@ubuntu:/opt# tar -xjf /mnt/mipsel-4.1.2-nopic.tar.bz2
+root@ubuntu:/opt# ls
+mipsel-4.1.2-nopic
+root@ubuntu:/opt# mv mipsel-4.1.2-nopic mipsel-nopic
+root@ubuntu:/opt# ls
+mipsel-nopic
+root@ubuntu:/opt#
+
+然后是设置环境变量，写个hello.c程序来验证编译工具是否安装成功：
+
+root@ubuntu:/opt# export GCC_EXEC_PREFIX=/opt/mipsel-nopic/lib/gcc/mipsel-linux/4.1.2/
+root@ubuntu:/opt# export PATH=/opt/mipsel-nopic/bin:$PATH
+root@ubuntu:/opt# vi hello.c
+
+按I进入插入模式，输入以下内容，按ESC，输入wq保存退出：
+#include <stdio.h>
+int main()
+{
+        printf("hello jz-mipsel-linux ucosii/r/n");
+        return 0;
+}
+root@ubuntu:/opt# mipsel-linux-gcc -o hello hello.c
+mipsel-linux-gcc: error trying to exec 'cc1': execvp: No such file or directory
+
+root@ubuntu:/opt#
+
+ 
+
+非常郁闷，居然连最简单的HELLO都编译失败。网上查一下，说可能是gcc没装好或路径不对，于是又下载重装更新，瞎折腾了一把，最后发现出错是因为被文档误导了，有GCC_EXEC_PREFIX的环境变量定义反而不行，将其删除即可：
+root@ubuntu:/opt# export -n GCC_EXEC_PREFIX
+root@ubuntu:/opt# mipsel-linux-gcc -o hello hello.c
+...
+/opt/mipsel-nopic/bin/../lib/gcc/mipsel-linux/4.1.2/../../../../mipsel-linux/bin/ld: /opt/mipsel-nopic/bin/../lib/gcc/mipsel-linux/4.1.2/crtend.o: warning: linking PIC files with non-PIC files
+/opt/mipsel-nopic/bin/../lib/gcc/mipsel-linux/4.1.2/../../../../mipsel-linux/bin/ld: /opt/mipsel-nopic/bin/../lib/gcc/mipsel-linux/4.1.2/../../../../mipsel-linux/lib/crtn.o: warning: linking PIC files with non-PIC files
+
+root@ubuntu:/opt#
+
+ 
+
+编译工具链装好了，接着解开ucosii的源码：
+
+root@ubuntu:/opt# tar -xf /mnt/ucosii.tar
+root@ubuntu:/opt# ls
+hello  hello.c  mipsel-nopic  ucosii
+root@ubuntu:/opt# cd ucosii
+root@ubuntu:/opt/ucosii# ls
+audio  cvs-up-dir.sh  jz4740  lwip     mips  sample  ucfs
+CVS    jz4730         LIBS    madplay  mmc   src     ucgui
+root@ubuntu:/opt/ucosii#
+
+ 
+
+按文档说明，我应该要进JZ4750目录编译，但显然此安装包里没有这个配置。不管那么多，先到JZ4740子目录编译一下：
+root@ubuntu:/opt/ucosii# cd jz4740/
+root@ubuntu:/opt/ucosii/jz4740# make
+mipsel-linux-gcc -mips32 -O2 -mno-abicalls -fno-pic -fno-builtin -fno-exceptions -ffunction-sections -finit-priority -fomit-frame-pointer -msoft-float -G 0 -DJZ4740_PAV=1 -DCAMERA=0 -DUCGUI=1 -DUCFS=1 -DMMC=1 -DJPEG=1 -DTOUCH=2 -DJZ4740_PAV=1 -DDM=0      -I../src -I../jz4740/include -I../mips -I../jz4740 -I../jz4740/nand -DNAND=1 -DKEYTYPE=1 -I../jz4740/drv/key -DCODECTYPE=1 -I../jz4740/drv/codec -DRTCTYPE=1 -I../jz4740/drv/rtc -DLCDTYPE=1 -I../jz4740/drv/lcd -DTOUCH=2 -I../jz4740/drv/touch -I../mmc -I../ucfs -I../ucgui/Font -I../ucgui/LCDDriver -I../ucgui/Config -I../ucgui/Core -I../ucgui/ConvertColor -I../ucgui/WM -I../ucgui/Widget -I../ucgui/MemDev -I../ucgui/JPEG -DUDC=1 -DNAND_UDC_DISK=1 -DRAM_UDC_DISK=0 -I../jz4740/udc_new/udc_bus -I../jz4740/udc_new/udc_dma -I../jz4740/udc_new/mass_storage -I../jz4740/udc_new/block/ramdisk -I../jz4740/udc_new/block/nanddisk -I../madplay/libmad-0.15.1b -I../madplay/libid3tag-0.15.1b -D_ASSEMBLER_ -D__ASSEMBLY__ -o head.o -c head.S
+cc1: error: unrecognized command line option "-finit-priority"
+make: *** [head.o] Error 1
+root@ubuntu:/opt/ucosii/jz4740#
+
+ 
+
+这下搞不掂了，重新下载了另一个编译工具链mipsel-linux-gcc412-glibc236-nopic-sf-20101020.tar.bz2一样不行，改makefile把此选项去掉，又有别的错误。折腾了半天，还是不行，最后放弃了这个网上的版本。
+
+然后打电话给君正的技术支持重新要一个ucos的SDK。JZ的人员素质很高，很快就答应了，一会就传了个minios SDK过来。SDK附带一个minios sdk使用说明.pdf，看了此文档后，才知道原来ucos的开发是需要先做资源，包括def、img、str、font和开机画面等，生成res.bin和ResID.h，以及def_boot.bin、img_boot.bin，然后把ResID.h复制到源码目录加入编译。烧录时可以多个bin一起烧进去。
+
+这次我拿到的是一个多媒体播放的SDK配置，其主目录为mtv_50，首先仍是解压安装：
+root@ubuntu:/opt# tar -xf /mnt/minios.tar
+root@ubuntu:/opt# ls
+hello  hello.c  minios  mipsel-4.1.2-nopic  ucosII  ucosii-old
+root@ubuntu:/opt# cd minios/
+root@ubuntu:/opt/minios# ls
+dcdv  inc  jzfs  midware  miniclib  mtv_50  sample  soc_src  src
+
+ 
+
+按照文档说明，把mxu_as文件复制到编译工具目录：
+root@ubuntu:/opt/minios# cd mtv_50/tools
+root@ubuntu:/opt/minios/mtv_50/tools# ls
+big5_tools  crc32.c  gb18030_tools  ksc_tools  Makefile  mxu_as
+root@ubuntu:/opt/minios/mtv_50/tools# cp mxu_as /opt/mipsel-nopic/bin/
+
+ 
+
+然后编译nandboot：
+
+root@ubuntu:/opt/minios/mtv_50/tools# cd ..
+root@ubuntu:/opt/minios/mtv_50# cd ../soc_src/jz4755/nandboot/
+root@ubuntu:/opt/minios/soc_src/jz4755/nandboot# make clean
+rm -fr *.o nand.elf clock.o  debug.o  nandboot.o  nandlib.o  core  *.sym *.map *.dump nand.bin *.lib
+root@ubuntu:/opt/minios/soc_src/jz4755/nandboot# make
+mipsel-linux-gcc -mips32 -O2 -mno-abicalls -fno-pic -fno-builtin -fno-exceptions -ffunction-sections -Wall -Werror -fomit-frame-pointer -msoft-float -G 0 -DSOC_GENERATION=4755 -DUARTQUERY=2 -DHAVE_DCDV=0 -DPLATFORM_CETUS -DPLATFORM_CETUS_4750L -DIMAGE_DECODE_MEM_LEN="(4*1024*1024)" -DAUDIO_DECODE_MEM_LEN="(5*1024*1024)" -DAUDIOTAG_MEM_SIZE="(5*1024*1024)" -DLCD16BPP=0 -DLCD32BPP=1 -DSCREEN_W=480 -DSCREEN_H=272 -DVIDEOMAXMEM=0x81fffc00 -DLCD_TYPE_BPP_32 -DNOT_SUPPORT_TVOUT -DTVOUTTYPE=0 -I../../../soc_src/jz4755/include -I../../../src -I../../../soc_src/jz4755/nandboot  -D_ASSEMBLER_ -D__ASSEMBLY__ -o start.o -c start.S
+...
+mipsel-linux-gcc -nostdlib -T u-boot-nand.lds -o nand.elf start.o  clock.o  debug.o  nandboot.o  nandlib.o   -lstdc++ -lc -lm -lgcc
+mipsel-linux-objcopy -O binary nand.elf nand.bin
+mipsel-linux-objdump -d nand.elf > nand.dump
+mipsel-linux-nm nand.elf | sort > nand.sym
+mipsel-linux-objdump -h nand.elf > nand.map
+root@ubuntu:/opt/minios/soc_src/jz4755/nandboot#
+
+ 
+
+一次成功，难得。接着清理并编译主BIN：
+root@ubuntu:/opt/minios/soc_src/jz4755/nandboot# cd /opt/minios/mtv_50/
+root@ubuntu:/opt/minios/mtv_50# make cleanall
+#cd ;make clean;#cd ../mtv_50;
+make[1]: Entering directory `/opt/minios/mtv_50/desktop'
+make[2]: Entering directory `/opt/minios/mtv_50/desktop/simpleness'
+rm -fr ../../../mtv_50/desktop/simpleness/rel
+...
+rm -f  *~ *.o ../../../soc_src/LIBS/mass_lib.a depend
+make[1]: Leaving directory `/opt/minios/soc_src/common/mass_lib'
+root@ubuntu:/opt/minios/mtv_50#
+root@ubuntu:/opt/minios/mtv_50# make build
+...
+../../mtv_50/genlds   ../../mtv_50/video/rel/video.elf.obj  ../../mtv_50/target/mobile_tv.lds > mobile_tv.lds
+../../mtv_50/genlds: 4: gawk: not found
+make[1]: *** [../../mtv_50/video/rel/video.elf] Error 127
+make[1]: Leaving directory `/opt/minios/mtv_50/video'
+make: *** [../mtv_50/video] Error 2
+root@ubuntu:/opt/minios/mtv_50#
+
+ 
+
+不出所料又杯具了。不过还好，是缺了gawk这个包，将它装上就是了：
+
+root@ubuntu:/opt/minios/mtv_50# apt-get install gawk
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  gawk
+0 upgraded, 1 newly installed, 0 to remove and 43 not upgraded.
+Need to get 525kB of archives.
+After this operation, 2,122kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com karmic/main gawk 1:3.1.6.dfsg-0ubuntu2 [525kB]
+Fetched 525kB in 4s (114kB/s)
+Selecting previously deselected package gawk.
+(Reading database ... 40315 files and directories currently installed.)
+Unpacking gawk (from .../gawk_1%3a3.1.6.dfsg-0ubuntu2_i386.deb) ...
+Processing triggers for install-info ...
+Processing triggers for man-db ...
+Setting up gawk (1:3.1.6.dfsg-0ubuntu2) ...
+
+root@ubuntu:/opt/minios/mtv_50#
+
+ 
+
+这次终于编译通过了：
+
+root@ubuntu:/opt/minios/mtv_50# make build
+...
+head:----------------------------------
+     name  = desktoplib_drawer.bin
+     nand  = 6954
+     start = 0x80451000
+     size  = 12160
+---------------------------------------
+head:----------------------------------
+     name  = desktoplib_tradition.bin
+     nand  = 6960
+     start = 0x80451000
+     size  = 8728
+---------------------------------------
+Total File Count 62 Link File Count 62!
+make: [app] Error 1 (ignored)
+make: [app] Error 1 (ignored)
+cp -f HostLink/minios.bin ../../
+root@ubuntu:/opt/minios/mtv_50#
+
+ 
+
+其输出文件minios.bin在/opt下：
+
+root@ubuntu:/opt/minios/mtv_50# cd ../../
+root@ubuntu:/opt# ls -l
+total 14504
+-rwxr-xr-x  1 root root   572102 2010-12-07 02:44 hello
+-rw-r--r--  1 root root      105 2010-12-07 02:44 hello.c
+drwxrwxrwx 11 root root     4096 2010-04-14 03:15 minios
+-rw-r--r--  1 root root 14264320 2010-12-07 05:00 minios.bin
+drwxr-xr-x 10  508  500     4096 2008-03-25 00:52 mipsel-nopic
+root@ubuntu:/opt#
+
+ 
+
+文档上还需要编译minios/loader，但我没有这个目录。搜一下，最后发现在minios/mtv_50/loader目录下，于是编译之：
+
+root@ubuntu:/opt/minios/mtv_50# cd loader
+root@ubuntu:/opt/minios/mtv_50/loader# make clean
+rm -fr ../../mtv_50/loader/target
+root@ubuntu:/opt/minios/mtv_50/loader# make
+Compile: ../../soc_src/common/kernel_lib/head.S
+Compile: ../../miniclib/libc_s.S
+Compile: ../../soc_src/jz4755/kernel/clock.c
+...
+    144       0       0     144      90 os_dbg.o (ex ../../src/minios.a)
+   2216       0   20496   22712    58b8 os_cpu_a.o (ex ../../src/minios.a)
+ 148272    1632   49600  199504   30b50 (TOTALS)
+   text    data     bss     dec     hex filename
+ 150896    1688   82532  235116   3966c ../../mtv_50/loader/target/loader.elf
+ 150896    1688   82532  235116   3966c (TOTALS)
+root@ubuntu:/opt/minios/mtv_50/loader#
+
+接下来就是将所有BIN文件拷到烧录目录下，执行烧录了。
+
+ 
+
+至此基本上把JZ4750的主要几种系统的开发模式都浅尝试验过了，都没有做深入的软硬件配置和应用开发，但感觉还是比较复杂。君正在UCOS上的资料还是太少，网上的源码包和文档都太久不更新过于陈旧，离开了技术支持绝对是不行的，对原厂商依赖性太强，需要提供较多的服务支持，这对其方案应用的发展来说显然是有限制的。
+
+ 
+
+顺便解释一下这里所谓的minios与uC/OS的关系，其实minios一般就是硬件方案厂商在uC/OS的基础上作了移植开发增强功能的结果。移植的意思是从一种硬件架构移到另一种，因为不同的硬件方案中CPU指令、寄存器、时钟中断、数据类型等都不同，所以需要移植修改。比如凌阳的开发板会附带一个凌阳从uC/OS移植过来的minios；我拿到的这个minios，其实是君正在uC/OS II的基础上移植开发的。
+————————————————
+版权声明：本文为CSDN博主「huzgd」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/huzgd/article/details/6065818
+

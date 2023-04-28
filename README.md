@@ -908,6 +908,9 @@ https://github.com/OpenNoah/bmkernel/blob/master/main.c
 * kernel readme: https://github.com/retrofw/kernel/blob/main/README-JZ  
 * busybox: https://github.com/OpenNoah/rootfs  
 https://github.com/OpenNoah/rootfs/releases  
+* see 源码中国  
+* 君正4750开发板使用日记6-uCOS(minios)的开发配置试验  
+https://blog.csdn.net/huzgd/article/details/6065818  
 
 ## IngenicHAL  
 * https://github.com/Ingenic-community/IngenicHAL  

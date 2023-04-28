@@ -1,0 +1,524 @@
+https://blog.csdn.net/huzgd/article/details/5274817
+
+君正4750开发板使用日记2-Linux环境搭建与内核编译
+
+huzgd
+
+于 2010-01-31 17:00:00 发布
+
+12030
+ 收藏
+文章标签： ubuntu triggers linux内核 vmware file image
+版权
+Linux环境搭建与内核编译
+
+ 
+
+上一篇中把4750开发板与PC的硬件连通了，这一篇记录的是基本的Linux环境的搭建。其实官方文档已经比较细了，网上也有大量的资料，但到实践中还是有一些问题，在此记录一下。
+
+ 
+
+首先是安装一个LINUX系统来做开发环境了。官方推荐当然是直接装一个，但是一方面我平时很多工作还是要在Windows下完成，另一方面我也习惯了用Windows，因此我还是没有直接装。
+
+ 
+
+最开始搞了个VMWare虚拟机装了个RedHat，后来又尝试了一个Cygwin，下载了老半天装完，然后鼓弄了很久，觉得都不好用。后来看官方文档上是以Ubuntu为例，于是在VMWare上装了个Ubuntu桌面，但VMWare Tools老装不上，查了下说要重新编译内核，试了几回，内核是编译过了，但VMWare Tools还是有一部分编译不了，最重要的是共享文件那块没法用。我一怒之下，把装好的系统删了。后来下载了一个别人已经装好的Ubuntu Server 9.10镜像，据说已经装好了VMWare Tools，拉下来一看其实也没有装，但我懒得再折腾了，就基于这个系统开始配置开发环境了。
+
+ 
+
+由于没有搞掂VMWare与主机的文件共享，我只好把JZ4750的源码和工具包打包成一个ISO文件挂到Ubuntu的CDROM上访问。按照文档的指示，安装编译mipseltools-gcc412-glibc261.tar.bz2，编译了君正PATCH过的UBOOT和LINUX内核，烧写和配置UBOOT，再安装TFTP和NFS网络文件系统，配置UBOOT从NFS加载LINUX内核。文档上是先安装TFTP和NFS，其实可以放到后一步与根文件系统一块去做更合乎习惯。
+
+ 
+
+具体过程基本上都是在putty终端上完成。我一般在WINDOWS上开两个putty，一个连开发板COM口，另一个连VMWare的ubuntu终端。如果你本来就是用LINUX系统，那你可以像官方文档说的一样用minicom连COM口。
+
+ 
+
+由于我装的是ubuntu server，是没有桌面的，原始大小只有900M多一点，压缩一下只有208M，因此我不在上面做图形开发。由于选择用QT做GUI，QT提供了WINDOWS下的源码和开发环境，可以跟Visual Studio一起用，因此可以在WINDOWS下开发完，再转到ubuntu上交叉编译，再放到开发板上运行。
+
+ 
+
+进行编译操作前，最好确认有足够的磁盘空间，因为中间编译时间较长，需要很大磁盘空间，要是因为空间不够导致中止就不划算了。
+我的虚拟磁盘最大设置是20G。
+
+ 
+
+为了较详细地记录安装编译过程，我把所有过程重新做了一次，把主要的操作命令和输出结果也贴上来，虽有些繁琐，但对新人理解和比较整个安装过程是有些帮助的。我自己在安装时，就很希望有这么个日志记录。
+
+ 
+
+ 
+
+安装基本的编译工具gcc,g++,make之类的，Ubuntu提供了一个build-essential软件包可以直接全装上：
+
+（如果不是以root登录，要在命令前加sudo提升权限；安装过程需要从网上下载数据，请保持网络连接；如果是刚装好的系统，可能需要先执行apt-get update更新软件库列表）
+root@ubuntu:/# apt-get install build-essential
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  ssl-cert
+Use 'apt-get autoremove' to remove them.
+The following extra packages will be installed:
+  binutils cpp-4.4 dpkg-dev fakeroot g++ g++-4.4 gcc gcc-4.4 gcc-4.4-base
+  libc-bin libc-dev-bin libc6 libc6-dev libc6-i686 libgcc1 libgomp1 libstdc++6
+  libstdc++6-4.4-dev linux-libc-dev
+Suggested packages:
+  binutils-doc gcc-4.4-locales debian-keyring debian-maintainers g++-multilib
+  g++-4.4-multilib gcc-4.4-doc libstdc++6-4.4-dbg gcc-multilib manpages-dev
+  autoconf automake1.9 libtool flex bison gdb gcc-doc gcc-4.4-multilib
+  libmudflap0-4.4-dev libgcc1-dbg libgomp1-dbg libmudflap0-dbg libcloog-ppl0
+  libppl-c2 libppl7 glibc-doc libstdc++6-4.4-doc
+The following NEW packages will be installed:
+  binutils build-essential dpkg-dev fakeroot g++ g++-4.4 gcc gcc-4.4
+  libc-dev-bin libc6-dev libgomp1 libstdc++6-4.4-dev linux-libc-dev
+The following packages will be upgraded:
+  cpp-4.4 gcc-4.4-base libc-bin libc6 libc6-i686 libgcc1 libstdc++6
+7 upgraded, 13 newly installed, 0 to remove and 54 not upgraded.
+Need to get 26.9MB of archives.
+After this operation, 61.6MB of additional disk space will be used.
+Do you want to continue [Y/n]? y
+Get:1 http://us.archive.ubuntu.com karmic-updates/main libc-bin 2.10.1-0ubuntu16 [715kB]
+Get:2 http://us.archive.ubuntu.com karmic-updates/main libc6 2.10.1-0ubuntu16 [3,759kB]
+Get:3 http://us.archive.ubuntu.com karmic-updates/main libc6-i686 2.10.1-0ubuntu16 [1,199kB]
+...
+Get:19 http://us.archive.ubuntu.com karmic/main build-essential 11.4 [7,172B]
+Get:20 http://us.archive.ubuntu.com karmic/main fakeroot 1.12.4ubuntu1 [126kB]
+Fetched 26.9MB in 19min 55s (22.5kB/s)
+Preconfiguring packages ...
+(Reading database ... 40434 files and directories currently installed.)
+Preparing to replace libc-bin 2.10.1-0ubuntu15 (using .../libc-bin_2.10.1-0ubuntu16_i386.deb) ...
+Unpacking replacement libc-bin ...
+Processing triggers for man-db ...
+...
+Preparing to replace libstdc++6 4.4.1-4ubuntu8 (using .../libstdc++6_4.4.1-4ubuntu9_i386.deb) ...
+Unpacking replacement libstdc++6 ...
+Processing triggers for man-db ...
+Setting up libstdc++6 (4.4.1-4ubuntu9) ...
+
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+Selecting previously deselected package binutils.
+(Reading database ... 40434 files and directories currently installed.)
+Unpacking binutils (from .../binutils_2.20-0ubuntu2_i386.deb) ...
+...
+Selecting previously deselected package fakeroot.
+Unpacking fakeroot (from .../fakeroot_1.12.4ubuntu1_i386.deb) ...
+Processing triggers for man-db ...
+Setting up libc6-i686 (2.10.1-0ubuntu16) ...
+
+Setting up cpp-4.4 (4.4.1-4ubuntu9) ...
+...
+
+Setting up libstdc++6-4.4-dev (4.4.1-4ubuntu9) ...
+Setting up g++-4.4 (4.4.1-4ubuntu9) ...
+Setting up g++ (4:4.4.1-1ubuntu2) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode.
+
+Setting up build-essential (11.4) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+root@ubuntu:/# make
+make: *** No targets specified and no makefile found.  Stop.
+root@ubuntu:/#
+
+ 
+
+把君正提供的几个TAR安装打包了ISO挂到虚拟机的CDROM上，然后按文档进行解压安装。
+root@ubuntu:/# mount /dev/cdrom /mnt
+mount: block device /dev/sr0 is write-protected, mounting read-only
+root@ubuntu:/# ls /mnt
+celinux-040503-jz-20080409.patch.gz  mipseltools-gcc412-lnx24.tar.gz
+celinux-040503.tar.bz2               mipseltools-gcc412-lnx26.tar.gz
+linux2.4_developer_guide.pdf         mips_toolchain_guide.pdf
+linux-2.6.24.3-jz-20090218.patch.gz  MPlayer-1.0rc2-20090218.tar.bz2
+linux-2.6.24.3.tar.bz2               mxu_user_guide.pdf
+linux2.6_developer_guide_v1.4.1.pdf  root-jz-20090216.tar.bz2
+linux_resource_guide_v1.1.pdf        u-boot-1.1.6-jz-20090216.patch.gz
+mipsel-gcc4.1-cygwin-nopic.tar.bz2   uboot-1.1.6.tar.gz
+mipseltools-gcc412-glibc261.tar.bz2  uboot_developer_guide.pdf
+root@ubuntu:/#
+
+首先安装MIPS交叉编译工具。我理解的所谓交叉编译，就是从一个系统上编译程序给另一个不同的系统使用。
+对我的实际来说，就是从PC电脑的ubuntu linux系统上编译程序给君正4750开发板mips的系统使用。
+root@ubuntu:/opt# mkdir -p /opt
+root@ubuntu:/# cd /opt
+root@ubuntu:/opt# tar -xjf /mnt/mipseltools-gcc412-glibc261.tar.bz2
+root@ubuntu:/opt# ls
+mipseltools-gcc412-glibc261
+root@ubuntu:/opt#
+
+写一个简单C文件验证一下：
+root@ubuntu:/opt# vi hello.c
+
+按i进入编辑模式，输入以下内容，再按ESC，输入:wq保存退出：
+#include <stdio.h>
+int main()
+{
+        printf("hello jz-mipsel-linux/r/n");
+        return 0;
+}
+
+root@ubuntu:/opt# /opt/mipseltools-gcc412-glibc261/bin/mipsel-linux-gcc -o hello hello.c
+root@ubuntu:/opt# ls
+hello  hello.c  mipseltools-gcc412-glibc261
+root@ubuntu:/opt# ./hello
+-bash: ./hello: cannot execute binary file
+root@ubuntu:/opt#
+编译成功，当然了，编译的输出程序是mips指令系统的，只能在开发板上运行，不能在本机运行。
+
+ 
+
+接着是交叉编译用于mips架构的UBOOT和Linux内核。其实开发板上默认已经有这两个东东了，如果你只想编写程序不想修改内核的话，应该可以不用编译烧录。
+不过既然是搞开发的，不管用不用得着，自然还是要试一试的。
+解压UBOOT，打上君正的补丁：
+root@ubuntu:/opt/u-boot-1.1.6# tar -xf /mnt/uboot-1.1.6.tar.gz
+root@ubuntu:/opt# ls
+hello  hello.c  mipseltools-gcc412-glibc261  u-boot-1.1.6
+root@ubuntu:/opt# cd u-boot-1.1.6/
+root@ubuntu:/opt/u-boot-1.1.6# gzip -cd /mnt/u-boot-1.1.6-jz-20090216.patch.gz |patch -p1
+patching file ...
+...
+patching file nand_spl/nand_boot_jz4750.c
+patching file nand_spl/nand_boot_jz5730.c
+patching file net/eth.c
+patching file README.JZ
+patching file tools/bmp_logo.c
+root@ubuntu:/opt/u-boot-1.1.6#
+
+进行配置和交叉编译：
+root@ubuntu:/opt/u-boot-1.1.6# export PATH=/opt/mipseltools-gcc412-glibc261/bin:$PATH
+root@ubuntu:/opt/u-boot-1.1.6# make apus_nand_config
+Compile NAND boot image for apus
+Configuring for apus board...
+root@ubuntu:/opt/u-boot-1.1.6# make
+for dir in tools examples post post/cpu ; do make -C $dir _depend ; done
+make[1]: Entering directory `/opt/u-boot-1.1.6/tools'
+ln -s ../common/environment.c environment.c
+ln -s ../lib_generic/crc32.c crc32.c
+make[1]: Leaving directory `/opt/u-boot-1.1.6/tools'
+make[1]: Entering directory `/opt/u-boot-1.1.6/tools'
+make[1]: Nothing to be done for `_depend'.
+make[1]: Leaving directory `/opt/u-boot-1.1.6/tools'
+make[1]: Entering directory `/opt/u-boot-1.1.6/examples'
+
+...
+
+make -C tools all
+make[1]: Entering directory `/opt/u-boot-1.1.6/tools'
+gcc -Wall -pedantic -idirafter /opt/u-boot-1.1.6/include -idirafter /opt/u-boot-1.1.6/include2 -idirafter /opt/u-boot-1.1.6/include -DTEXT_BASE=0x80100000 -DUSE_HOSTCC
+
+-O -c -o img2srec.o img2srec.c
+gcc -Wall -pedantic -idirafter /opt/u-boot-1.1.6/include -idirafter /opt/u-boot-1.1.6/include2 -idirafter /opt/u-boot-1.1.6/include -DTEXT_BASE=0x80100000 -DUSE_HOSTCC
+
+-O  -o img2srec img2srec.o
+strip img2srec
+gcc -g -Wall -pedantic -idirafter /opt/u-boot-1.1.6/include -idirafter /opt/u-boot-1.1.6/include2 -idirafter /opt/u-boot-1.1.6/include -DTEXT_BASE=0x80100000 -
+
+DUSE_HOSTCC -O -c -o mkimage.o mkimage.c
+gcc -g -Wall -pedantic -idirafter /opt/u-boot-1.1.6/include -idirafter /opt/u-boot-1.1.6/include2 -idirafter /opt/u-boot-1.1.6/include -DTEXT_BASE=0x80100000 -
+
+DUSE_HOSTCC -O -c -o crc32.o crc32.c
+gcc -Wall -pedantic -idirafter /opt/u-boot-1.1.6/include -idirafter /opt/u-boot-1.1.6/include2 -idirafter /opt/u-boot-1.1.6/include -DTEXT_BASE=0x80100000 -DUSE_HOSTCC
+
+-O  -o mkimage mkimage.o crc32.o
+.....
+dd bs=1024 count=256 if=/opt/u-boot-1.1.6/nand_spl/junk6 of=/opt/u-boot-1.1.6/nand_spl/u-boot-spl-pad.bin
+256+0 records in
+256+0 records out
+262144 bytes (262 kB) copied, 1e-09 s, 262 TB/s
+rm -f /opt/u-boot-1.1.6/nand_spl/junk*
+make[1]: Leaving directory `/opt/u-boot-1.1.6/nand_spl/board/apus'
+cat nand_spl/u-boot-spl-pad.bin u-boot.bin > u-boot-nand.bin
+root@ubuntu:/opt/u-boot-1.1.6#
+编译成功，生成u-boot-nand.bin，可烧录到开发板上。
+
+ 
+
+接下来解压、补丁、配置和交叉编译mips下的linux内核：
+root@ubuntu:/opt# export PATH=/opt/mipseltools-gcc412-glibc261/bin:$PATH   //如果前面已经设置了路径，这里可以不需要了。
+root@ubuntu:/opt# tar -xjf /mnt/linux-2.6.24.3.tar.bz2
+root@ubuntu:/opt# ls
+hello  hello.c  linux-2.6.24.3  mipseltools-gcc412-glibc261  u-boot-1.1.6
+root@ubuntu:/opt# cd linux-2.6.24.3/
+root@ubuntu:/opt/linux-2.6.24.3# gzip -cd /mnt/linux-2.6.24.3-jz-20090218.patch.gz | patch -p1
+patching file ...
+...
+patching file sound/soc/jz4740/jz4740-ac97.c
+patching file sound/soc/jz4740/jz4740-ac97.h
+patching file sound/soc/jz4740/jz4740-i2s.c
+patching file sound/soc/jz4740/jz4740-i2s.h
+patching file sound/soc/jz4740/jz4740-pcm.c
+patching file sound/soc/jz4740/jz4740-pcm.h
+patching file sound/soc/jz4740/Kconfig
+patching file sound/soc/jz4740/Makefile
+patching file sound/soc/jz4740/pavo.c
+patching file sound/soc/Kconfig
+patching file sound/soc/Makefile
+root@ubuntu:/opt/linux-2.6.24.3#
+root@ubuntu:/opt/linux-2.6.24.3# make apus_defconfig
+  HOSTCC  scripts/basic/fixdep
+scripts/basic/fixdep.c: In function ‘traps’:
+scripts/basic/fixdep.c:377: warning: dereferencing type-punned pointer will break strict-aliasing rules
+...
+scripts/kconfig/lex.zconf.c:1639: warning: ‘input’ defined but not used
+  HOSTLD  scripts/kconfig/conf
+*
+* Linux Kernel Configuration
+*
+*
+* Machine selection
+*
+System type
+  1. Ingenic JZ4730 PMP board (JZ4730_PMP)
+  2. Ingenic JZ4740 PAVO board (JZ4740_PAVO)
+  3. Ingenic JZ4740 LEO board (JZ4740_LEO)
+  4. Ingenic JZ4740 LYRA board (JZ4740_LYRA)
+  5. Ingenic JZ4725 DIPPER board (JZ4725_DIPPER)
+  6. Ingenic JZ4720 VIRGO board (JZ4720_VIRGO)
+  7. Ingenic JZ4750 FUWA board (JZ4750_FUWA)
+  8. Ingenic JZ4750d FUWA1 board (JZ4750D_FUWA1) (NEW)
+> 9. Ingenic JZ4750 APUS board (JZ4750_APUS)
+  10. Alchemy processor based machines (MACH_ALCHEMY)
+  11. Basler eXcite smart camera (BASLER_EXCITE)
+...
+  45. Wind River PPMC board (WR_PPMC)
+choice[1-45]: 9
+Endianess selection
+> 1. Little endian (CPU_LITTLE_ENDIAN)
+choice[1]: 1
+*
+* CPU selection
+*
+CPU type
+> 1. MIPS32 Release 1 (CPU_MIPS32_R1)
+choice[1]: 1
+*
+* Kernel type
+*
+Kernel code model
+> 1. 32-bit kernel (32BIT)
+choice[1]: 1
+Kernel page size
+> 1. 4kB (PAGE_SIZE_4KB)
+  2. 16kB (PAGE_SIZE_16KB)
+  3. 64kB (PAGE_SIZE_64KB)
+choice[1-3]: 1
+
+....
+CRC-CCITT functions (CRC_CCITT) [N/m/y/?] n
+CRC16 functions (CRC16) [N/m/y/?] n
+CRC ITU-T V.41 functions (CRC_ITU_T) [N/m/y/?] n
+CRC32 functions (CRC32) [Y/?] y
+CRC7 functions (CRC7) [N/m/y/?] n
+CRC32c (Castagnoli, et al) Cyclic Redundancy-Check (LIBCRC32C) [N/m/y/?] n
+#
+# configuration written to .config
+#
+root@ubuntu:/opt/linux-2.6.24.3#
+root@ubuntu:/opt/linux-2.6.24.3# make uImage
+scripts/kconfig/conf -s arch/mips/Kconfig
+  CHK     include/linux/version.h
+  UPD     include/linux/version.h
+  CHK     include/linux/utsrelease.h
+  UPD     include/linux/utsrelease.h
+  SYMLINK include/asm -> include/asm-mips
+  CC      arch/mips/kernel/asm-offsets.s
+  GEN     include/asm-mips/asm-offsets.h
+  CALL    scripts/checksyscalls.sh
+  HOSTCC  scripts/genksyms/genksyms.o
+  SHIPPED scripts/genksyms/lex.c
+  SHIPPED scripts/genksyms/parse.h
+  SHIPPED scripts/genksyms/keywords.c
+  HOSTCC  scripts/genksyms/lex.o
+scripts/genksyms/lex.c:1481: warning: ‘input’ defined but not used
+  SHIPPED scripts/genksyms/parse.c
+  HOSTCC  scripts/genksyms/parse.o
+  HOSTLD  scripts/genksyms/genksyms
+  CC      scripts/mod/empty.o
+  HOSTCC  scripts/mod/mk_elfconfig
+  MKELF   scripts/mod/elfconfig.h
+  HOSTCC  scripts/mod/file2alias.o
+...
+  CC      drivers/mtd/mtdchar.o
+  CC      drivers/mtd/mtd_blkdevs.o
+uudecode drivers/mtd/mtdblock-jz.uu -o drivers/mtd/mtdblock-jz.o
+make[2]: uudecode: Command not found
+make[2]: *** [drivers/mtd/mtdblock-jz.o] Error 127
+make[1]: *** [drivers/mtd] Error 2
+make: *** [drivers] Error 2
+root@ubuntu:/opt/linux-2.6.24.3#
+
+编译失败，没有找到uudecode，看君正的文档是因为缺sharutils这个包，于是安装之：
+
+root@ubuntu:/opt/linux-2.6.24.3# apt-get install sharutils
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  ssl-cert
+Use 'apt-get autoremove' to remove them.
+Suggested packages:
+  mailx
+The following NEW packages will be installed:
+  sharutils
+0 upgraded, 1 newly installed, 0 to remove and 54 not upgraded.
+Need to get 109kB of archives.
+After this operation, 999kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com karmic/main sharutils 1:4.6.3-1build2 [109kB]
+Fetched 109kB in 4s (25.7kB/s)
+Selecting previously deselected package sharutils.
+(Reading database ... 42798 files and directories currently installed.)
+Unpacking sharutils (from .../sharutils_1%3a4.6.3-1build2_i386.deb) ...
+Processing triggers for install-info ...
+Processing triggers for man-db ...
+Setting up sharutils (1:4.6.3-1build2) ...
+Ignoring install-info called from maintainer script
+The package sharutils should be rebuild with new debhelper to get trigger support
+
+root@ubuntu:/opt/linux-2.6.24.3#
+再编译：
+root@ubuntu:/opt/linux-2.6.24.3# make uImage
+...
+mipsel-linux-objcopy -O binary --remove-section=.reginfo --remove-section=.mdebug --remove-section=.comment --remove-section=.note --remove-section=.pdr --remove-
+
+section=.options --remove-section=.MIPS.options vmlinux arch/mips/boot/vmlinux.bin
+rm -f arch/mips/boot/vmlinux.bin.gz
+gzip -9 arch/mips/boot/vmlinux.bin
+mkimage -A mips -O linux -T kernel -C gzip /
+                -a 0x80010000 -e 0x80326730 /
+                -n 'Linux-2.6.24.3' /
+                -d arch/mips/boot/vmlinux.bin.gz arch/mips/boot/uImage
+make[1]: mkimage: Command not found
+make[1]: *** [uImage] Error 127
+make: *** [uImage] Error 2
+root@ubuntu:/opt/linux-2.6.24.3#
+这回缺mkimage，也是意料之中了，按君正的文档说明，从u-boot/tools目录下复制到/usr/sbin（放其它目录也行，只要在PATH范围内能找到），再编译：
+root@ubuntu:/opt/linux-2.6.24.3# cp ../u-boot-1.1.6/tools/mkimage /usr/sbin/
+root@ubuntu:/opt/linux-2.6.24.3# make uImage
+  CHK     include/linux/version.h
+  CHK     include/linux/utsrelease.h
+  CALL    scripts/checksyscalls.sh
+  CHK     include/linux/compile.h
+mipsel-linux-objcopy -O binary --remove-section=.reginfo --remove-section=.mdebug --remove-section=.comment --remove-section=.note --remove-section=.pdr --remove-
+
+ 
+
+ 
+
+ 
+
+ 
+
+编译成功，可以按文档烧录到开发板上了。
+
+烧录过程大概如下：
+1.把上面编译好的的u-boot-nand.bin和uImage文件复制到USB_BOOT.exe目录
+2.给开发板和PC接上小USB线，运行USB_BOOT.exe，出现命令行窗口
+3.按住SW6，再按一下RESET键，松开SW6键，开发板进入白屏状态
+4.输入>boot 0，屏幕上出现Configure success字样
+5.擦除所有分区：>nerase 0 4096 0 0
+6.也可以单独探险uboot分区：>nerase 0 8 0 0 擦除uImage分区：>nerase 8 8 0 0
+7.写uboot：>nprog 0 u-boot-nand.bin 0 0 -n
+8.写uImage：>nprog 1024 uImage.bin 0 0 -n
+
+ 
+
+屏幕日志输出如下：
+
+
+
+ Welcome!
+ USB Boot Host Software!
+ USB Boot Software current version: 1.4b
+ Handling user command.
+ USBBoot :> boot 0
+
+ Checking state of No.0 device: Unboot
+ Now booting No.0 device:
+ Download stage one program and execute at 0x80002000: Pass
+ Download stage two program and execute at 0x80c00000: Pass
+ Boot success!
+ Now configure No.0 device:
+ Now checking whether all configure args valid:
+ Current device information: CPU is Jz4750
+ Crystal work at 24MHz, the CCLK up to 336MHz and PMH_CLK up to 112MHz
+ Total SDRAM size is 16 MB, work in 4 bank and 32 bit mode
+ Nand page size 2048, ECC offset 24, bad block ID 127, use 1 plane mode
+ Configure success!
+ USBBoot :> nerase 0 4096 0 0
+
+ Erasing No.0 device No.0 flash...... Finish!
+ Operation end position : 4096
+ Force erase ,no bad block infomation !
+ USBBoot :> nprog 0 u-boot-nand.bin 0 0 -n
+
+ Programing No.0 device...
+ Erasing No.0 device No.0 flash...... Finish!
+ Operation end position : 2
+ Force erase ,no bad block infomation !
+ Total size to send in byte is :266932
+ Image type : without oob
+ It will cause 2 times buffer transfer.
+ No.1 Programming... Finish! Checking... pass! End at 128
+ No.2 Programming... Finish! Checking... pass! End at 131
+ USBBoot :> nprog 1024 uImage 0 0 -n
+
+ Programing No.0 device...
+ Erasing No.0 device No.0 flash...... Finish!
+ Operation end position : 15
+ Force erase ,no bad block infomation !
+ Total size to send in byte is :1784168
+ Image type : without oob
+ It will cause 7 times buffer transfer.
+ No.1 Programming... Finish! Checking... pass! End at 1152
+ No.2 Programming... Finish! Checking... pass! End at 1280
+ No.3 Programming... Finish! Checking... pass! End at 1408
+ No.4 Programming... Finish! Checking... pass! End at 1536
+ No.5 Programming... Finish! Checking... pass! End at 1664
+ No.6 Programming... Finish! Checking... pass! End at 1792
+ No.7 Programming... Finish! Checking... pass! End at 1896
+ USBBoot :> exit
+
+ 
+
+烧写完后，按RESET键重启，COM口输出如下：
+
+NAND Secondary Program Loader
+
+Starting U-Boot ...
+
+
+U-Boot 1.1.6 (May 21 2009 - 16:21:12)
+
+Board: Ingenic APUS (CPU Speed 336 MHz)
+DRAM:  64 MB
+Flash:  0 kB
+NAND:1024 MiB
+*** Warning - bad CRC or NAND, using default environment
+
+In:    serial
+Out:   lcd
+Err:   lcd
+Net:   JZ ETHERNET
+Hit any key to stop autoboot:  0
+
+NAND read: device 0 offset 0x200000, size 0x200000
+ 2097152 bytes read: OK
+## Booting image at 80600000 ...
+   Image Name:   Linux-2.6.24.3
+   Image Type:   MIPS Linux Kernel Image (gzip compressed)
+   Data Size:    1784104 Bytes =  1.7 MB
+   Load Address: 80010000
+   Entry Point:  803117d0
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
+
+ 
+
+到这一步，内核已经编译启动成功，接下来是根文件系统的问题了。关于TFTP和NFS网络根文件系统下一篇再细述。
+————————————————
+版权声明：本文为CSDN博主「huzgd」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/huzgd/article/details/5274817

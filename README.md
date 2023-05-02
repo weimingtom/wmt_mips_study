@@ -933,3 +933,7 @@ https://sourceforge.net/projects/virtualmips/files/virtualmips/
 
 ## mimiker  
 * https://github.com/cahirwpz/mimiker  
+
+## gcc for baremetal  
+* Codescape.GNU.Tools.Package.2021.09-01.for.MIPS.IMG.Bare.Metal.Windows.x86_64.tar.gz  
+* mips-2015.05-19-mips-sde-elf-i686-pc-linux-gnu.tar.bz2  

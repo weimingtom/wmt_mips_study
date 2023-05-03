@@ -398,6 +398,7 @@ work_hos_v1.tar.gz
 * (work) ubuntu 140432, work_retrobsd_v1_success.tar.gz  
 with mips-2013.11-37-mips-sde-elf-i686-pc-linux-gnu.tar.bz2  
 * https://github.com/RetroBSD/retrobsd/releases/tag/tools  
+* https://github.com/RetroBSD/retrobsd-early  
 
 ## retrobsd qemu  
 * sergev/qemu模拟retrobsd的问题解决了。为什么无法加载到sdcard，是因为qemu代码中（对应max32开发板）的  

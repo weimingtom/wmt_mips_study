@@ -406,7 +406,7 @@ sdcard针脚设置和unix.hex里面的sdcard针脚不同，改一下就可以了
 * https://github.com/sergev/qemu/wiki/RetroBSD-Example  
 * work_retrobsd_qemu_v2_success_old_rom.tar.gz  
 * work_retrobsd_qemu_v3_build_retrobsd_and_run.tar.gz  
-* 
+* https://github.com/sergev/qemu/blob/master/hw/mips/mips_pic32mx7.c, search BOARD_MAX32  
 ```
         s->sdcard_spi_port = 3;/*1;*/             // SD card at SPI2,
         cs0_port = 3;/*2;*/  cs0_pin = 3;/*14;*/        // select0 at C14,
@@ -414,6 +414,11 @@ sdcard针脚设置和unix.hex里面的sdcard针脚不同，改一下就可以了
 ```	
 * need build old version retrobsd, before 2015-01-10    
 https://github.com/RetroBSD/retrobsd/tree/8e228dde62b2121e11e8182aca51ad7fc1f1c722  
+```
+/home/wmt/work_retrobsd_qemu/qemu-mips/bin/qemu-system-mipsel 
+-machine pic32mx7-max32  -serial stdio -bios boot-max32.hex 
+-kernel unix_build.hex -sd sdcard_build.img 
+```
 
 ## litebsd  
 * https://github.com/sergev/LiteBSD  

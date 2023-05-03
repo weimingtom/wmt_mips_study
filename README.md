@@ -413,7 +413,8 @@ sdcard针脚设置和unix.hex里面的sdcard针脚不同，改一下就可以了
         cs0_port = 3;/*2;*/  cs0_pin = 3;/*14;*/        // select0 at C14,
         cs1_port = -1;/*3;*/  cs1_pin = -1;/*1;*/         // select1 at D1
 ```	
-* need build old version retrobsd, before 2015-01-10    
+* need build old version retrobsd, before 2015-01-10 
+unix_build.hex is from ./sys/pic32/max32/unix.hex, sdcard_build.img is from ./sdcard.img  
 https://github.com/RetroBSD/retrobsd/tree/8e228dde62b2121e11e8182aca51ad7fc1f1c722  
 ```
 /home/wmt/work_retrobsd_qemu/qemu-mips/bin/qemu-system-mipsel 

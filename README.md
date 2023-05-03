@@ -407,6 +407,7 @@ sdcard针脚设置和unix.hex里面的sdcard针脚不同，改一下就可以了
 * work_retrobsd_qemu_v2_success_old_rom.tar.gz  
 * work_retrobsd_qemu_v3_build_retrobsd_and_run.tar.gz  
 * https://github.com/sergev/qemu/blob/master/hw/mips/mips_pic32mx7.c, search BOARD_MAX32  
+**need to change to D4 and SPI4**    
 ```
         s->sdcard_spi_port = 3;/*1;*/             // SD card at SPI2,
         cs0_port = 3;/*2;*/  cs0_pin = 3;/*14;*/        // select0 at C14,

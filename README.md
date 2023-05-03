@@ -398,7 +398,22 @@ work_hos_v1.tar.gz
 * (work) ubuntu 140432, work_retrobsd_v1_success.tar.gz  
 with mips-2013.11-37-mips-sde-elf-i686-pc-linux-gnu.tar.bz2  
 * https://github.com/RetroBSD/retrobsd/releases/tag/tools  
-* (TODO) https://github.com/sergev/qemu/wiki/RetroBSD-Example  
+
+## retrobsd qemu  
+* sergev/qemu模拟retrobsd的问题解决了。为什么无法加载到sdcard，是因为qemu代码中（对应max32开发板）的  
+sdcard针脚设置和unix.hex里面的sdcard针脚不同，改一下就可以了（把qemu代码中的片选脚改成D4，从输出信息中可以看到）。  
+不过这个qemu似乎无法运行最新版的retrobsd，但我试验过编译旧版的retrobsd是可以运行的  
+* https://github.com/sergev/qemu/wiki/RetroBSD-Example  
+* work_retrobsd_qemu_v2_success_old_rom.tar.gz  
+* work_retrobsd_qemu_v3_build_retrobsd_and_run.tar.gz  
+* 
+```
+        s->sdcard_spi_port = 3;/*1;*/             // SD card at SPI2,
+        cs0_port = 3;/*2;*/  cs0_pin = 3;/*14;*/        // select0 at C14,
+        cs1_port = -1;/*3;*/  cs1_pin = -1;/*1;*/         // select1 at D1
+```	
+* need build old version retrobsd, before 2015-01-10    
+https://github.com/RetroBSD/retrobsd/tree/8e228dde62b2121e11e8182aca51ad7fc1f1c722  
 
 ## litebsd  
 * https://github.com/sergev/LiteBSD  

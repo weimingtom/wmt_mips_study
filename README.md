@@ -421,6 +421,7 @@ https://github.com/RetroBSD/retrobsd/tree/8e228dde62b2121e11e8182aca51ad7fc1f1c7
 -machine pic32mx7-max32  -serial stdio -bios boot-max32.hex 
 -kernel unix_build.hex -sd sdcard_build.img 
 ```
+* login: root, password: none  
 
 ## litebsd  
 * https://github.com/sergev/LiteBSD  

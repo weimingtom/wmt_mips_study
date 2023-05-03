@@ -393,16 +393,21 @@ work_hos_v1.tar.gz
 * 有时候菜单Reinitial Simulator也会出问题，导致加载汇编文件失败。最好是重启exe  
 * 我觉得设置中的bare machine按钮没什么用，似乎无法修改段的起始地址的规定范围，几乎总是用simple machine就可以了  
 
-## litebsd, retrobsd    
-* https://github.com/sergev/LiteBSD  
-* https://github.com/sergev/qemu/wiki/RetroBSD-Example  
+## retrobsd    
 * https://github.com/RetroBSD/retrobsd  
+* (work) ubuntu 140432, work_retrobsd_v1_success.tar.gz  
+with mips-2013.11-37-mips-sde-elf-i686-pc-linux-gnu.tar.bz2  
+* https://github.com/RetroBSD/retrobsd/releases/tag/tools  
+* (TODO) https://github.com/sergev/qemu/wiki/RetroBSD-Example  
+
+## litebsd  
+* https://github.com/sergev/LiteBSD  
 * https://github.com/zyy0721/Minisys-OS/blob/master/boot/boot.S  
 * https://github.com/sergev/LiteBSD/releases/tag/tools  
 * gcc-4.8.1-mips-linux.tgz  
-* ubuntu 140432, work_retrobsd_v1_success.tar.gz  
-with mips-2013.11-37-mips-sde-elf-i686-pc-linux-gnu.tar.bz2  
-
+* https://github.com/sergev/LiteBSD/wiki/ELF-toolchain  
+* https://github.com/sergev/LiteBSD/wiki/chipKIT-WiFire-board  
+* 
 ## (TODO) virtualmips  
 * https://code.google.com/archive/p/virtualmips  
 * https://github.com/RetroBSD/retrobsd/tree/master/tools/virtualmips  

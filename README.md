@@ -400,6 +400,8 @@ work_hos_v1.tar.gz
 * https://github.com/zyy0721/Minisys-OS/blob/master/boot/boot.S  
 * https://github.com/sergev/LiteBSD/releases/tag/tools  
 * gcc-4.8.1-mips-linux.tgz  
+* ubuntu 140432, work_retrobsd_v1_success.tar.gz  
+with mips-2013.11-37-mips-sde-elf-i686-pc-linux-gnu.tar.bz2  
 
 ## (TODO) virtualmips  
 * https://code.google.com/archive/p/virtualmips  

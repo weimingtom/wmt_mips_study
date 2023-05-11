@@ -45,6 +45,8 @@ Lab 11: Multicycle Processor (Part 2)
 * (TODO) https://github.com/yajin/jz-hacking/blob/master/wiki/qemujz.wiki  
 (TODO) how to run this qemu-JZ ????   
 see https://code.google.com/archive/p/jz-hacking/wikis/qemujz.wiki    
+* (TODO) http://git.ingenic.com.cn:8082/bj/repo  
+* (TODO) https://www.ymcn.org/search.php?keyword=jz4740&cateid=0&sort=&sortby=&sm=0&page=5  
 
 
 ## TODO, gcc -S, asm volatile, for QtSpim    

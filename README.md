@@ -973,3 +973,8 @@ https://sourceforge.net/projects/virtualmips/files/virtualmips/
 
 ## MT7688 TFT  
 * https://github.com/2324059/spi_tft  
+
+## CPU设计实战  
+* 这本mips书也不错，是龙芯自己出的。进阶，讨论AXI和SoC问题，或者说它讨论更复杂的测试问题。  
+以后打算买来收藏，暂时不看，因为这本偏难。这本书用的开发板是为XC7A200T（系列最高配），  
+Vivado 2019.2。甚至还有云端的FPGA开发  

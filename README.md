@@ -851,7 +851,9 @@ PIC32MX470F512L-120I/PF
 ```
 在Windows下运行SDE单步调试MIPS hello程序，首先安装SDE，把COD3E，
 计算机组成与设计这本书的光盘中的Cygwin版SDE安装到Msys下，
+把/sde/bin添加到/etc/profile代码中加入PATH变量值中，
 把sde\sde\include\mips复制到sde\sde\include\machine目录（缺少符号链接），
+切换到sde\sde\examples\hello
 然后用make SBD=GSIM32L编译（不要用sde-make，因为不是cygwin），
 再用sde-run helloram运行。
 然后用sde-gdb helloram打开图形界面调试器（和其他gdb不同，这个默认是图形界面，

@@ -861,6 +861,13 @@ PIC32MX470F512L-120I/PF
 点击左上角的运行按钮（跑步图标），选择GNU Simulator（相当于target sim），
 点击控制台图标，
 然后步进即可在控制台中看到输出（类似于sde-run的效果）
+如果是sde-gdb -nw helloram，则是：
+$ sde-gdb -nw helloram
+(gdb) target sim
+(gdb) load
+(gdb) b main
+(gdb) r
+(gdb) q
 ```
 
 ## mraa, libmraa  

@@ -868,6 +868,7 @@ $ sde-gdb -nw helloram
 (gdb) b main
 (gdb) r
 (gdb) q
+具体请参考sde-guide.pdf的第4章Page 22.  
 ```
 
 ## mraa, libmraa  

@@ -847,7 +847,19 @@ PIC32MX470F512L-120I/PF
 * (TOOD) MIPSSW-MSDE-v5.03.06.tgz\.\sde\examples\hello   
 * (TODO) maybe sde-gdb can use mipssim ???  
 * search baidupan, COD3E_计算机组成与设计.iso, 第3版  
-* 计算机组成与设计：硬件/软件接口  
+* 计算机组成与设计：硬件/软件接口
+```
+在Windows下运行SDE单步调试MIPS hello程序，首先安装SDE，把COD3E，
+计算机组成与设计这本书的光盘中的Cygwin版SDE安装到Msys下，
+把sde\sde\include\mips复制到sde\sde\include\machine目录（缺少符号链接），
+然后用make SBD=GSIM32L编译（不要用sde-make，因为不是cygwin），
+再用sde-run helloram运行。
+然后用sde-gdb helloram打开图形界面调试器（和其他gdb不同，这个默认是图形界面，
+也可以用-nw开关关闭图形界面），
+点击左上角的运行按钮（跑步图标），选择GNU Simulator（相当于target sim），
+点击控制台图标，
+然后步进即可在控制台中看到输出（类似于sde-run的效果）
+```
 
 ## mraa, libmraa  
 * https://github.com/eclipse/mraa/blob/master/docs/linkit_7688.md  

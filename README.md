@@ -870,6 +870,12 @@ $ sde-gdb -nw helloram
 (gdb) q
 具体请参考sde-guide.pdf的第4章Page 22.  
 ```
+```
+其实MIPS古老开发套件SDE中，SDE-GDB没有标是什么软件，看上去是tcl/tk风格的界面，
+代码是gdbtcl。可以用来研究MIPS汇编。我找了一下，应该是根据linux软件insight调试器
+（或者叫Cygnus Insight Debugger，或者叫gdbtk）改出来的。除了Insight，
+还有别的常用gdb图形调试工具，例如ddd（也是基于tcl）和gdbtui（gdb内置功能）
+```
 
 ## mraa, libmraa  
 * https://github.com/eclipse/mraa/blob/master/docs/linkit_7688.md  

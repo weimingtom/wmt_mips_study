@@ -876,6 +876,7 @@ $ sde-gdb -nw helloram
 （或者叫Cygnus Insight Debugger，或者叫gdbtk）改出来的。除了Insight，
 还有别的常用gdb图形调试工具，例如ddd（也是基于tcl）和gdbtui（gdb内置功能）
 ```
+* copy cygwin1.dll to /sde/bin, dll file is from WinAVR-20100110-install.exe  
 
 ## mraa, libmraa  
 * https://github.com/eclipse/mraa/blob/master/docs/linkit_7688.md  

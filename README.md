@@ -1013,3 +1013,6 @@ Vivado 2019.2。甚至还有云端的FPGA开发
 
 ## moo_compiler  
 * https://github.com/nkumar0727/moo_compiler
+
+## 芯联芯, 技术资源  
+* https://www.cipunited.com/cn/res-platform.html  

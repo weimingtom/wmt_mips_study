@@ -117,6 +117,66 @@ LD =       $(CROSS_COMPILE)ld -EL
 * https://www.linux-mips.org/wiki/Emulators  
 * linux-2.x maybe ok  
 * https://github.com/kholia/mips-hacking  
+* vmlinux_ubuntu140432_v4.rar, readme_ubuntu140432_v4.txt  
+```
+----
+xubuntu200464
+
+$ cd busybox-1.20.2
+$ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu- defconfig
+$ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu- menuconfig
+Build Options--->Build BusyBox as a static binary(no shared libs)
+Login/Password Management Utilities--->passwd(uncheck)
+Miscellaneous Utilities--->time(uncheck)
+Networking Utilities--->inetd(uncheck)ntpd(uncheck)
+Runit Utilities--->all(uncheck)
+#if 0 to shell/shell_common.c printlim inside
+#if 0 to shell/shell_common.c shell_builtin_unlimit(char **argv) inside
+
+https://github.com/fdu/STM32F429I-disco_Buildroot/issues/1
+Init Utilities--->init->Support reading an inittab file(uncheck)
+comment_ strings (tty2...4) in file nit/init.c
+/*new_init_action(ASKFIRST, bb_default_login_shell, VC_2);
+new_init_action(ASKFIRST, bb_default_login_shell, VC_3);
+new_init_action(ASKFIRST, bb_default_login_shell, VC_4);*/
+
+$ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu-
+$ make ARCH=mips CROSS_COMPILE=mipsel-linux-gnu- install
+$ tar czf install.tar.gz _install/
+
+-------------
+ubuntu140432
+
+$ tar xzf install.tar.gz
+$ cd _install
+$ mkdir -p proc sys dev etc etc/init.d
+$ gedit ./etc/init.d/rcS
+#!/bin/sh
+mount -t proc none /proc
+mount -t sysfs none /sys
+/sbin/mdev -s
+ifconfig lo up
+ifconfig eth0 10.0.2.15 netmask 255.255.255.0
+route add default gw 10.0.2.1
+$ chmod +x ./etc/init.d/rcS
+$ cp etc/init.d/rcS rcS
+$ cd /dev
+$ sudo mknod -m 660 console c 5 1
+$ sudo mknod -m 660 null c 1 3
+
+$ cd ../linux-3.5.7/
+$ make ARCH=mips CROSS_COMPILE=/home/wmt/work_xv6_mips/mips-2015.05/bin/mips-sde-elf- menuconfig
+General setup--->Initramfs source file(s): /home/wmt/work_mips_linux/_install/
+Kernel hacking--->root=/dev/ram rdinit=/linuxrc init=/linuxrc
+$ make ARCH=mips CROSS_COMPILE=/home/wmt/work_xv6_mips/mips-2015.05/bin/mips-sde-elf-
+
+$ qemu-system-mipsel -M mipssim -kernel vmlinux -nographic
+------------------
+can't open /dev/tty2: No such file or directory
+can't open /dev/tty3: No such file or directory
+can't open /dev/tty4: No such file or directory
+see https://github.com/fdu/STM32F429I-disco_Buildroot/issues/1
+```
 
 ## loongson linux (vmlinux), ls1b defconfig, linux-2.6.3, 4.19, 5.3, for qemu (need src mod) -machine ls1b    
 * https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.2.tar.gz  

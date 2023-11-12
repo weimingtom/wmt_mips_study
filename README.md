@@ -48,6 +48,9 @@ see https://code.google.com/archive/p/jz-hacking/wikis/qemujz.wiki
 * (TODO) http://git.ingenic.com.cn:8082/bj/repo  
 * (TODO) https://www.ymcn.org/search.php?keyword=jz4740&cateid=0&sort=&sortby=&sm=0&page=5  
 
+## (TODO) csdn todo:  
+* (TODO) gxemul-0.4.3_可以仿真龙芯处理器的模拟器Godson  
+* (TODO) MIPS-OS从JOS移植的具有用于MIPS R3000的Shell的定制操作系统  
 
 ## TODO, gcc -S, asm volatile, for QtSpim    
 * (TODO) (IMP) use gcc-2.95.3 cross mips to gcc hello.c -S -mno-explicit-relocs, need comment jal __ main, why ???

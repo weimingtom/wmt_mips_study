@@ -47,6 +47,26 @@ Lab 11: Multicycle Processor (Part 2)
 see https://code.google.com/archive/p/jz-hacking/wikis/qemujz.wiki    
 * (TODO) http://git.ingenic.com.cn:8082/bj/repo  
 * (TODO) https://www.ymcn.org/search.php?keyword=jz4740&cateid=0&sort=&sortby=&sm=0&page=5  
+* 龙芯
+```
+
+https://github.com/nihcdsv/nihao
+
+平衡车
+https://gitee.com/weidongshan/100ask_r128_demos
+https://www.bilibili.com/video/BV1Fg4y197Vh/?spm_id_from=333.337.search-card.all.click&vd_source=8aac237d3ed1fe24370f8df03ab1993d
+
+
+gxemul运行不了龙芯，可能需要自己编译lemote_2f
+linux-3.10.tar.gz\linux-3.10\arch\mips\configs - TAR+GZIP 压缩文件, 解包大小为 1,341,937,926 字节
+lemote2f_defconfig
+http://ftp.loongnix.cn/embedd/ls1a500/linux-3.10.tar.gz
+
+
+基于龙芯1C智龙开发板的 龙芯嵌入式开发入门教程
+https://www.bilibili.com/video/BV1Zt411U7pW/?spm_id_from=333.999.0.0&vd_source=8aac237d3ed1fe24370f8df03ab1993d
+```
+
 
 ## (TODO) csdn todo:  
 * (TODO) gxemul-0.4.3_可以仿真龙芯处理器的模拟器Godson  

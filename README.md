@@ -49,6 +49,20 @@ see https://code.google.com/archive/p/jz-hacking/wikis/qemujz.wiki
 * (TODO) https://www.ymcn.org/search.php?keyword=jz4740&cateid=0&sort=&sortby=&sm=0&page=5  
 * 龙芯
 ```
+https://blog.csdn.net/qq_30135687/article/details/130288776?spm=1001.2014.3001.5502
+https://blog.csdn.net/qq_30135687?type=blog
+https://blog.csdn.net/qq_30135687/article/details/130410801?spm=1001.2014.3001.5502
+http://ftp.loongnix.cn/embedd/ls1b/
+
+
+ARM7模拟器for linux
+SimIt-ARM.rar
+https://sourceforge.net/projects/simit-arm/
+## SimIt-ARM, with C++, ARM7, provide sa1100 and colibri linux images in sourceforge, like skyeye  
+* https://sourceforge.net/projects/simit-arm/    
+* https://github.com/dmlockhart/simit-arm
+
+
 
 https://github.com/nihcdsv/nihao
 

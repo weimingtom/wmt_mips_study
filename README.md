@@ -47,8 +47,15 @@ Lab 11: Multicycle Processor (Part 2)
 see https://code.google.com/archive/p/jz-hacking/wikis/qemujz.wiki    
 * (TODO) http://git.ingenic.com.cn:8082/bj/repo  
 * (TODO) https://www.ymcn.org/search.php?keyword=jz4740&cateid=0&sort=&sortby=&sm=0&page=5  
-* 龙芯
+* 龙芯 and arm  
 ```
+romfs
+YC-ZXID-YX-V2001.img
+见qq邮箱
+romfser-master
+uclinux
+
+
 https://blog.csdn.net/qq_30135687/article/details/130288776?spm=1001.2014.3001.5502
 https://blog.csdn.net/qq_30135687?type=blog
 https://blog.csdn.net/qq_30135687/article/details/130410801?spm=1001.2014.3001.5502

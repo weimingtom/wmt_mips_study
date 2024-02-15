@@ -155,7 +155,8 @@ LD =       $(CROSS_COMPILE)ld -EL
 * https://pages.cs.wisc.edu/~larus/HP_AppA.pdf  
 
 ## mips linux (vmlinux), for qemu -machine mipssim (and for -machine mips)      
-* https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.5.7.tar.gz  
+* https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.5.7.tar.gz
+* mips-2015.05-19-mips-sde-elf-i686-pc-linux-gnu.tar.bz2  
 * https://www.linux-mips.org/wiki/Porting  
 * https://www.linux-mips.org/wiki/Kernel_Build  
 * https://www.linux-mips.org/wiki/MIPSsim  

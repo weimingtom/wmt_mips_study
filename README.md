@@ -1131,3 +1131,4 @@ Vivado 2019.2。甚至还有云端的FPGA开发
 * https://www.hxedu.com.cn/hxedu/hg/book/bookInfo.html?code=TN462950  
 * mipssdk.v2.0.0k.windows.x64.offline.exe  
 * cpusoc_design_example.zip  
+* http://codescape.mips.com/sdk/v2.0.0k/docs/  

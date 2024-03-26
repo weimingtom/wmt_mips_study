@@ -1105,6 +1105,7 @@ https://sourceforge.net/projects/virtualmips/files/virtualmips/
 ## gcc for baremetal  
 * Codescape.GNU.Tools.Package.2021.09-01.for.MIPS.IMG.Bare.Metal.Windows.x86_64.tar.gz  
 * mips-2015.05-19-mips-sde-elf-i686-pc-linux-gnu.tar.bz2  
+* mips-mti-elf-gcc 2017.10-05, mipssdk.v2.0.0k.windows.x64.offline.exe  
 
 ## MT7688 TFT  
 * https://github.com/2324059/spi_tft  
@@ -1122,3 +1123,11 @@ Vivado 2019.2。甚至还有云端的FPGA开发
 
 ## 芯联芯, 技术资源  
 * https://www.cipunited.com/cn/res-platform.html  
+
+## 从CPU到SoC的设计与实现 基于高云云源软件和FPGA硬件平台  
+* 这本新书，《从CPU到SoC的设计与实现 基于高云云源软件和FPGA硬件平台》，出版社是电子工业出版社，也是讲MIPS的，想买未入手。有提供随书代码，工具链是mips-mti-elf-gcc，安装是Windows版的Codescape mipssdk v2.0.0k（这个安装文件少见，收藏），可以同时装bare和linux两种工具链，2017.10-05  
+* https://github.com/alexlimofficial/gcc-mips-compiler  
+* https://zhuanlan.zhihu.com/p/671895745  
+* https://www.hxedu.com.cn/hxedu/hg/book/bookInfo.html?code=TN462950  
+* mipssdk.v2.0.0k.windows.x64.offline.exe  
+* cpusoc_design_example.zip  

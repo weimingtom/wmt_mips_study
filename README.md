@@ -1133,3 +1133,8 @@ Vivado 2019.2。甚至还有云端的FPGA开发
 * cpusoc_design_example.zip  
 * http://codescape.mips.com/sdk/v2.0.0k/docs/  
 * 我买的另一本《从CPU到SoC的设计与实现》也到手的，我认为MIPS内容值得入手，主要讲单周期MIPS和流水线MIPS（带AHB-Lite总线接口）结合高云开发工具和ModelSim波形仿真。用到的FPGA是高云GW2A-LV55PG484C8，但高云的GW2A系列虽然有sipeed的荔枝糖系列（如20K和25K）但这个可能是55K，应该是很难得到硬件的，但荔枝糖也属于GW2A系列（高云主推的第一个系列）  
+
+## buildroot  
+* https://buildroot.org
+* buildroot-2024.02.1.tar.gz\buildroot-2024.02.1\configs\qemu_mips32r2_malta_defconfig
+*  

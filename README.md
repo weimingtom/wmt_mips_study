@@ -1136,5 +1136,8 @@ Vivado 2019.2。甚至还有云端的FPGA开发
 
 ## buildroot  
 * https://buildroot.org
-* buildroot-2024.02.1.tar.gz\buildroot-2024.02.1\configs\qemu_mips32r2_malta_defconfig
-*  
+* buildroot-2024.02.1.tar.gz\buildroot-2024.02.1\configs\qemu_mips32r2el_malta_defconfig
+* buildroot-2024.02.1.tar.gz\buildroot-2024.02.1\board\qemu\mips32r2el-malta
+* readme.txt  
+* qemu-system-mipsel -M malta -kernel output/images/vmlinux -serial stdio -drive file=output/images/rootfs.ext2,format=raw -append "rootwait root=/dev/sda" -net nic,model=pcnet -net user  
+* for qemu_mips32r2el_malta_defconfig  

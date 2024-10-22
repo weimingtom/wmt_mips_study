@@ -5,6 +5,7 @@ My MIPS study
 * https://github.com/weimingtom/wmt_mips_study/blob/master/fpga_001.md  
 
 ## TODO
+* (TODO) PS2 Linux, with rpms gcc and gtk+-1, initrd, kernel, etc...  
 * (IMP) Compile mingw mips cross gcc version 2    
 * (IMP) https://github.com/ljkgpxs/virtualnoah  
 * (IMP) https://github.com/OpenNoah/virtualnoah  

@@ -4,7 +4,12 @@ My MIPS study
 ## FPGA  
 * https://github.com/weimingtom/wmt_mips_study/blob/master/fpga_001.md
 * (TODO) minimips32_v8_20221114_坑未处理.rar
-* (TODO) quartus12_copy  
+* (TODO) quartus12_copy
+* kianRiscV-tangnano20k_ulinux_soc.zip
+* TangNano-20K-example-main.rar/nestang/nes.gprj
+* (x) Gowin_V1.9.8.11_Education_win.zip
+Gowin_V1.9.9Beta-4_Education_win.zip  
+* nestang_install.7z/TangNano-20K-example-main_mod.7z  
 
 ## TODO
 * (TODO) PS2 Linux, with rpms gcc2 and gtk+-1, initrd, kernel, etc...

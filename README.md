@@ -2,7 +2,9 @@
 My MIPS study
 
 ## FPGA  
-* https://github.com/weimingtom/wmt_mips_study/blob/master/fpga_001.md  
+* https://github.com/weimingtom/wmt_mips_study/blob/master/fpga_001.md
+* (TODO) minimips32_v8_20221114_坑未处理.rar
+* (TODO) quartus12_copy  
 
 ## TODO
 * (TODO) PS2 Linux, with rpms gcc2 and gtk+-1, initrd, kernel, etc...

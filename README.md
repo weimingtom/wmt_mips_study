@@ -8,7 +8,8 @@ My MIPS study
 * kianRiscV-tangnano20k_ulinux_soc.zip
 * TangNano-20K-example-main.rar/nestang/nes.gprj
 * (x) Gowin_V1.9.8.11_Education_win.zip    
-Gowin_V1.9.9Beta-4_Education_win.zip    
+Gowin_V1.9.9Beta-4_Education_win.zip  
+Gowin_V1.9.9_x64_win.zip  
 * nestang_install.7z/TangNano-20K-example-main_mod.7z  
 
 ## TODO

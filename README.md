@@ -1154,3 +1154,51 @@ Vivado 2019.2。甚至还有云端的FPGA开发
 
 ## delay slot  
 * 延时槽  
+
+## mips linux  
+```
+x86 vm
+https://qiita.com/okuoku/items/e3e7e73d9d5e4ff92112
+https://github.com/jart/blink
+
+mips sandbox
+https://github.com/nikhilh-20/ELFEN
+
+mips linux
+https://github.com/mellow-hype/malta-kernel-images/tree/main
+
+mips qemu
+https://qemu-project.gitlab.io/qemu/system/target-mips.html
+mips emulator, wowmips
+https://www.x86matthew.com/view_post?id=mips_1
+https://hackaday.com/2024/02/17/wowmips-a-mips-emulator-for-windows-applications/
+https://github.com/x86matthew/WoWMIPS/tree/main
+https://github.com/hugsy/cemu
+https://github.com/cvut/QtMips
+https://github.com/alexfru/EmuMipsElf/tree/master
+https://github.com/alexfru/SmallerC
+riscv64 linux
+https://github.com/cyyself/cemu/blob/master/docs/riscv64-linux.md
+
+???
+https://github.com/nju-mips/nemu-mips32/tree/master
+
+my study
+* barebone_v1_success_mipssim_ubuntu140432_sde.tar.gz
+* qemu_gdb_mips_hello-master_v1_ubuntu140432_sde.tar.gz
+buildroot malta qemu
+https://github.com/buildroot/buildroot/blob/master/board/qemu/mips32r2el-malta/readme.txt
+* skyeye-testsuite-1.3.4_rc1\skyeye-testsuite\dyncom\hello-mips
+https://github.com/alexyz/sysmips
+sysmips, 4kc, ??? how to buld kernel, ??? where kernel files
+linux source build not tested, only rom file
+目前看来比较容易运行起来的mips linux (特别是malta目标机）古旧版本内核是3.2或者2.6之间。
+有这些线索和头绪：
+（1）从baremetal开始改，baremetal mips跑qemu输出日志还是比较容易做到
+（2）通过buildroot，你别说buildroot甚至带了mips malta地目标配置，
+说不定真可以qemu（甚至有qemu参数说明）
+（3）通过skyeye，待考
+（4）通过sysmips，可以模拟linux 3内核，但编译方法不明，待考
+（5）通过qemu，只测试了linux-3.5
+（6）通过ls1b修改版qemu，似乎对应linux-2.6.3, 4.19, 5.3
+```

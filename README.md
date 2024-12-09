@@ -1201,4 +1201,23 @@ linux source build not tested, only rom file
 （4）通过sysmips，可以模拟linux 3内核，但编译方法不明，待考
 （5）通过qemu，只测试了linux-3.5
 （6）通过ls1b修改版qemu，似乎对应linux-2.6.3, 4.19, 5.3
+
+
+
+
+
+这本新书，《从CPU到SoC的设计与实现 基于高云云源软件和FPGA硬件平台》，
+出版社是电子工业出版社，也是讲MIPS的，想买未入手。
+有提供随书代码，工具链是mips-mti-elf-gcc，
+安装是Windows版的Codescape mipssdk v2.0.0k（这个安装文件少见，收藏），
+可以同时装bare和linux两种工具链，2017.10-05
+==
+https://github.com/alexlimofficial/gcc-mips-compiler
+https://zhuanlan.zhihu.com/p/671895745
+https://www.hxedu.com.cn/hxedu/hg/book/bookInfo.html?code=TN462950
+mipssdk.v2.0.0k.windows.x64.offline.exe
+cpusoc_design_example.zip
+http://codescape.mips.com/sdk/v2.0.0k/docs/
+
+
 ```

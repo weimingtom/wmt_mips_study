@@ -22,7 +22,7 @@ Gowin_V1.9.9_x64_win.zip
 * (IMP) skyeye and skyeye testcases for godson and mips    
 * naken_asm  
 * gcc -S for qtspim ((IMP) can see Simulizer-0.43-beta/gcc-mips.sh how to process gcc output)    
-* see https://github.com/weimingtom/wmt_ai_study/blob/master/fpga_cpld_001.md  
+* (**IMP, IMP, IMP**) see https://github.com/weimingtom/wmt_ai_study/blob/master/fpga_cpld_001.md  
 * openwrt & buildroot   
 * golang or rust baremetal / bare, simulator (emulator), compiler, etc  
 * (IMP) ucosii  

@@ -1224,3 +1224,7 @@ http://codescape.mips.com/sdk/v2.0.0k/docs/
 
 ## 二进制安全基础_mips_随书代码  
 * 二进制安全基础   
+
+## armips  
+* https://github.com/Kingcom/armips  
+* https://github.com/hrydgard/ppsspp/tree/master/ext  

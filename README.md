@@ -550,7 +550,7 @@ https://github.com/RetroBSD/retrobsd/tree/8e228dde62b2121e11e8182aca51ad7fc1f1c7
 * gcc-4.8.1-mips-linux.tgz  
 * https://github.com/sergev/LiteBSD/wiki/ELF-toolchain  
 * https://github.com/sergev/LiteBSD/wiki/chipKIT-WiFire-board  
-* 
+
 ## (TODO) virtualmips  
 * https://code.google.com/archive/p/virtualmips  
 * https://github.com/RetroBSD/retrobsd/tree/master/tools/virtualmips  

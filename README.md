@@ -498,6 +498,7 @@ work_hos_v1.tar.gz
 * https://ecs-network.serv.pacific.edu/past-courses/2012-fall-ecpe-170/tutorials/qtspim-tutorial  
 * QtSpim的数据段代码段可能是某种古老r3000机器的布局，但似乎也兼容mips32。我以前以为设置中的异常处理器是  
 打开一个程序，其实是用来替换内置的boot汇编文件，或者不使用boot代码：  
+（补注：猜测MIPS r3000可能是指PS2）  
 * 可以加载多个.s汇编文件，会连接加载到同一个text段内，接在上一个的末尾。但不能批量添加，   
 需要手工逐个加。所以加载汇编文件的菜单操作其实相当于接在内置异常处理器的.text段代码后面。  
 * 汇编文件中.text的起始地址（例如.text 0x400000）参数只允许一定规则的偏移，例如只能40_0080  

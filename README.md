@@ -1077,6 +1077,7 @@ ramdisk 修改路径：arch/mips/xburst/soc-4775/chip-m150/halley/common/
 系统操作中注意事项：  
 1，WIFI 信号不好，需外接天线，同时WIFI距热点较远时，信号衰减较大，频偏未校准，建议使用airkiss调试时靠近WIFI热点（三米以内）。  
 2，系统启动进入Buildroot时，密码为：root  
+* 君正官网_HALLEY5_EVB_mips
 
 ## 君正jz4740_pavo开发板  
 * search, 君正jz4740_pavo开发板  

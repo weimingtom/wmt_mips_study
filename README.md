@@ -1230,3 +1230,8 @@ http://codescape.mips.com/sdk/v2.0.0k/docs/
 ## armips  
 * https://github.com/Kingcom/armips  
 * https://github.com/hrydgard/ppsspp/tree/master/ext  
+
+## uMIPS, pico-uMIPS  
+* https://dmitry.gr/?r=05.Projects&proj=33.%20LinuxCard
+* https://github.com/weimingtom/uMIPS_fork
+* https://github.com/ElectroBoy404NotFound/pico-uMIPS

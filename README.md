@@ -1235,3 +1235,6 @@ http://codescape.mips.com/sdk/v2.0.0k/docs/
 * https://dmitry.gr/?r=05.Projects&proj=33.%20LinuxCard
 * https://github.com/weimingtom/uMIPS_fork
 * https://github.com/ElectroBoy404NotFound/pico-uMIPS
+
+## tcmips
+* https://github.com/zhangjiantao/tcmips
